@@ -55,6 +55,10 @@ on will open theObject
 	
 end will open
 
+on boolValue(isExists)
+	return (isExists is 1)
+end boolValue
+
 on launched theObject
 	set theList to call method "getContents" of class "FilesInPasteboard"
 	try
@@ -80,7 +84,7 @@ on launched theObject
 	set fileManager to call method "defaultManager" of class "NSFileManager"
 	repeat with theItem in theList
 		set isExists to call method "fileExistsAtPath:" of fileManager with parameter theItem
-		
+		set isExists to boolValue(isExists)
 		if not isExists then
 			set theMessage to localized string "fileIsNotFound"
 			set theMessage to theMessage & return & theItem
