@@ -1,8 +1,12 @@
-property FileUtil : load("FileUtility") of application "FileClipperLib"
+on loadLib(theName)
+	return loadLib(theName) of application (get "FileClipperLib")
+end loadLib
+
+property FileUtil : loadLib("FileUtility")
 property UniqueNamer : UniqueNamer of FileUtil
 property PathAnalyzer : PathAnalyzer of FileUtil
-property InsertionLocation : load("InsertionContainer") of application "FileClipperLib"
-property ShellUtils : load("ShellUtils") of application "FileClipperLib"
+property InsertionLocation : loadLib("InsertionContainer")
+property ShellUtils : loadLib("ShellUtils")
 
 property _insetionLocation : missing value
 property doFile : missing value
