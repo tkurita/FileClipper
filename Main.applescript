@@ -1,12 +1,14 @@
-on loadLib(theName)
-	return loadLib(theName) of application (get "FileClipperLib")
-end loadLib
+property loader : proxy_with({autocollect:true}) of application (get "FileClipperLib")
 
-property FileUtil : loadLib("FileUtility")
+on load(a_name)
+	return loader's load(a_name)
+end load
+
+property FileUtil : load("FileUtility")
 property UniqueNamer : UniqueNamer of FileUtil
 property PathAnalyzer : PathAnalyzer of FileUtil
-property InsertionLocation : loadLib("InsertionContainer")
-property ShellUtils : loadLib("ShellUtils")
+property InsertionLocation : load("InsertionLocator")
+property ShellUtils : load("ShellUtils")
 
 property _insetionLocation : missing value
 property doFile : missing value
@@ -41,11 +43,17 @@ on showMessage(theMessage)
 	display dialog theMessage buttons {"OK"} default button "OK" with icon note
 end showMessage
 
+on show_alert(a_message, sub_message)
+	activate
+	hide window "Progress"
+	display alert a_message message sub_message
+end show_alert
+
 on will open theObject
 	set coordinate system to AppleScript coordinate system
 	set _insetionLocation to do() of InsertionLocation
 	
-	if _isInFinderWindow of InsertionLocation then
+	if InsertionLocation's is_location_in_window() then
 		tell application "Finder"
 			set fwinBounds to bounds of Finder window 1
 		end tell
@@ -64,9 +72,9 @@ on boolValue(isExists)
 end boolValue
 
 on launched theObject
-	set theList to call method "getContents" of class "FilesInPasteboard"
+	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
-		get theList
+		get a_list
 	on error
 		set theMessage to localized string "NoFilesInClipboard"
 		showMessage(theMessage)
@@ -86,13 +94,14 @@ on launched theObject
 	end if
 	
 	set fileManager to call method "defaultManager" of class "NSFileManager"
-	repeat with theItem in theList
+	repeat with theItem in a_list
 		set isExists to call method "fileExistsAtPath:" of fileManager with parameter theItem
 		set isExists to boolValue(isExists)
 		if not isExists then
 			set theMessage to localized string "fileIsNotFound"
 			set theMessage to theMessage & return & theItem
-			showMessage(theMessage)
+			--showMessage(theMessage)
+			show_alert(theMessage, theItem)
 			exit repeat
 		end if
 		

@@ -5,27 +5,38 @@
 +(id) getContents
 {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-	NSString *availableType = [pasteboard availableTypeFromArray:[NSArray arrayWithObject:NSFilenamesPboardType]];
-	
+	NSString *availableType = [pasteboard availableTypeFromArray:
+		[NSArray arrayWithObjects:NSFilenamesPboardType, NSStringPboardType, nil]];
+	NSLog(availableType);
 	if (availableType == nil) {
 		//NSLog(@"no abailable");
 		return nil;
 	}
 	
-	NSData *theData = [pasteboard dataForType:NSFilenamesPboardType];
-	if (theData == nil) {
-		//NSLog(@"no data");
-		return nil;
+	id result = nil;
+	if (availableType == NSFilenamesPboardType) {
+		NSData *theData = [pasteboard dataForType:availableType];
+		if (theData == nil) {
+			//NSLog(@"no data");
+			return nil;
+		}
+
+		NSString *error = nil;
+		NSPropertyListFormat format;
+		result = [NSPropertyListSerialization propertyListFromData:theData
+												 mutabilityOption:NSPropertyListImmutable
+														   format:&format
+												 errorDescription:&error];
+		 if (error) NSLog(error);
+	
+	} else {
+		NSString *a_path = [pasteboard stringForType:NSStringPboardType];
+		if (!a_path || (![a_path hasPrefix:@"/"]))  return nil;
+		result = [NSArray arrayWithObject:a_path];
 	}
 	
-	NSString *error = nil;
-	NSPropertyListFormat format;
-	id plist = [NSPropertyListSerialization propertyListFromData:theData
-											 mutabilityOption:NSPropertyListImmutable
-													   format:&format
-											 errorDescription:&error];
-	//NSLog([plist description]);
-	return plist;
+	//NSLog([result description]);
+	return result;
 }
 
 @end
