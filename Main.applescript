@@ -23,15 +23,15 @@ on make_alias(a_source, a_destination)
 	end tell
 end make_alias
 
-on make_symbolick_link(a_source, a_destination)
+on make_symbolic_link(a_source, a_destination)
 	set a_name to name of (do(a_source) of PathAnalyzer)
 	set a_name to do of UniqueNamer about a_name at a_destination
 	set a_target to (a_destination as Unicode text) & a_name
-	make_symbolick_link of ShellUtils from a_source into a_target with relativePath
+	symlink of ShellUtils from a_source into a_target with relative
 	tell application "Finder"
 		update file a_target
 	end tell
-end make_symbolick_link
+end make_symbolic_link
 
 on copy_clip_item(a_source, a_destination)
 	copyItem of FileUtil from a_source into a_destination given name:"", mode:3
@@ -89,10 +89,10 @@ on launched theObject
 	set an_identifier to identifier of main bundle
 	if an_identifier is "MoveToHere" then
 		set do_file to move_clip_item
-	else if an_identifier is "make_aliasFileToHere" then
+	else if an_identifier is "MakeAliasFileToHere" then
 		set do_file to make_alias
-	else if an_identifier is "make_symbolick_linkToHere" then
-		set do_file to make_symbolick_link
+	else if an_identifier is "MakeSymbolicLinkToHere" then
+		set do_file to make_symbolic_link
 	else if an_identifier is "CopyToHere" then
 		set do_file to copy_clip_item
 	end if
