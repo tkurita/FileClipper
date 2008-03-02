@@ -7,41 +7,41 @@ end load
 property FileUtil : load("FileUtility")
 property UniqueNamer : UniqueNamer of FileUtil
 property PathAnalyzer : PathAnalyzer of FileUtil
-property InsertionLocation : load("InsertionLocator")
+property InsertionLocator : load("InsertionLocator")'s set_allow_closed_folder(false)
 property ShellUtils : load("ShellUtils")
+property GUIScriptingChecker : load("GUIScriptingChecker")
 
-property _insetionLocation : missing value
-property doFile : missing value
+property do_file : missing value
 
-on moveClipItem(sourceItem, destinationFolder)
-	moveItem of FileUtil from sourceItem into destinationFolder given name:"", mode:3
-end moveClipItem
+on move_clip_item(a_source, a_destination)
+	moveItem of FileUtil from a_source into a_destination given name:"", mode:3
+end move_clip_item
 
-on makeAlias(sourceItem, destinationFolder)
+on make_alias(a_source, a_destination)
 	tell application "Finder"
-		make alias file at destinationFolder to sourceItem
+		make alias file at a_destination to a_source
 	end tell
-end makeAlias
+end make_alias
 
-on makeSymbolicLink(sourceItem, destinationFolder)
-	set theName to name of (do(sourceItem) of PathAnalyzer)
-	set theName to do of UniqueNamer about theName at destinationFolder
-	set theTarget to (destinationFolder as Unicode text) & theName
-	makeSymbolicLink of ShellUtils from sourceItem into theTarget with relativePath
+on make_symbolick_link(a_source, a_destination)
+	set a_name to name of (do(a_source) of PathAnalyzer)
+	set a_name to do of UniqueNamer about a_name at a_destination
+	set a_target to (a_destination as Unicode text) & a_name
+	make_symbolick_link of ShellUtils from a_source into a_target with relativePath
 	tell application "Finder"
-		update file theTarget
+		update file a_target
 	end tell
-end makeSymbolicLink
+end make_symbolick_link
 
-on copyClipItem(sourceItem, destinationFolder)
-	copyItem of FileUtil from sourceItem into destinationFolder given name:"", mode:3
-end copyClipItem
+on copy_clip_item(a_source, a_destination)
+	copyItem of FileUtil from a_source into a_destination given name:"", mode:3
+end copy_clip_item
 
-on showMessage(theMessage)
+on show_message(a_msg)
 	activate
 	hide window "Progress"
-	display dialog theMessage buttons {"OK"} default button "OK" with icon note
-end showMessage
+	display dialog a_msg buttons {"OK"} default button "OK" with icon note
+end show_message
 
 on show_alert(a_message, sub_message)
 	activate
@@ -51,68 +51,72 @@ end show_alert
 
 on will open theObject
 	set coordinate system to AppleScript coordinate system
-	set _insetionLocation to do() of InsertionLocation
-	
-	if InsertionLocation's is_location_in_window() then
+	if InsertionLocator's is_location_in_window() then
 		tell application "Finder"
-			set fwinBounds to bounds of Finder window 1
+			set fwin_bounds to bounds of Finder window 1
 		end tell
-		set xPos to ((item 1 of fwinBounds) + (item 3 of fwinBounds)) / 2
-		set yPos to ((item 2 of fwinBounds) + (item 4 of fwinBounds)) / 2
-		set winSize to size of theObject
-		set xPos to xPos - (item 1 of winSize) / 2
-		set yPos to yPos - (item 2 of winSize) / 2
-		set position of theObject to {xPos, yPos}
+		set x_pos to ((item 1 of fwin_bounds) + (item 3 of fwin_bounds)) / 2
+		set y_pos to ((item 2 of fwin_bounds) + (item 4 of fwin_bounds)) / 2
+		set win_size to size of theObject
+		set x_pos to x_pos - (item 1 of win_size) / 2
+		set y_pos to y_pos - (item 2 of win_size) / 2
+		set position of theObject to {x_pos, y_pos}
 	end if
 	
 end will open
 
-on boolValue(isExists)
-	return (isExists is 1)
-end boolValue
+on bool_value(a_bool)
+	return (a_bool is 1)
+end bool_value
 
 on launched theObject
+	if not do() of GUIScriptingChecker then
+		-- GUI Scripting is disable
+		return
+	end if
+	set target_location to InsertionLocator's do()
+	show window "Progress"
 	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
 		get a_list
 	on error
-		set theMessage to localized string "NoFilesInClipboard"
-		showMessage(theMessage)
+		set a_msg to localized string "NoFilesInClipboard"
+		show_message(a_msg)
 		quit
 		return
 	end try
 	
-	set theIdentifier to identifier of main bundle
-	if theIdentifier is "MoveToHere" then
-		set doFile to moveClipItem
-	else if theIdentifier is "MakeAliasFileToHere" then
-		set doFile to makeAlias
-	else if theIdentifier is "MakeSymbolicLinkToHere" then
-		set doFile to makeSymbolicLink
-	else if theIdentifier is "CopyToHere" then
-		set doFile to copyClipItem
+	set an_identifier to identifier of main bundle
+	if an_identifier is "MoveToHere" then
+		set do_file to move_clip_item
+	else if an_identifier is "make_aliasFileToHere" then
+		set do_file to make_alias
+	else if an_identifier is "make_symbolick_linkToHere" then
+		set do_file to make_symbolick_link
+	else if an_identifier is "CopyToHere" then
+		set do_file to copy_clip_item
 	end if
 	
-	set fileManager to call method "defaultManager" of class "NSFileManager"
-	repeat with theItem in a_list
-		set isExists to call method "fileExistsAtPath:" of fileManager with parameter theItem
-		set isExists to boolValue(isExists)
-		if not isExists then
-			set theMessage to localized string "fileIsNotFound"
-			set theMessage to theMessage & return & theItem
-			--showMessage(theMessage)
-			show_alert(theMessage, theItem)
+	set file_manager to call method "defaultManager" of class "NSFileManager"
+	repeat with an_item in a_list
+		set is_exists to call method "fileExistsAtPath:" of file_manager with parameter an_item
+		set is_exists to bool_value(is_exists)
+		if not is_exists then
+			set a_msg to localized string "fileIsNotFound"
+			--set a_msg to a_msg & return & an_item
+			--show_message(a_msg)
+			show_alert(a_msg, an_item)
 			exit repeat
 		end if
 		
 		try
-			doFile(POSIX file theItem, _insetionLocation)
+			do_file(POSIX file an_item, target_location)
 		on error errMsg number errN
 			if errN is -48 then
-				set theMessage to localized string "SameNameExists"
-				showMessage(theMessage)
+				set a_msg to localized string "SameNameExists"
+				show_message(a_msg)
 			else if errN is not -1712 then
-				showMessage(errMsg)
+				show_message(errMsg)
 			end if
 		end try
 	end repeat

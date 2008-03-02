@@ -7,7 +7,7 @@
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSString *availableType = [pasteboard availableTypeFromArray:
 		[NSArray arrayWithObjects:NSFilenamesPboardType, NSStringPboardType, nil]];
-	NSLog(availableType);
+	//NSLog(availableType);
 	if (availableType == nil) {
 		//NSLog(@"no abailable");
 		return nil;
