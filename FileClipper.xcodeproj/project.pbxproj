@@ -17,6 +17,8 @@
 				2CAB356F09BE676300A9C0EC /* PBXTargetDependency */,
 				2CAB356D09BE676100A9C0EC /* PBXTargetDependency */,
 				2CAB356B09BE675F00A9C0EC /* PBXTargetDependency */,
+				2C41037B0D855A0E00AC0593 /* PBXTargetDependency */,
+				2C4103790D855A0E00AC0593 /* PBXTargetDependency */,
 			);
 			name = BuildAll;
 			productName = BuildAll;
@@ -24,6 +26,26 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXAppleScriptBuildPhase section */
+		2C4102EA0D854BEF00AC0593 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				2C4102EB0D854BEF00AC0593 /* Main.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4103610D85597300AC0593 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				2C4103620D85597300AC0593 /* Main.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF73B6709B86F4100EF8406 /* AppleScript */ = {
 			isa = PBXAppleScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,6 +89,30 @@
 /* End PBXAppleScriptBuildPhase section */
 
 /* Begin PBXBuildFile section */
+		2C4102E70D854BEF00AC0593 /* FilesInPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF73B7909B870CD00EF8406 /* FilesInPasteboard.h */; };
+		2C4102E80D854BEF00AC0593 /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
+		2C4102E90D854BEF00AC0593 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
+		2C4102EB0D854BEF00AC0593 /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
+		2C4102EF0D854BEF00AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
+		2C4102F10D854BEF00AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
+		2C4102F20D854BEF00AC0593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		2C4102F30D854BEF00AC0593 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
+		2C4102F40D854BEF00AC0593 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
+		2C4102F60D854BEF00AC0593 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2C4102F70D854BEF00AC0593 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2C41035E0D85597300AC0593 /* FilesInPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF73B7909B870CD00EF8406 /* FilesInPasteboard.h */; };
+		2C41035F0D85597300AC0593 /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
+		2C4103600D85597300AC0593 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
+		2C4103620D85597300AC0593 /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C4103640D85597300AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
+		2C4103650D85597300AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
+		2C4103670D85597300AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
+		2C4103680D85597300AC0593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		2C4103690D85597300AC0593 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
+		2C41036A0D85597300AC0593 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
+		2C41036C0D85597300AC0593 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2C41036D0D85597300AC0593 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CAB363109BE6A3800A9C0EC /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2CAB363209BE6A3800A9C0EC /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
 		2CAB363309BE6A3800A9C0EC /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
@@ -122,6 +168,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C4103780D855A0E00AC0593 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C41035C0D85597300AC0593 /* SVN Move */;
+			remoteInfo = "SVN Move";
+		};
+		2C41037A0D855A0E00AC0593 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C4102E50D854BEF00AC0593 /* SVN Copy */;
+			remoteInfo = "SVN Copy";
+		};
 		2CAB356A09BE675F00A9C0EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -157,6 +217,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2C4102FB0D854BEF00AC0593 /* SVN Copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SVN Copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C4103710D85597300AC0593 /* SVN Move.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SVN Move.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressWindow.m; sourceTree = "<group>"; };
 		2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWindow.h; sourceTree = "<group>"; };
 		2CAB364B09BE6BE200A9C0EC /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -185,6 +247,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2C4102F50D854BEF00AC0593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4102F60D854BEF00AC0593 /* Cocoa.framework in Frameworks */,
+				2C4102F70D854BEF00AC0593 /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C41036B0D85597300AC0593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C41036C0D85597300AC0593 /* Cocoa.framework in Frameworks */,
+				2C41036D0D85597300AC0593 /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF73B5409B86EB100EF8406 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +337,8 @@
 				2CF73B5609B86EB100EF8406 /* Make Alias File to Here.app */,
 				2CF73DBD09B88D4C00EF8406 /* Move to Here.app */,
 				2CF73E8C09B8997400EF8406 /* Make Symbolic Link to Here.app */,
+				2C4102FB0D854BEF00AC0593 /* SVN Copy.app */,
+				2C4103710D85597300AC0593 /* SVN Move.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +346,7 @@
 		29B97314FDCFA39411CA2CEA /* FileClipper */ = {
 			isa = PBXGroup;
 			children = (
+				2C4103060D854C3600AC0593 /* SVNCopy */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -311,6 +394,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C4103060D854C3600AC0593 /* SVNCopy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVNCopy;
+			sourceTree = "<group>";
+		};
 		2CF7409909B9C8FF00EF8406 /* MakeSymbolicLinkToHere */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +436,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2C4102E60D854BEF00AC0593 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4102E70D854BEF00AC0593 /* FilesInPasteboard.h in Headers */,
+				2C4102E80D854BEF00AC0593 /* ProgressWindow.h in Headers */,
+				2C4102E90D854BEF00AC0593 /* AppController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C41035D0D85597300AC0593 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C41035E0D85597300AC0593 /* FilesInPasteboard.h in Headers */,
+				2C41035F0D85597300AC0593 /* ProgressWindow.h in Headers */,
+				2C4103600D85597300AC0593 /* AppController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF73B6B09B86F6F00EF8406 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +499,44 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2C4102E50D854BEF00AC0593 /* SVN Copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C4102F80D854BEF00AC0593 /* Build configuration list for PBXNativeTarget "SVN Copy" */;
+			buildPhases = (
+				2C4102E60D854BEF00AC0593 /* Headers */,
+				2C4102EA0D854BEF00AC0593 /* AppleScript */,
+				2C4102EC0D854BEF00AC0593 /* Resources */,
+				2C4102F00D854BEF00AC0593 /* Sources */,
+				2C4102F50D854BEF00AC0593 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SVN Copy";
+			productName = "Move to Here";
+			productReference = 2C4102FB0D854BEF00AC0593 /* SVN Copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C41035C0D85597300AC0593 /* SVN Move */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C41036E0D85597300AC0593 /* Build configuration list for PBXNativeTarget "SVN Move" */;
+			buildPhases = (
+				2C41035D0D85597300AC0593 /* Headers */,
+				2C4103610D85597300AC0593 /* AppleScript */,
+				2C4103630D85597300AC0593 /* Resources */,
+				2C4103660D85597300AC0593 /* Sources */,
+				2C41036B0D85597300AC0593 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SVN Move";
+			productName = "Move to Here";
+			productReference = 2C4103710D85597300AC0593 /* SVN Move.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2CF73B5509B86EB100EF8406 /* Make Alias File to Here */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CF73B5909B86EB300EF8406 /* Build configuration list for PBXNativeTarget "Make Alias File to Here" */;
@@ -480,11 +628,31 @@
 				2CF73E7B09B8997400EF8406 /* Make Symbolic Link to Here */,
 				2CF73DBC09B88D4C00EF8406 /* Move to Here */,
 				2CAB356709BE675400A9C0EC /* BuildAll */,
+				2C4102E50D854BEF00AC0593 /* SVN Copy */,
+				2C41035C0D85597300AC0593 /* SVN Move */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2C4102EC0D854BEF00AC0593 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */,
+				2C4102EF0D854BEF00AC0593 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4103630D85597300AC0593 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4103640D85597300AC0593 /* Localizable.strings in Resources */,
+				2C4103650D85597300AC0593 /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF73B5209B86EB100EF8406 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +696,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2C4102F00D854BEF00AC0593 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4102F10D854BEF00AC0593 /* FilesInPasteboard.m in Sources */,
+				2C4102F20D854BEF00AC0593 /* main.m in Sources */,
+				2C4102F30D854BEF00AC0593 /* ProgressWindow.m in Sources */,
+				2C4102F40D854BEF00AC0593 /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C4103660D85597300AC0593 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4103670D85597300AC0593 /* FilesInPasteboard.m in Sources */,
+				2C4103680D85597300AC0593 /* main.m in Sources */,
+				2C4103690D85597300AC0593 /* ProgressWindow.m in Sources */,
+				2C41036A0D85597300AC0593 /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF73B5309B86EB100EF8406 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,6 +765,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2C4103790D855A0E00AC0593 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C41035C0D85597300AC0593 /* SVN Move */;
+			targetProxy = 2C4103780D855A0E00AC0593 /* PBXContainerItemProxy */;
+		};
+		2C41037B0D855A0E00AC0593 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C4102E50D854BEF00AC0593 /* SVN Copy */;
+			targetProxy = 2C41037A0D855A0E00AC0593 /* PBXContainerItemProxy */;
+		};
 		2CAB356B09BE675F00A9C0EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2CF73DBC09B88D4C00EF8406 /* Move to Here */;
@@ -646,6 +846,118 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2C4102F90D854BEF00AC0593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_IDENTIFIER = SVNCopy;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "SVN Copy";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		2C4102FA0D854BEF00AC0593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				BUNDLE_IDENTIFIER = SVNCopy;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "SVN Copy";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		2C41036F0D85597300AC0593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_IDENTIFIER = SVNMove;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "SVN Move";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		2C4103700D85597300AC0593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				BUNDLE_IDENTIFIER = SVNMove;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "SVN Move";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		2CAB357409BE67A600A9C0EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -920,6 +1232,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C4102F80D854BEF00AC0593 /* Build configuration list for PBXNativeTarget "SVN Copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C4102F90D854BEF00AC0593 /* Debug */,
+				2C4102FA0D854BEF00AC0593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C41036E0D85597300AC0593 /* Build configuration list for PBXNativeTarget "SVN Move" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C41036F0D85597300AC0593 /* Debug */,
+				2C4103700D85597300AC0593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CAB357309BE67A600A9C0EC /* Build configuration list for PBXAggregateTarget "BuildAll" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

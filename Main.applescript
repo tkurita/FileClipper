@@ -4,17 +4,41 @@ on load(a_name)
 	return loader's load(a_name)
 end load
 
-property FileUtil : load("FileUtility")
-property UniqueNamer : UniqueNamer of FileUtil
-property PathAnalyzer : PathAnalyzer of FileUtil
+property XFile : load("XFile")
+property UniqueNamer : UniqueNamer of XFile
+property PathAnalyzer : PathAnalyzer of XFile
 property InsertionLocator : load("InsertionLocator")'s set_allow_closed_folder(false)
 property ShellUtils : load("ShellUtils")
 property GUIScriptingChecker : load("GUIScriptingChecker")
 
 property do_file : missing value
 
+on do_svn(svn_action, a_source, a_destination)
+	set x_source to XFile's make_with(a_source)
+	set source_dir to x_source's parent_folder()'s posix_path()'s quoted form
+	set source_name to x_source's item_name()'s quoted form
+	set a_destination to quoted form of POSIX path of a_destination
+	set a_shell to system attribute "SHELL"
+	do shell script "cd " & source_dir & ";" & a_shell & " -lc 'svn $0 $1 $2' " & svn_action & space & source_name & space & a_destination
+end do_svn
+
+on svn_copy(a_source, a_destination)
+	do_svn("cp", a_source, a_destination)
+end svn_copy
+
+on svn_move(a_source, a_destination)
+	do_svn("mv", a_source, a_destination)
+end svn_move
+
 on move_clip_item(a_source, a_destination)
-	moveItem of FileUtil from a_source into a_destination given name:"", mode:3
+	--moveItem of FileUtil from a_source into a_destination given name:"", mode:3
+	set x_source to XFile's make_with(a_source)
+	set x_dest to XFile's make_with(a_destination)
+	set x_dest to x_dest's unique_child(x_source's item_name())
+	x_source's move_to(x_dest)
+	tell application "Finder"
+		update file (x_dest's hfs_path())
+	end tell
 end move_clip_item
 
 on make_alias(a_source, a_destination)
@@ -34,7 +58,14 @@ on make_symbolic_link(a_source, a_destination)
 end make_symbolic_link
 
 on copy_clip_item(a_source, a_destination)
-	copyItem of FileUtil from a_source into a_destination given name:"", mode:3
+	set x_source to XFile's make_with(a_source)
+	set x_dest to XFile's make_with(a_destination)
+	set x_dest to x_dest's unique_child(x_source's item_name())
+	x_source's copy_to(x_dest)
+	tell application "Finder"
+		update file (x_dest's hfs_path())
+	end tell
+	--copyItem of FileUtil from a_source into a_destination given name:"", mode:3
 end copy_clip_item
 
 on show_message(a_msg)
@@ -95,6 +126,10 @@ on launched theObject
 		set do_file to make_symbolic_link
 	else if an_identifier is "CopyToHere" then
 		set do_file to copy_clip_item
+	else if an_identifier is "SVNCopy" then
+		set do_file to svn_copy
+	else if an_identifier is "SVNMove" then
+		set do_file to svn_move
 	end if
 	
 	set file_manager to call method "defaultManager" of class "NSFileManager"
@@ -111,12 +146,12 @@ on launched theObject
 		
 		try
 			do_file(POSIX file an_item, target_location)
-		on error errMsg number errN
-			if errN is -48 then
+		on error a_msg number errn
+			if errn is -48 then
 				set a_msg to localized string "SameNameExists"
 				show_message(a_msg)
-			else if errN is not -1712 then
-				show_message(errMsg)
+			else if errn is not -1712 then
+				show_message(a_msg)
 			end if
 		end try
 	end repeat
