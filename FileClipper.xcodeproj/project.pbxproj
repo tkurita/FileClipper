@@ -172,14 +172,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C41035C0D85597300AC0593 /* SVN Move */;
+			remoteGlobalIDString = 2C41035C0D85597300AC0593;
 			remoteInfo = "SVN Move";
 		};
 		2C41037A0D855A0E00AC0593 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C4102E50D854BEF00AC0593 /* SVN Copy */;
+			remoteGlobalIDString = 2C4102E50D854BEF00AC0593;
 			remoteInfo = "SVN Copy";
 		};
 		2CAB356A09BE675F00A9C0EC /* PBXContainerItemProxy */ = {
@@ -346,7 +346,6 @@
 		29B97314FDCFA39411CA2CEA /* FileClipper */ = {
 			isa = PBXGroup;
 			children = (
-				2C4103060D854C3600AC0593 /* SVNCopy */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -392,13 +391,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2C4103060D854C3600AC0593 /* SVNCopy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SVNCopy;
 			sourceTree = "<group>";
 		};
 		2CF7409909B9C8FF00EF8406 /* MakeSymbolicLinkToHere */ = {

@@ -15,11 +15,32 @@ property do_file : missing value
 
 on do_svn(svn_action, a_source, a_destination)
 	set x_source to XFile's make_with(a_source)
-	set source_dir to x_source's parent_folder()'s posix_path()'s quoted form
+	set source_dir to x_source's parent_folder()'s posix_path()
+	if (source_dir & "/") is (a_destination's POSIX path) then
+		set a_name to x_source's item_name()
+		activate
+		try
+			set a_result to display dialog "Enter File Name :" default answer a_name
+		on error number -128
+			return
+		end try
+		set new_name to text returned of a_result
+		if new_name is a_name then
+			return
+		end if
+		set a_destination to new_name
+	else
+		set a_destination to POSIX path of a_destination
+	end if
+	
+	set source_dir to source_dir's quoted form
 	set source_name to x_source's item_name()'s quoted form
-	set a_destination to quoted form of POSIX path of a_destination
+	set a_destination to quoted form of a_destination
 	set a_shell to system attribute "SHELL"
-	do shell script "cd " & source_dir & ";" & a_shell & " -lc 'svn $0 $1 $2' " & svn_action & space & source_name & space & a_destination
+	set cd_command to "cd " & source_dir & ";"
+	set all_command to cd_command & a_shell & " -lc 'svn $0 $1 $2' " & svn_action & space & source_name & space & a_destination
+	log all_command
+	do shell script all_command
 end do_svn
 
 on svn_copy(a_source, a_destination)
@@ -106,6 +127,7 @@ on launched theObject
 		return
 	end if
 	set target_location to InsertionLocator's do()
+	log target_location
 	show window "Progress"
 	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
@@ -145,6 +167,7 @@ on launched theObject
 		end if
 		
 		try
+			log target_location
 			do_file(POSIX file an_item, target_location)
 		on error a_msg number errn
 			if errn is -48 then
