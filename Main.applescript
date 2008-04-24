@@ -39,7 +39,7 @@ on do_svn(svn_action, a_source, a_destination)
 	set a_shell to system attribute "SHELL"
 	set cd_command to "cd " & source_dir & ";"
 	set all_command to cd_command & a_shell & " -lc 'svn $0 $1 $2' " & svn_action & space & source_name & space & a_destination
-	log all_command
+	--log all_command
 	do shell script all_command
 end do_svn
 
@@ -58,7 +58,7 @@ on move_clip_item(a_source, a_destination)
 	set x_dest to x_dest's unique_child(x_source's item_name())
 	x_source's move_to(x_dest)
 	tell application "Finder"
-		update file (x_dest's hfs_path())
+		update item (x_dest's hfs_path())
 	end tell
 end move_clip_item
 
@@ -74,7 +74,7 @@ on make_symbolic_link(a_source, a_destination)
 	set a_target to (a_destination as Unicode text) & a_name
 	symlink of ShellUtils from a_source into a_target with relative
 	tell application "Finder"
-		update file a_target
+		update item a_target
 	end tell
 end make_symbolic_link
 
@@ -84,7 +84,7 @@ on copy_clip_item(a_source, a_destination)
 	set x_dest to x_dest's unique_child(x_source's item_name())
 	x_source's copy_to(x_dest)
 	tell application "Finder"
-		update file (x_dest's hfs_path())
+		update item (x_dest's hfs_path())
 	end tell
 	--copyItem of FileUtil from a_source into a_destination given name:"", mode:3
 end copy_clip_item
@@ -127,7 +127,7 @@ on launched theObject
 		return
 	end if
 	set target_location to InsertionLocator's do()
-	log target_location
+	--log target_location
 	show window "Progress"
 	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
@@ -167,7 +167,7 @@ on launched theObject
 		end if
 		
 		try
-			log target_location
+			--log target_location
 			do_file(POSIX file an_item, target_location)
 		on error a_msg number errn
 			if errn is -48 then
