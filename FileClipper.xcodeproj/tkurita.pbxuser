@@ -18,7 +18,6 @@
 		activeExecutable = 2C4103720D85597300AC0593 /* SVN Move */;
 		activeTarget = 2CAB356709BE675400A9C0EC /* BuildAll */;
 		addToTargets = (
-			2CF73E1E09B8971D00EF8406 /* Copy to Here */,
 		);
 		breakpoints = (
 			2CAB365D09BE6D2D00A9C0EC /* AppController.m:7 */,
@@ -136,11 +135,10 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 230694979;
-			PBXWorkspaceStateSaveDate = 230694979;
+			PBXPerProjectTemplateStateSaveDate = 233059040;
+			PBXWorkspaceStateSaveDate = 233059040;
 		};
 		perUserProjectItems = {
-			2C07DF6B0DAE45B800ADF803 = 2C07DF6B0DAE45B800ADF803 /* PBXTextBookmark */;
 			2C16B0FB0D861DEE0044E026 = 2C16B0FB0D861DEE0044E026 /* PBXTextBookmark */;
 			2C4103090D854C4A00AC0593 = 2C4103090D854C4A00AC0593 /* PBXTextBookmark */;
 			2C41030B0D854C4A00AC0593 = 2C41030B0D854C4A00AC0593 /* PBXTextBookmark */;
@@ -154,8 +152,7 @@
 			2C67E7E709C7B7C700776819 = 2C67E7E709C7B7C700776819 /* PBXTextBookmark */;
 			2C67E7E909C7B7C700776819 = 2C67E7E909C7B7C700776819 /* PBXTextBookmark */;
 			2C67E7EB09C7B7C700776819 = 2C67E7EB09C7B7C700776819 /* PBXTextBookmark */;
-			2C6D9FC70DC020590087E74E /* PBXTextBookmark */ = 2C6D9FC70DC020590087E74E /* PBXTextBookmark */;
-			2C6D9FDA0DC021650087E74E /* PBXTextBookmark */ = 2C6D9FDA0DC021650087E74E /* PBXTextBookmark */;
+			2C6D9FDB0DC021990087E74E = 2C6D9FDB0DC021990087E74E /* PBXTextBookmark */;
 			2C76F2920D7AFE6400C883B4 = 2C76F2920D7AFE6400C883B4 /* PBXTextBookmark */;
 			2C76F2930D7AFE6400C883B4 = 2C76F2930D7AFE6400C883B4 /* PBXTextBookmark */;
 			2C76F2940D7AFE6400C883B4 = 2C76F2940D7AFE6400C883B4 /* PBXTextBookmark */;
@@ -167,8 +164,8 @@
 			2CAB366809BE6D6300A9C0EC = 2CAB366809BE6D6300A9C0EC /* PBXTextBookmark */;
 			2CAB366C09BE6D6300A9C0EC = 2CAB366C09BE6D6300A9C0EC /* PBXTextBookmark */;
 			2CAB38C009BEB8D200A9C0EC = 2CAB38C009BEB8D200A9C0EC /* PBXTextBookmark */;
+			2CE4C5490DC0623400B57E6E = 2CE4C5490DC0623400B57E6E /* PBXTextBookmark */;
 			2CE4F5220D76A49900FEFED3 = 2CE4F5220D76A49900FEFED3 /* PBXTextBookmark */;
-			2CEC547B0D993B5B006F98B6 = 2CEC547B0D993B5B006F98B6 /* PBXTextBookmark */;
 			2CF73C5B09B8739700EF8406 = 2CF73C5B09B8739700EF8406 /* PBXTextBookmark */;
 			2CF73C5E09B8739700EF8406 = 2CF73C5E09B8739700EF8406 /* PBXTextBookmark */;
 			2CF740D609B9D21400EF8406 = 2CF740D609B9D21400EF8406 /* PBXTextBookmark */;
@@ -253,16 +250,6 @@
 		lineNumber = 132;
 		modificationTime = 229497042.406616;
 		state = 1;
-	};
-	2C07DF6B0DAE45B800ADF803 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */;
-		name = "Main.applescript: 186";
-		rLen = 0;
-		rLoc = 5553;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
 	};
 	2C16B0FB0D861DEE0044E026 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -507,17 +494,7 @@
 		path = "/Users/tkurita/Dev/Projects/FileClipper/trunk/build/Release/Make Alias File to Here.app/Contents/Resources/English.lproj/InfoPlist.strings";
 		sourceTree = "<absolute>";
 	};
-	2C6D9FC70DC020590087E74E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */;
-		name = "Main.applescript: 186";
-		rLen = 0;
-		rLoc = 5553;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
-	2C6D9FDA0DC021650087E74E /* PBXTextBookmark */ = {
+	2C6D9FDB0DC021990087E74E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */;
 		name = "Main.applescript: 186";
@@ -705,6 +682,16 @@
 		vrLen = 744;
 		vrLoc = 0;
 	};
+	2CE4C5490DC0623400B57E6E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */;
+		name = "Main.applescript: 186";
+		rLen = 0;
+		rLoc = 5553;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
 	2CE4F4DC0D769B0700FEFED3 /* FilesInPasteboard.m:16 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -728,16 +715,6 @@
 		rLoc = 67;
 		rType = 0;
 		vrLen = 69;
-		vrLoc = 0;
-	};
-	2CEC547B0D993B5B006F98B6 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */;
-		name = "Main.applescript: 157";
-		rLen = 0;
-		rLoc = 5471;
-		rType = 0;
-		vrLen = 0;
 		vrLoc = 0;
 	};
 	2CF2D28C0D7AF3D3008666C6 /* Main.applescript:105 */ = {
