@@ -51,15 +51,25 @@ on svn_move(a_source, a_destination)
 	do_svn("mv", a_source, a_destination)
 end svn_move
 
+on note_file_changed(a_xfile)
+	tell application "Finder"
+		update item (a_xfile's parent_folder()'s hfs_path())
+		update item (a_xfile's hfs_path())
+	end tell
+	(*
+	set a_path to a_xfile's posix_path()
+	set workspace to call method "sharedWorkspace" of class "NSWorkspace"
+	call method "noteFileSystemChanged:" of workspace with parameter a_path
+	*)
+end note_file_changed
+
 on move_clip_item(a_source, a_destination)
 	--moveItem of FileUtil from a_source into a_destination given name:"", mode:3
 	set x_source to XFile's make_with(a_source)
 	set x_dest to XFile's make_with(a_destination)
 	set x_dest to x_dest's unique_child(x_source's item_name())
 	x_source's move_to(x_dest)
-	tell application "Finder"
-		update item (x_dest's hfs_path())
-	end tell
+	note_file_changed(x_dest)
 end move_clip_item
 
 on make_alias(a_source, a_destination)
@@ -73,9 +83,7 @@ on make_symbolic_link(a_source, a_destination)
 	set a_name to do of UniqueNamer about a_name at a_destination
 	set a_target to (a_destination as Unicode text) & a_name
 	symlink of ShellUtils from a_source into a_target with relative
-	tell application "Finder"
-		update item a_target
-	end tell
+	note_file_changed(XFile's make_with(a_destination))
 end make_symbolic_link
 
 on copy_clip_item(a_source, a_destination)
@@ -83,9 +91,7 @@ on copy_clip_item(a_source, a_destination)
 	set x_dest to XFile's make_with(a_destination)
 	set x_dest to x_dest's unique_child(x_source's item_name())
 	x_source's copy_to(x_dest)
-	tell application "Finder"
-		update item (x_dest's hfs_path())
-	end tell
+	note_file_changed(x_dest)
 	--copyItem of FileUtil from a_source into a_destination given name:"", mode:3
 end copy_clip_item
 
@@ -121,11 +127,32 @@ on bool_value(a_bool)
 	return (a_bool is 1)
 end bool_value
 
+script MessageDelegate
+	on ok_button()
+		return localized string "LauchSystemPreferences"
+	end ok_button
+	
+	on cancel_button()
+		return localized string "Cancel"
+	end cancel_button
+	
+	on title_message()
+		return localized string "GUIScriptingIsNotEnabled"
+	end title_message
+	
+	on detail_message()
+		return localized string "AskLaunchPreferences"
+	end detail_message
+end script
+
 on launched theObject
+	GUIScriptingChecker's set_delegate(MessageDelegate)
 	if not do() of GUIScriptingChecker then
 		-- GUI Scripting is disable
+		quit
 		return
 	end if
+	
 	set target_location to InsertionLocator's do()
 	--log target_location
 	show window "Progress"

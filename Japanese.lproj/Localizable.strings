@@ -1,3 +1,7 @@
 "NoFilesInClipboard" = "クリップボードにファイルへ参照がありません。";
 "SameNameExists" = "同じ名前のファイルがあります。";
 "fileIsNotFound" = "ファイルもしくはフォルダがありません。";
+"LauchSystemPreferences" = "システム環境設定を起動";
+"Cancel" = "キャンセル";
+"GUIScriptingIsNotEnabled" = "GUI スクリプティングが使用可能になっていません。";
+"AskLaunchPreferences" = "システム環境設定で「補助装置を使用可能にする」を ON にしてください。";
