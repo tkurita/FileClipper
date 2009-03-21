@@ -141,24 +141,6 @@
 		2CAB38AB09BEB8CC00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CAB38AC09BEB8CD00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CD403F50F7373CF00B96300 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
-		2CD4040E0F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD4040F0F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD404100F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
-		2CD404110F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD404120F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD404130F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
-		2CD404140F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD404150F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD404160F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
-		2CD404170F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD404180F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD404190F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
-		2CD4041A0F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD4041B0F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD4041C0F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
-		2CD4041D0F737A8F00B96300 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040B0F737A8F00B96300 /* SmartActivate.c */; };
-		2CD4041E0F737A8F00B96300 /* SmartActivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD4040C0F737A8F00B96300 /* SmartActivate.h */; };
-		2CD4041F0F737A8F00B96300 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4040D0F737A8F00B96300 /* SmartActivate.m */; };
 		2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -252,9 +234,6 @@
 		2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2CAB375409BEA71900A9C0EC /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
 		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
-		2CD4040B0F737A8F00B96300 /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
-		2CD4040C0F737A8F00B96300 /* SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartActivate.h; sourceTree = "<group>"; };
-		2CD4040D0F737A8F00B96300 /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
 		2CF73B5609B86EB100EF8406 /* Make Alias File to Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Alias File to Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF73B5809B86EB100EF8406 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2CF73B7909B870CD00EF8406 /* FilesInPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesInPasteboard.h; sourceTree = "<group>"; };
@@ -377,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				2C48998F0DE43333001A564D /* History */,
-				2CD4040A0F737A8F00B96300 /* SmartActivateLib */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -423,16 +401,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2CD4040A0F737A8F00B96300 /* SmartActivateLib */ = {
-			isa = PBXGroup;
-			children = (
-				2CD4040B0F737A8F00B96300 /* SmartActivate.c */,
-				2CD4040C0F737A8F00B96300 /* SmartActivate.h */,
-				2CD4040D0F737A8F00B96300 /* SmartActivate.m */,
-			);
-			path = SmartActivateLib;
 			sourceTree = "<group>";
 		};
 		2CF7409909B9C8FF00EF8406 /* MakeSymbolicLinkToHere */ = {
@@ -481,7 +449,6 @@
 				2C4102E70D854BEF00AC0593 /* FilesInPasteboard.h in Headers */,
 				2C4102E80D854BEF00AC0593 /* ProgressWindow.h in Headers */,
 				2C4102E90D854BEF00AC0593 /* AppController.h in Headers */,
-				2CD4041B0F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +459,6 @@
 				2C41035E0D85597300AC0593 /* FilesInPasteboard.h in Headers */,
 				2C41035F0D85597300AC0593 /* ProgressWindow.h in Headers */,
 				2C4103600D85597300AC0593 /* AppController.h in Headers */,
-				2CD4041E0F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +469,6 @@
 				2CF73C4509B8737600EF8406 /* FilesInPasteboard.h in Headers */,
 				2CAB363409BE6A3800A9C0EC /* ProgressWindow.h in Headers */,
 				2CAB386109BEB6D100A9C0EC /* AppController.h in Headers */,
-				2CD404150F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +479,6 @@
 				2CF73E1309B896B600EF8406 /* FilesInPasteboard.h in Headers */,
 				2CAB363609BE6A3800A9C0EC /* ProgressWindow.h in Headers */,
 				2CAB386309BEB6D200A9C0EC /* AppController.h in Headers */,
-				2CD4040F0F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +489,6 @@
 				2CF73E2009B8971D00EF8406 /* FilesInPasteboard.h in Headers */,
 				2CAB363209BE6A3800A9C0EC /* ProgressWindow.h in Headers */,
 				2CAB364D09BE6BE200A9C0EC /* AppController.h in Headers */,
-				2CD404120F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +499,6 @@
 				2CF73E7D09B8997400EF8406 /* FilesInPasteboard.h in Headers */,
 				2CAB363809BE6A3800A9C0EC /* ProgressWindow.h in Headers */,
 				2CAB386209BEB6D200A9C0EC /* AppController.h in Headers */,
-				2CD404180F737A8F00B96300 /* SmartActivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,8 +716,6 @@
 				2C4102F20D854BEF00AC0593 /* main.m in Sources */,
 				2C4102F30D854BEF00AC0593 /* ProgressWindow.m in Sources */,
 				2C4102F40D854BEF00AC0593 /* AppController.m in Sources */,
-				2CD4041A0F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD4041C0F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,8 +727,6 @@
 				2C4103680D85597300AC0593 /* main.m in Sources */,
 				2C4103690D85597300AC0593 /* ProgressWindow.m in Sources */,
 				2C41036A0D85597300AC0593 /* AppController.m in Sources */,
-				2CD4041D0F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD4041F0F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,8 +738,6 @@
 				2CF73C4309B8737000EF8406 /* main.m in Sources */,
 				2CAB363309BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
 				2CAB38AA09BEB8CC00A9C0EC /* AppController.m in Sources */,
-				2CD404140F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD404160F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,8 +749,6 @@
 				2CF73DF709B895B400EF8406 /* main.m in Sources */,
 				2CAB363509BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
 				2CAB38AC09BEB8CD00A9C0EC /* AppController.m in Sources */,
-				2CD4040E0F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD404100F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,8 +760,6 @@
 				2CF73E2709B8971D00EF8406 /* main.m in Sources */,
 				2CAB363109BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
 				2CAB364E09BE6BE200A9C0EC /* AppController.m in Sources */,
-				2CD404110F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD404130F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,8 +771,6 @@
 				2CF73E8509B8997400EF8406 /* main.m in Sources */,
 				2CAB363709BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
 				2CAB38AB09BEB8CC00A9C0EC /* AppController.m in Sources */,
-				2CD404170F737A8F00B96300 /* SmartActivate.c in Sources */,
-				2CD404190F737A8F00B96300 /* SmartActivate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1037,10 +1037,16 @@
 		vrLoc = 4498;
 	};
 	2CD4040C0F737A8F00B96300 /* SmartActivate.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = SmartActivate.h;
+		path = /Users/tkurita/Dev/Projects/FileClipper/trunk/SmartActivateLib/SmartActivate.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {822, 406}}";
-			sepNavSelRange = "{374, 23}";
-			sepNavVisRange = "{0, 808}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 429}";
 		};
 	};
 	2CD404200F737AC700B96300 /* PBXTextBookmark */ = {
