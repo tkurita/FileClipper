@@ -5,13 +5,13 @@ on load(a_name)
 end load
 
 property XFile : load("XFile")
-property UniqueNamer : UniqueNamer of XFile
-property PathAnalyzer : PathAnalyzer of XFile
+--property PathAnalyzer : PathAnalyzer of XFile
 property InsertionLocator : load("InsertionLocator")'s set_allow_closed_folder(false)
 property ShellUtils : load("ShellUtils")
 property GUIScriptingChecker : load("GUIScriptingChecker")
 
 property do_file : missing value
+property _progress_window : missing value
 
 on do_svn(svn_action, a_source, a_destination)
 	set x_source to XFile's make_with(a_source)
@@ -79,11 +79,14 @@ on make_alias(a_source, a_destination)
 end make_alias
 
 on make_symbolic_link(a_source, a_destination)
-	set a_name to name of (do(a_source) of PathAnalyzer)
-	set a_name to do of UniqueNamer about a_name at a_destination
-	set a_target to (a_destination as Unicode text) & a_name
-	symlink of ShellUtils from a_source into a_target with relative
-	note_file_changed(XFile's make_with(a_destination))
+	set x_destination to XFile's make_with(a_destination)
+	--set a_name to name of (do(a_source) of PathAnalyzer)
+	set a_mame to XFile's make_with(a_source)'s item_name()
+	--set a_name to do of UniqueNamer about a_name at a_destination
+	--set a_target to (a_destination as Unicode text) & a_name
+	set x_target to x_destination's unique_child(a_name)
+	symlink of ShellUtils from a_source into (x_target's hfs_path()) with relative
+	note_file_changed(x_destination)
 end make_symbolic_link
 
 on copy_clip_item(a_source, a_destination)
@@ -108,6 +111,7 @@ on show_alert(a_message, sub_message)
 end show_alert
 
 on will open theObject
+	log "start will open"
 	set coordinate system to AppleScript coordinate system
 	if InsertionLocator's is_location_in_window() then
 		tell application "Finder"
@@ -127,25 +131,25 @@ on bool_value(a_bool)
 	return (a_bool is 1)
 end bool_value
 
-script MessageDelegate
-	on ok_button()
-		return localized string "LauchSystemPreferences"
-	end ok_button
-	
-	on cancel_button()
-		return localized string "Cancel"
-	end cancel_button
-	
-	on title_message()
-		return localized string "GUIScriptingIsNotEnabled"
-	end title_message
-	
-	on detail_message()
-		return localized string "AskLaunchPreferences"
-	end detail_message
-end script
-
-on launched theObject
+on _main()
+	--log "start _man"
+	script MessageDelegate
+		on ok_button()
+			return localized string "LauchSystemPreferences"
+		end ok_button
+		
+		on cancel_button()
+			return localized string "Cancel"
+		end cancel_button
+		
+		on title_message()
+			return localized string "GUIScriptingIsNotEnabled"
+		end title_message
+		
+		on detail_message()
+			return localized string "AskLaunchPreferences"
+		end detail_message
+	end script
 	GUIScriptingChecker's set_delegate(MessageDelegate)
 	if not do() of GUIScriptingChecker then
 		-- GUI Scripting is disable
@@ -155,7 +159,7 @@ on launched theObject
 	
 	set target_location to InsertionLocator's do()
 	--log target_location
-	show window "Progress"
+	show my _progress_window
 	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
 		get a_list
@@ -165,7 +169,6 @@ on launched theObject
 		quit
 		return
 	end try
-	
 	set an_identifier to identifier of main bundle
 	if an_identifier is "MoveToHere" then
 		set do_file to move_clip_item
@@ -180,15 +183,12 @@ on launched theObject
 	else if an_identifier is "SVNMove" then
 		set do_file to svn_move
 	end if
-	
 	set file_manager to call method "defaultManager" of class "NSFileManager"
 	repeat with an_item in a_list
 		set is_exists to call method "fileExistsAtPath:" of file_manager with parameter an_item
 		set is_exists to bool_value(is_exists)
 		if not is_exists then
 			set a_msg to localized string "fileIsNotFound"
-			--set a_msg to a_msg & return & an_item
-			--show_message(a_msg)
 			show_alert(a_msg, an_item)
 			exit repeat
 		end if
@@ -205,8 +205,23 @@ on launched theObject
 			end if
 		end try
 	end repeat
-	
+end _main
+
+on launched theObject
+	--log "start launched"
+	try
+		_main()
+	on error msg number errno
+		show_alert(msg, "Error : " & errno)
+	end try
 	--beep
 	quit
 end launched
 
+on awake from nib theObject
+	--log "start awake form nib"
+	set a_name to name of theObject
+	if a_name is "Progress" then
+		set my _progress_window to theObject
+	end if
+end awake from nib
