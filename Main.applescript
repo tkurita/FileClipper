@@ -80,10 +80,7 @@ end make_alias
 
 on make_symbolic_link(a_source, a_destination)
 	set x_destination to XFile's make_with(a_destination)
-	--set a_name to name of (do(a_source) of PathAnalyzer)
-	set a_mame to XFile's make_with(a_source)'s item_name()
-	--set a_name to do of UniqueNamer about a_name at a_destination
-	--set a_target to (a_destination as Unicode text) & a_name
+	set a_name to XFile's make_with(a_source)'s item_name()
 	set x_target to x_destination's unique_child(a_name)
 	symlink of ShellUtils from a_source into (x_target's hfs_path()) with relative
 	note_file_changed(x_destination)
