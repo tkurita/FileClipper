@@ -5,7 +5,6 @@ on load(a_name)
 end load
 
 property XFile : load("XFile")
---property PathAnalyzer : PathAnalyzer of XFile
 property InsertionLocator : load("InsertionLocator")'s set_allow_closed_folder(false)
 property ShellUtils : load("ShellUtils")
 property GUIScriptingChecker : load("GUIScriptingChecker")
