@@ -199,6 +199,7 @@
 		2C9E8043104CF22F00C5B158 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13271103196E000578ACF /* PathExtra.m */; };
 		2C9E8044104CF22F00C5B158 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13271103196E000578ACF /* PathExtra.m */; };
 		2C9E8045104CF23000C5B158 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13271103196E000578ACF /* PathExtra.m */; };
+		2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */; };
 		2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
 		2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */; };
 		2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE2030E4C4246002A8807 /* BundleIcon.icns */; };
@@ -324,6 +325,8 @@
 		2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C9E7FD2104CDF7000C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
+		2C9E81DA104D22FA00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		2C9E81DE104D230800C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -599,6 +602,7 @@
 				2CF7418D09B9EBF200EF8406 /* InfoPlist.strings */,
 				2C9E7E0F104B88F100C5B158 /* FileProcessor.h */,
 				2C9E7E10104B88F100C5B158 /* FileProcessor.m */,
+				2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */,
 			);
 			path = MoveToHere;
 			sourceTree = "<group>";
@@ -889,6 +893,7 @@
 				2CAAE20C0E4C42A4002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E28104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1079,15 @@
 			children = (
 				2C9E7E79104B905200C5B158 /* English */,
 				2C9E7E7C104B90A400C5B158 /* Japanese */,
+			);
+			name = ServicesMenu.strings;
+			sourceTree = "<group>";
+		};
+		2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C9E81DA104D22FA00C5B158 /* English */,
+				2C9E81DE104D230800C5B158 /* Japanese */,
 			);
 			name = ServicesMenu.strings;
 			sourceTree = "<group>";
