@@ -19,7 +19,7 @@
 		activeExecutable = 2CF73DBE09B88D4C00EF8406 /* Move to Here */;
 		activeTarget = 2CF73DBC09B88D4C00EF8406 /* Move to Here */;
 		addToTargets = (
-			2CF73DBC09B88D4C00EF8406 /* Move to Here */,
+			2CF73E7B09B8997400EF8406 /* Make Symbolic Link to Here */,
 		);
 		breakpoints = (
 			2CF2D28C0D7AF3D3008666C6 /* Main.applescript:1 */,
@@ -839,7 +839,7 @@
 	2C9E7E0F104B88F100C5B158 /* FileProcessor.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{220, 0}";
 			sepNavVisRange = "{0, 220}";
 		};
 	};
@@ -847,7 +847,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {768, 644}}";
 			sepNavSelRange = "{1060, 0}";
-			sepNavVisRange = "{180, 995}";
+			sepNavVisRange = "{178, 997}";
 		};
 	};
 	2C9E7E14104B892300C5B158 /* FileProcessor.h */ = {
@@ -875,7 +875,7 @@
 	2C9E7E79104B905200C5B158 /* English */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
-			sepNavSelRange = "{35, 0}";
+			sepNavSelRange = "{0, 38}";
 			sepNavVisRange = "{0, 38}";
 		};
 	};
@@ -886,7 +886,7 @@
 	2C9E7E7C104B90A400C5B158 /* Japanese */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
-			sepNavSelRange = "{29, 0}";
+			sepNavSelRange = "{0, 32}";
 			sepNavVisRange = "{0, 32}";
 		};
 	};
@@ -2496,6 +2496,48 @@
 		vrLen = 733;
 		vrLoc = 0;
 	};
+	2C9E81DA104D22FA00C5B158 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{27, 0}";
+			sepNavVisRange = "{0, 38}";
+		};
+	};
+	2C9E81DE104D230800C5B158 /* Japanese */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{26, 2}";
+			sepNavVisRange = "{0, 31}";
+		};
+	};
+	2C9E81E2104D239F00C5B158 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{52, 0}";
+			sepNavVisRange = "{0, 52}";
+		};
+	};
+	2C9E81E6104D23C100C5B158 /* Japanese */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{35, 0}";
+			sepNavVisRange = "{0, 38}";
+		};
+	};
+	2C9E83D8104D245C00C5B158 /* FileProcessor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 220}";
+		};
+	};
+	2C9E83D9104D245C00C5B158 /* FileProcessor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{200, 0}";
+			sepNavVisRange = "{0, 200}";
+		};
+	};
 	2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{15, 135}, {873, 798}}";
@@ -3001,8 +3043,8 @@
 	};
 	2CF7417D09B9EA5600EF8406 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {702, 400}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
+			sepNavSelRange = "{0, 75}";
 			sepNavVisRange = "{0, 75}";
 			sepNavVisRect = "{{0, 0}, {805, 452}}";
 			sepNavWindowFrame = "{{38, 145}, {667, 733}}";
@@ -3010,7 +3052,7 @@
 	};
 	2CF7417E09B9EA6600EF8406 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {702, 400}}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 496}}";
 			sepNavSelRange = "{75, 0}";
 			sepNavVisRange = "{0, 75}";
 			sepNavVisRect = "{{0, 0}, {722, 411}}";

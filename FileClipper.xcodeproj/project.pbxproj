@@ -200,6 +200,8 @@
 		2C9E8044104CF22F00C5B158 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13271103196E000578ACF /* PathExtra.m */; };
 		2C9E8045104CF23000C5B158 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13271103196E000578ACF /* PathExtra.m */; };
 		2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */; };
+		2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E81E4104D23B100C5B158 /* ServicesMenu.strings */; };
+		2C9E83DB104D245C00C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E83D9104D245C00C5B158 /* FileProcessor.m */; };
 		2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
 		2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */; };
 		2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE2030E4C4246002A8807 /* BundleIcon.icns */; };
@@ -327,6 +329,10 @@
 		2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E81DA104D22FA00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E81DE104D230800C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		2C9E81E2104D239F00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		2C9E81E6104D23C100C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
+		2C9E83D8104D245C00C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C9E83D9104D245C00C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -591,6 +597,9 @@
 			children = (
 				2CAAE2030E4C4246002A8807 /* BundleIcon.icns */,
 				2CF740BC09B9CB0700EF8406 /* InfoPlist.strings */,
+				2C9E81E4104D23B100C5B158 /* ServicesMenu.strings */,
+				2C9E83D8104D245C00C5B158 /* FileProcessor.h */,
+				2C9E83D9104D245C00C5B158 /* FileProcessor.m */,
 			);
 			path = MakeSymbolicLinkToHere;
 			sourceTree = "<group>";
@@ -921,6 +930,7 @@
 				2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E27104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,6 +1045,7 @@
 				2C5FB18D1046116B006C3DC9 /* SmartActivate.c in Sources */,
 				2C9E7E34104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E8042104CF22E00C5B158 /* PathExtra.m in Sources */,
+				2C9E83DB104D245C00C5B158 /* FileProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,6 +1099,15 @@
 			children = (
 				2C9E81DA104D22FA00C5B158 /* English */,
 				2C9E81DE104D230800C5B158 /* Japanese */,
+			);
+			name = ServicesMenu.strings;
+			sourceTree = "<group>";
+		};
+		2C9E81E4104D23B100C5B158 /* ServicesMenu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C9E81E2104D239F00C5B158 /* English */,
+				2C9E81E6104D23C100C5B158 /* Japanese */,
 			);
 			name = ServicesMenu.strings;
 			sourceTree = "<group>";
