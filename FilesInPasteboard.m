@@ -32,7 +32,11 @@
 	} else {
 		NSString *a_path = [pasteboard stringForType:NSStringPboardType];
 		if (!a_path || (![a_path hasPrefix:@"/"]))  return nil;
-		result = [NSArray arrayWithObject:a_path];
+		if ([[NSFileManager defaultManager] fileExistsAtPath:a_path]) {
+			result = [NSArray arrayWithObject:a_path];
+		} else {
+			result = nil;
+		}
 	}
 	
 	//NSLog([result description]);

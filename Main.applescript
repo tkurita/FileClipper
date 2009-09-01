@@ -11,6 +11,7 @@ property GUIScriptingChecker : load("GUIScriptingChecker")
 
 property do_file : missing value
 property _progress_window : missing value
+property _window_controller : missing value
 
 on do_svn(svn_action, a_source, a_destination)
 	set x_source to XFile's make_with(a_source)
@@ -91,7 +92,6 @@ on copy_clip_item(a_source, a_destination)
 	set x_dest to x_dest's unique_child(x_source's item_name())
 	x_source's copy_to(x_dest)
 	note_file_changed(x_dest)
-	--copyItem of FileUtil from a_source into a_destination given name:"", mode:3
 end copy_clip_item
 
 on show_message(a_msg)
@@ -107,7 +107,7 @@ on show_alert(a_message, sub_message)
 end show_alert
 
 on will open theObject
-	log "start will open"
+	--log "start will open"
 	set coordinate system to AppleScript coordinate system
 	if InsertionLocator's is_location_in_window() then
 		tell application "Finder"
@@ -155,7 +155,8 @@ on _main()
 	
 	set target_location to InsertionLocator's do()
 	--log target_location
-	show my _progress_window
+	--show my _progress_window
+	call method "showWindow:" of my _window_controller
 	set a_list to call method "getContents" of class "FilesInPasteboard"
 	try
 		get a_list
@@ -219,5 +220,7 @@ on awake from nib theObject
 	set a_name to name of theObject
 	if a_name is "Progress" then
 		set my _progress_window to theObject
+	else if a_name is "WindowController" then
+		set my _window_controller to theObject
 	end if
 end awake from nib
