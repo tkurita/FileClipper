@@ -228,7 +228,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C9E8182104D206000C5B158</string>
+						<string>2C9E8195104D20EA00C5B158</string>
 						<key>history</key>
 						<array>
 							<string>2C9E8169104D101300C5B158</string>
@@ -268,7 +268,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C9E8183104D206000C5B158</string>
+						<string>2C9E8196104D20EA00C5B158</string>
 						<key>history</key>
 						<array>
 							<string>2C9E816A104D101300C5B158</string>
@@ -366,6 +366,8 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>2C9E7E23104B893800C5B158</string>
+								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>2CF7417C09B9EA5600EF8406</string>
 								<string>2C9E7E78104B905200C5B158</string>
@@ -382,13 +384,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>2</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>10</integer>
-									<integer>2</integer>
+									<integer>17</integer>
+									<integer>14</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -430,7 +427,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ProgressWindowController.m</string>
+								<string>Main.applescript</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -438,11 +435,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ProgressWindowController.m</string>
+										<string>Main.applescript</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C9E817F104D206000C5B158</string>
+										<string>2C9E8194104D20EA00C5B158</string>
 										<key>history</key>
 										<array>
 											<string>2CF7421509B9EF2600EF8406</string>
@@ -464,12 +461,10 @@
 											<string>2C9E7EE8104C02EE00C5B158</string>
 											<string>2C9E7EE9104C02EE00C5B158</string>
 											<string>2C9E7EEA104C02EE00C5B158</string>
-											<string>2C9E7EEB104C02EE00C5B158</string>
 											<string>2C9E7EED104C02EE00C5B158</string>
 											<string>2C9E7EEE104C02EE00C5B158</string>
 											<string>2C9E7EF1104C02EE00C5B158</string>
 											<string>2C9E7EF3104C02EE00C5B158</string>
-											<string>2C9E7F98104CD38800C5B158</string>
 											<string>2C9E7FA6104CD5DC00C5B158</string>
 											<string>2C9E7FE0104CEE7E00C5B158</string>
 											<string>2C9E8004104CEF6700C5B158</string>
@@ -481,10 +476,14 @@
 											<string>2C9E8115104D023F00C5B158</string>
 											<string>2C9E8135104D03AC00C5B158</string>
 											<string>2C9E8136104D03AC00C5B158</string>
-											<string>2C9E8160104D101300C5B158</string>
 											<string>2C9E8161104D101300C5B158</string>
 											<string>2C9E817D104D206000C5B158</string>
-											<string>2C9E815F104D101300C5B158</string>
+											<string>2C9E8188104D20EA00C5B158</string>
+											<string>2C9E8189104D20EA00C5B158</string>
+											<string>2C9E818A104D20EA00C5B158</string>
+											<string>2C9E818B104D20EA00C5B158</string>
+											<string>2C9E818C104D20EA00C5B158</string>
+											<string>2C9E818D104D20EA00C5B158</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -528,6 +527,12 @@
 											<string>2C9E8138104D03AC00C5B158</string>
 											<string>2C9E8165104D101300C5B158</string>
 											<string>2C9E817E104D206000C5B158</string>
+											<string>2C9E818E104D20EA00C5B158</string>
+											<string>2C9E818F104D20EA00C5B158</string>
+											<string>2C9E8190104D20EA00C5B158</string>
+											<string>2C9E8191104D20EA00C5B158</string>
+											<string>2C9E8192104D20EA00C5B158</string>
+											<string>2C9E8193104D20EA00C5B158</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -727,6 +732,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2C9E7F39104C0B9500C5B158</string>
 		<string>2C9E8167104D101300C5B158</string>
 		<string>/Users/tkurita/Dev/Projects/FileClipper/trunk/FileClipper.xcodeproj</string>
@@ -933,13 +939,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>2C9E7E89104B93F600C5B158</string>
+				<string>2C9E8197104D20EA00C5B158</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>2C9E7E8A104B93F600C5B158</string>
-				<string>2C9E7E8B104B93F600C5B158</string>
-				<string>2C9E7E8C104B93F600C5B158</string>
-				<string>2C9E7E8D104B93F600C5B158</string>
-				<string>2C9E7E8E104B93F600C5B158</string>
+				<string>2C9E8198104D20EA00C5B158</string>
+				<string>2C9E8199104D20EA00C5B158</string>
+				<string>2C9E819A104D20EA00C5B158</string>
+				<string>2C9E819B104D20EA00C5B158</string>
+				<string>2C9E819C104D20EA00C5B158</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

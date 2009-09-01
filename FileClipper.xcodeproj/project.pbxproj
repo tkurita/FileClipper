@@ -31,7 +31,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2C4102EB0D854BEF00AC0593 /* Main.applescript in AppleScript */,
 				2C9E7EA2104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -42,7 +41,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2C4103620D85597300AC0593 /* Main.applescript in AppleScript */,
 				2C9E7EA0104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -53,7 +51,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2CAB385709BEB20300A9C0EC /* Main.applescript in AppleScript */,
 				2C9E7E9D104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -64,7 +61,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2CAB385909BEB20400A9C0EC /* Main.applescript in AppleScript */,
 				2C9E7E9F104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -75,7 +71,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2CAB376F09BEAA3A00A9C0EC /* Main.applescript in AppleScript */,
 				2C9E7EA1104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -86,7 +81,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				2CAB385809BEB20400A9C0EC /* Main.applescript in AppleScript */,
 				2C9E7E9E104BD85700C5B158 /* FinderController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
@@ -98,7 +92,6 @@
 		2C4102E70D854BEF00AC0593 /* FilesInPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF73B7909B870CD00EF8406 /* FilesInPasteboard.h */; };
 		2C4102E80D854BEF00AC0593 /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
 		2C4102E90D854BEF00AC0593 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
-		2C4102EB0D854BEF00AC0593 /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
 		2C4102EF0D854BEF00AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2C4102F10D854BEF00AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
@@ -110,7 +103,6 @@
 		2C41035E0D85597300AC0593 /* FilesInPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF73B7909B870CD00EF8406 /* FilesInPasteboard.h */; };
 		2C41035F0D85597300AC0593 /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
 		2C4103600D85597300AC0593 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
-		2C4103620D85597300AC0593 /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4103640D85597300AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
 		2C4103650D85597300AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2C4103670D85597300AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
@@ -221,11 +213,7 @@
 		2CAB363809BE6A3800A9C0EC /* ProgressWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */; };
 		2CAB364D09BE6BE200A9C0EC /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
 		2CAB364E09BE6BE200A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
-		2CAB376F09BEAA3A00A9C0EC /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CAB37A509BEAD0800A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
-		2CAB385709BEB20300A9C0EC /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
-		2CAB385809BEB20400A9C0EC /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
-		2CAB385909BEB20400A9C0EC /* Main.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CAB376E09BEAA3A00A9C0EC /* Main.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CAB385D09BEB20D00A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2CAB385E09BEB20E00A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2CAB386109BEB6D100A9C0EC /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAB364B09BE6BE200A9C0EC /* AppController.h */; };
