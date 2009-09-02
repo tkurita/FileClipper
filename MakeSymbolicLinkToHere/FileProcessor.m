@@ -30,7 +30,8 @@
 	NSString* source;
 	while (source = [enumerator nextObject]) {
 		NSString *newname = [[source lastPathComponent] uniqueNameAtLocation:location];
-		if (symlink([source fileSystemRepresentation], 
+		NSString *relpath = [source relativePathWithBase:location];
+		if (symlink([relpath fileSystemRepresentation], 
 					[[location stringByAppendingPathComponent:newname] fileSystemRepresentation]) != 0) {
 			NSLog(@"Error to make symbolic link : %d", errno);
 		}
