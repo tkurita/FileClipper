@@ -220,6 +220,13 @@
 		2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FB17E1046109F006C3DC9 /* Carbon.framework */; };
 		2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */; };
 		2C9E85DE104E509900C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */; };
+		2C9E8609104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860A104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860B104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860C104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860D104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860E104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
 		2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
 		2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */; };
 		2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE2030E4C4246002A8807 /* BundleIcon.icns */; };
@@ -331,13 +338,11 @@
 		2C9E7E7C104B90A400C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E7E9C104BD85700C5B158 /* FinderController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FinderController.applescript; sourceTree = "<group>"; };
 		2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
-		2C9E7FD2104CDF7000C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E81DA104D22FA00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E81DE104D230800C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E81E2104D239F00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E81E6104D23C100C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
-		2C9E83D8104D245C00C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E83D9104D245C00C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E83E0104D2A1B00C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E83E4104D2A3B00C5B158 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
@@ -366,6 +371,8 @@
 		2C9E85B1104E4D2700C5B158 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C9E85B2104E4D2700C5B158 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
 		2C9E85B7104E4D8D00C5B158 /* Make Hard Link to Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Hard Link to Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9E8608104E784700C5B158 /* FileProcessorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorBase.m; sourceTree = "<group>"; };
+		2C9E8610104E788A00C5B158 /* FileProcessorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorBase.h; sourceTree = "<group>"; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -611,6 +618,8 @@
 				2C9E7E2F104B8A1100C5B158 /* ProgressWindowController.h */,
 				2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */,
 				2C9E7E0F104B88F100C5B158 /* FileProcessor.h */,
+				2C9E8608104E784700C5B158 /* FileProcessorBase.m */,
+				2C9E8610104E788A00C5B158 /* FileProcessorBase.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -682,7 +691,6 @@
 				2CAAE2030E4C4246002A8807 /* BundleIcon.icns */,
 				2CF740BC09B9CB0700EF8406 /* InfoPlist.strings */,
 				2C9E81E4104D23B100C5B158 /* ServicesMenu.strings */,
-				2C9E83D8104D245C00C5B158 /* FileProcessor.h */,
 				2C9E83D9104D245C00C5B158 /* FileProcessor.m */,
 			);
 			path = MakeSymbolicLinkToHere;
@@ -717,7 +725,6 @@
 				2C9E7E78104B905200C5B158 /* ServicesMenu.strings */,
 				2CAAE1850E4C4103002A8807 /* BundleIcon.icns */,
 				2CF7418209B9EA7400EF8406 /* InfoPlist.strings */,
-				2C9E7FD2104CDF7000C5B158 /* FileProcessor.h */,
 				2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */,
 			);
 			path = CopyToHere;
@@ -1035,6 +1042,7 @@
 				2C5FB18F1046116C006C3DC9 /* SmartActivate.c in Sources */,
 				2C9E7E3C104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E8044104CF22F00C5B158 /* PathExtra.m in Sources */,
+				2C9E860B104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,6 +1061,7 @@
 				2C5FB1901046116D006C3DC9 /* SmartActivate.c in Sources */,
 				2C9E7E38104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E8045104CF23000C5B158 /* PathExtra.m in Sources */,
+				2C9E860A104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1081,7 @@
 				2C9E85CD104E4E4E00C5B158 /* WindowVisibilityController.m in Sources */,
 				2C9E85CE104E4E5600C5B158 /* main.m in Sources */,
 				2C9E85DE104E509900C5B158 /* FileProcessor.m in Sources */,
+				2C9E8609104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,6 +1107,7 @@
 				2C9E84E6104DF35900C5B158 /* NDResourceFork.m in Sources */,
 				2C9E84EF104DF35900C5B158 /* NSString+NDCarbonUtilities.m in Sources */,
 				2C9E84F1104DF35900C5B158 /* NSURL+NDCarbonUtilities.m in Sources */,
+				2C9E860E104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1127,7 @@
 				2C9E7E36104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E7FF6104CEEEC00C5B158 /* FileProcessor.m in Sources */,
 				2C9E8043104CF22F00C5B158 /* PathExtra.m in Sources */,
+				2C9E860C104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,6 +1147,7 @@
 				2C9E7E3A104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E7FD5104CDF7000C5B158 /* FileProcessor.m in Sources */,
 				2C9E8040104CF22D00C5B158 /* PathExtra.m in Sources */,
+				2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1167,7 @@
 				2C9E7E34104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E8042104CF22E00C5B158 /* PathExtra.m in Sources */,
 				2C9E83DB104D245C00C5B158 /* FileProcessor.m in Sources */,
+				2C9E860D104E784700C5B158 /* FileProcessorBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

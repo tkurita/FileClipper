@@ -1,12 +1,7 @@
 #import <Cocoa/Cocoa.h>
+#import "FileProcessorBase.h"
 
-
-@interface FileProcessor : NSObject {
-	NSString *location;
-	NSArray *sourceItems;
+@interface FileProcessor : FileProcessorBase {
 }
-
-- (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path;
-- (void) startTask:(id)sender;
 
 @end

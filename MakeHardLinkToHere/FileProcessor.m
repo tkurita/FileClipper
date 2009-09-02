@@ -3,29 +3,12 @@
 
 @implementation FileProcessor
 
-- (void)setLocation:(NSString *)path {
-	[path retain];
-	[location autorelease];
-	location = path;
-}
 
-- (void)setSourceItems:(NSArray *)array {
-	[array retain];
-	[sourceItems autorelease];
-	sourceItems = array;
-}
-
-- (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path {
-	self = [self init];
-	[self setLocation:path];
-	[self setSourceItems:array];
-	return self;
-}
-
-- (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
+- (void) displayErrorLog:(NSString *)aText
 {
-	NSLog([errorInfo description]);
-	return NO;
+	[[NSApp delegate] 
+		performSelectorOnMainThread:@selector(displayErrorLog:) 
+		withObject:aText waitUntilDone:NO];
 }
 
 - (void) startTask:(id)sender
@@ -38,7 +21,8 @@
 		NSString *newname = [[source lastPathComponent] uniqueNameAtLocation:location];
 		NSString *destination = [location stringByAppendingPathComponent:newname];
 		if (![file_manager linkPath:source toPath:destination handler:self] ){
-			NSLog(@"Fail to make hard link from %@ to %@", source, destination);
+			[self displayErrorLog:
+			 [NSString stringWithFormat:@"Fail to make hard link from %@ to %@\n", source, destination]];
 		}
 	}
 	[pool release];

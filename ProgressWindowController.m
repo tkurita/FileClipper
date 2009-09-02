@@ -25,7 +25,7 @@
 - (void)processFiles:(NSArray *)array toLocation:(NSString *)path
 {
 	[self showWindow:self];
-	FileProcessor* processor = [[FileProcessor alloc] initWithSourceItems:array toLocation:path];
+	FileProcessor* processor = [[FileProcessor alloc] initWithSourceItems:array toLocation:path owner:self];
 	NSThread *thread = [[NSThread alloc] initWithTarget:[processor autorelease]
 											   selector:@selector(startTask:) object:self];
 	[[NSNotificationCenter defaultCenter] addObserver:self

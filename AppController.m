@@ -7,6 +7,18 @@
 
 @implementation AppController
 
+- (void)displayErrorLog:(NSString *)aText
+{
+	[errorWindow orderFront:self];
+    NSRange endRange;
+	
+    endRange.location = [[errorTextView textStorage] length];
+    endRange.length = 0;
+    [errorTextView replaceCharactersInRange:endRange withString:aText];
+    endRange.length = [errorTextView length];
+    [errorTextView scrollRangeToVisible:endRange];
+}
+
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");

@@ -4,25 +4,6 @@
 
 @implementation FileProcessor
 
-- (void)setLocation:(NSString *)path {
-	[path retain];
-	[location autorelease];
-	location = path;
-}
-
-- (void)setSourceItems:(NSArray *)array {
-	[array retain];
-	[sourceItems autorelease];
-	sourceItems = array;
-}
-
-- (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path {
-	self = [self init];
-	[self setLocation:path];
-	[self setSourceItems:array];
-	return self;
-}
-
 - (void) startTask:(id)sender
 {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
