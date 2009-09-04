@@ -1,10 +1,13 @@
 #import <Cocoa/Cocoa.h>
 #import "PaletteWindowController.h"
+#import "FileProcessor.h"
 
 @interface ProgressWindowController : PaletteWindowController {
 	IBOutlet id indicator;
 	IBOutlet id askWindow;
 	IBOutlet id newNameField;
+	IBOutlet FileProcessor* fileProcessor;
+	IBOutlet id messageField;
 }
 
 - (IBAction)okAction:(id)sender;

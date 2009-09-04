@@ -1,9 +1,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface FileProcessorBase : NSObject {
+	IBOutlet id owner;
 	NSString *location;
 	NSArray *sourceItems;
-	id owner;
 	NSString* currentSource;
 	NSString* newName;
 	NSLock* lock;
@@ -12,7 +12,7 @@
 @property (retain) NSArray* sourceItems;
 @property (assign) id owner;
 @property (assign) NSString* currentSource;
-@property (assign) NSString* newName;
+@property (retain) NSString* newName;
 
 - (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path owner:(id)ownerObject;
 - (void)startTask:(id)sender;

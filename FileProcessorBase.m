@@ -4,14 +4,29 @@
 @implementation FileProcessorBase
 @synthesize location, sourceItems, owner, currentSource, newName;
 
+- (id)init
+{
+	if (self = [super init]) {
+		lock = [NSLock new];
+	}
+	return self;
+}
+
 - (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path owner:(id)ownerObject
 {
 	self = [self init];
-	self.location = [path cleanPath];
+	self.location = path;
 	self.sourceItems = array;
 	self.owner = ownerObject;
-	lock = [NSLock new];
 	return self;
+}
+
+- (void)setLocation:(NSString *)path
+{
+	path = [path cleanPath];
+	[path retain];
+	[location autorelease];
+	location = path;
 }
 
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
@@ -56,6 +71,7 @@
 {
 	[sourceItems release];
 	[location release];
+	[newName release];
 	[lock release];
 	[super dealloc];
 }

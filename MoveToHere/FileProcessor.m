@@ -3,7 +3,7 @@
 
 @implementation FileProcessor
 
-NSTask* makeSVNTask((NSArray *)arguments)
+NSTask* makeSVNTask(NSArray* arguments)
 {
 	NSString* svncommand = [[NSUserDefaults standardUserDefaults] stringForKey:@"SVNCommand"];
 	NSTask* task = [NSTask new];
@@ -17,10 +17,10 @@ NSTask* makeSVNTask((NSArray *)arguments)
 - (BOOL)trySVN:(NSString *)source
 {
 	NSTask* svntask = makeSVNTask([NSArray arrayWithObjects:@"info", source, nil]);
+	BOOL result = NO;
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
-		result = NO;
 		goto bail;
 	}
 	
@@ -29,7 +29,6 @@ NSTask* makeSVNTask((NSArray *)arguments)
 	[svntask waitUntilExit];
 	
 	if ([svntask terminationStatus] != 0) {
-		result = NO;
 		goto bail;
 	}
 
@@ -38,13 +37,12 @@ NSTask* makeSVNTask((NSArray *)arguments)
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
-		NSLog([NSString stringWithData:[[[svntask standardError] fileHandleForReading] availableData]
-					encodingCandidates:NSUTF8StringEncoding]);
-		result = NO;
+		NSLog([[[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
+						encoding:NSUTF8StringEncoding] autorelease]);
 		goto bail;
 	}
 	
-	retult = YES;
+	result = YES;
 bail:
 	return result;
 }

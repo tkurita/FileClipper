@@ -11,6 +11,11 @@
 
 - (IBAction)okAction:(id)sender
 {
+	NSString *newpath = [fileProcessor.location stringByAppendingPathComponent:[newNameField stringValue]];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:newpath]) {
+		[messageField setStringValue:@"Same name exists."];
+		return;
+	}
 	[NSApp endSheet:askWindow returnCode:NSOKButton];
 }
 
@@ -53,8 +58,10 @@
 - (void)processFiles:(NSArray *)array toLocation:(NSString *)path
 {
 	[self showWindow:self];
-	FileProcessor* processor = [[FileProcessor alloc] initWithSourceItems:array toLocation:path owner:self];
-	NSThread *thread = [[NSThread alloc] initWithTarget:[processor autorelease]
+	//FileProcessor* processor = [[FileProcessor alloc] initWithSourceItems:array toLocation:path owner:self];
+	fileProcessor.sourceItems = array;
+	fileProcessor.location = path;
+	NSThread *thread = [[NSThread alloc] initWithTarget:fileProcessor
 											   selector:@selector(startTask:) object:self];
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(threadExit:) 

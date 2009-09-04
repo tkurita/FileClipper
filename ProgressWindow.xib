@@ -8,8 +8,8 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
 			<integer value="14"/>
+			<integer value="4"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -134,7 +134,7 @@
 								<string key="NSContents">Enter New Name:</string>
 								<reference key="NSSupport" ref="80117917"/>
 								<reference key="NSControlView" ref="435233839"/>
-								<object class="NSColor" key="NSBackgroundColor">
+								<object class="NSColor" key="NSBackgroundColor" id="219658619">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
 									<string key="NSColorName">controlColor</string>
@@ -143,7 +143,7 @@
 										<bytes key="NSWhite">MC42NjY2NjY2OQA</bytes>
 									</object>
 								</object>
-								<object class="NSColor" key="NSTextColor">
+								<object class="NSColor" key="NSTextColor" id="573618143">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
 									<string key="NSColorName">controlTextColor</string>
@@ -191,6 +191,22 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
+						<object class="NSTextField" id="385465910">
+							<reference key="NSNextResponder" ref="928960337"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{17, 35}, {170, 17}}</string>
+							<reference key="NSSuperview" ref="928960337"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="157649117">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents"/>
+								<reference key="NSSupport" ref="80117917"/>
+								<reference key="NSControlView" ref="385465910"/>
+								<reference key="NSBackgroundColor" ref="219658619"/>
+								<reference key="NSTextColor" ref="573618143"/>
+							</object>
+						</object>
 					</object>
 					<string key="NSFrameSize">{392, 127}</string>
 					<reference key="NSSuperview"/>
@@ -198,6 +214,9 @@
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMinSize">{392, 149}</string>
 				<string key="NSMaxSize">{800, 149}</string>
+			</object>
+			<object class="NSCustomObject" id="759309362">
+				<string key="NSClassName">FileProcessor</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -258,6 +277,30 @@
 						<reference key="destination" ref="799903321"/>
 					</object>
 					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">owner</string>
+						<reference key="source" ref="759309362"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">fileProcessor</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="759309362"/>
+					</object>
+					<int key="connectionID">29</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">messageField</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="385465910"/>
+					</object>
+					<int key="connectionID">32</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -332,6 +375,7 @@
 							<reference ref="435233839"/>
 							<reference ref="799903321"/>
 							<reference ref="62747785"/>
+							<reference ref="385465910"/>
 						</object>
 						<reference key="parent" ref="127394174"/>
 					</object>
@@ -391,6 +435,26 @@
 						<reference key="object" ref="418842254"/>
 						<reference key="parent" ref="799903321"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">27</int>
+						<reference key="object" ref="759309362"/>
+						<reference key="parent" ref="1002"/>
+						<string key="objectName">File Processor</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">30</int>
+						<reference key="object" ref="385465910"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="157649117"/>
+						</object>
+						<reference key="parent" ref="928960337"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">31</int>
+						<reference key="object" ref="157649117"/>
+						<reference key="parent" ref="385465910"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -401,7 +465,6 @@
 					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
 					<string>13.IBEditorWindowLastContentRect</string>
-					<string>13.IBPluginDependency</string>
 					<string>13.IBWindowTemplateEditedContentRect</string>
 					<string>13.NSWindowTemplate.visibleAtLaunch</string>
 					<string>13.windowTemplate.hasMaxSize</string>
@@ -417,6 +480,7 @@
 					<string>20.IBPluginDependency</string>
 					<string>21.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
+					<string>27.IBPluginDependency</string>
 					<string>3.IBAttributePlaceholdersKey</string>
 					<string>3.IBEditorWindowLastContentRect</string>
 					<string>3.IBWindowTemplateEditedContentRect</string>
@@ -424,6 +488,8 @@
 					<string>3.NSWindowTemplate.visibleAtLaunch</string>
 					<string>3.windowTemplate.hasMinSize</string>
 					<string>3.windowTemplate.minSize</string>
+					<string>30.IBPluginDependency</string>
+					<string>31.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>4.ImportedFromIB2</string>
 					<string>5.IBPluginDependency</string>
@@ -435,13 +501,13 @@
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>{{21, 695}, {392, 127}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{21, 695}, {392, 127}}</string>
 					<boolean value="NO" id="6"/>
 					<boolean value="YES" id="5"/>
 					<reference ref="5"/>
 					<string>{800, 127}</string>
 					<string>{392, 127}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -466,6 +532,8 @@
 					<reference ref="6"/>
 					<reference ref="5"/>
 					<string>{213, 107}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -492,11 +560,35 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">FileProcessor</string>
+					<string key="superclassName">FileProcessorBase</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">FileProcessor.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">FileProcessorBase</string>
+					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">startTask:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">owner</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">FileProcessorBase.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">PaletteWindowController</string>
 					<string key="superclassName">NSWindowController</string>
@@ -538,11 +630,15 @@
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>askWindow</string>
+							<string>fileProcessor</string>
 							<string>indicator</string>
+							<string>messageField</string>
 							<string>newNameField</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>FileProcessor</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
