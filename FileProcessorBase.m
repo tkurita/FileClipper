@@ -100,9 +100,13 @@ bail:
 {
 	self.currentSource = source;
 	self.newName = nil;
-	[owner performSelectorOnMainThread:@selector(askNewName:) withObject:self waitUntilDone:YES];
-	[lock lock];
-	[lock unlock];
+	if ([[location stringByAppendingPathComponent:[source lastPathComponent]] fileExists]) {
+		[owner performSelectorOnMainThread:@selector(askNewName:) withObject:self waitUntilDone:YES];
+		[lock lock];
+		[lock unlock];
+	} else {
+		self.newName = [source lastPathComponent];
+	}
 	return (newName && ![newName isEqualToString:[source lastPathComponent]]);
 }
 

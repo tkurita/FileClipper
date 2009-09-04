@@ -20,10 +20,8 @@
 	while (source = [enumerator nextObject]) {
 		source = [source cleanPath];
 		self.newName = [source lastPathComponent];
-		if (![[source stringByDeletingLastPathComponent] isEqualToString:location] 
-				|| [self resolveNewName:source]) {
+		if ([self resolveNewName:source]) {
 			if (![self trySVN:@"mv" withSource:source]) {
-				//self.newName = [newName uniqueNameAtLocation:location];
 				[file_manager movePath:source toPath:[location stringByAppendingPathComponent:newName] handler:self];
 			}
 		}
