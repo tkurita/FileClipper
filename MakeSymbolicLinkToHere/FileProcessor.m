@@ -4,9 +4,8 @@
 
 @implementation FileProcessor
 
-- (void) startTask:(id)sender
+- (void)doTask:(id)sender
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSEnumerator* enumerator = [sourceItems objectEnumerator];
 	NSString* source;
 	while (source = [enumerator nextObject]) {
@@ -17,6 +16,5 @@
 			NSLog(@"Error to make symbolic link : %d", errno);
 		}
 	}
-	[pool release];
 }
 @end

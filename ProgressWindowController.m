@@ -24,13 +24,12 @@
 	[NSApp endSheet:askWindow returnCode:NSCancelButton];
 }
 
-- (void)taskEnded:(NSThread *)thread
+- (void)taskEnded:(id)sender
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSThreadWillExitNotification object:thread];
-	[thread release];
 	[indicator stopAnimation:self];
 	[self close];	
 }
+
 
 - (void)threadExit:(NSNotification *)aNotification
 {
@@ -39,7 +38,6 @@
 
 - (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(FileProcessor *)processor
 {
-	NSLog(@"sheetDidEnd");
 	if (returnCode == NSOKButton) {
 		processor.newName = [newNameField stringValue];
 	}
@@ -58,15 +56,9 @@
 - (void)processFiles:(NSArray *)array toLocation:(NSString *)path
 {
 	[self showWindow:self];
-	//FileProcessor* processor = [[FileProcessor alloc] initWithSourceItems:array toLocation:path owner:self];
 	fileProcessor.sourceItems = array;
 	fileProcessor.location = path;
-	NSThread *thread = [[NSThread alloc] initWithTarget:fileProcessor
-											   selector:@selector(startTask:) object:self];
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(threadExit:) 
-											 name:NSThreadWillExitNotification object:thread];
-	[thread start];
+	[NSThread detachNewThreadSelector:@selector(startThreadTask:) toTarget:fileProcessor withObject:self];
 }
 
 

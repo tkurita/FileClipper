@@ -15,7 +15,7 @@
 @property (retain) NSString* newName;
 
 - (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path owner:(id)ownerObject;
-- (void)startTask:(id)sender;
+- (void)startThreadTask:(id)sender;
 - (void)displayErrorLog:(NSString *)aText;
 - (void)lock;
 - (void)unlock;

@@ -47,9 +47,8 @@ bail:
 	return result;
 }
 
-- (void)startTask:(id)sender
+- (void)doTask:(id)sender
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSEnumerator* enumerator = [sourceItems objectEnumerator];
 	NSString* source;
 	NSFileManager* file_manager = [NSFileManager defaultManager];
@@ -64,6 +63,5 @@ bail:
 			}
 		}
 	}
-	[pool release];
 }
 @end

@@ -329,7 +329,6 @@
 		2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
 		2C9E7E0F104B88F100C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
-		2C9E7E14104B892300C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7E15104B892300C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressWindow.xib; sourceTree = "<group>"; };
 		2C9E7E2F104B8A1100C5B158 /* ProgressWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWindowController.h; sourceTree = "<group>"; };
@@ -712,7 +711,6 @@
 			children = (
 				2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */,
 				2CF7419309B9EC4500EF8406 /* InfoPlist.strings */,
-				2C9E7E14104B892300C5B158 /* FileProcessor.h */,
 				2C9E7E15104B892300C5B158 /* FileProcessor.m */,
 				2C9E83E2104D2A3100C5B158 /* ServicesMenu.strings */,
 			);

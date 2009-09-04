@@ -62,9 +62,18 @@
 	return (newName && ![newName isEqualToString:[source lastPathComponent]]);
 }
 
-- (void)startTask:(id)sender
+- (void)doTask:(id)sender
 {
+	
+}
 
+- (void)startThreadTask:(id)sender
+{
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
+	[self doTask:sender];
+	[pool release];
+	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
+	[NSThread exit];
 }
 
 - (void) dealloc

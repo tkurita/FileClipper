@@ -5,9 +5,8 @@
 
 @implementation FileProcessor
 
-- (void) startTask:(id)sender
+- (void)doTask:(id)sender
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSEnumerator* enumerator = [sourceItems objectEnumerator];
 	NSString* source;
 	while (source = [enumerator nextObject]) {
@@ -22,6 +21,6 @@
 			NSLog(@"Fail to make alias for %@", source);
 		}
 	}
-	[pool release];
 }
+
 @end
