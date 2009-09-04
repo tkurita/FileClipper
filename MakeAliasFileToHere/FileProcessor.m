@@ -15,10 +15,10 @@
 		NDAlias* alias = [NDAlias aliasWithPath:source];
 		if (alias) {
 			if (![alias writeToFile:destination includeCustomIcon:NO] ) {
-				NSLog(@"Fail to make alias file at %@", destination);
+				[self displayErrorLog:@"Fail to make alias file at %@.\n", destination];
 			}
 		} else {
-			NSLog(@"Fail to make alias for %@", source);
+			[self displayErrorLog:@"Fail to make alias for %@.\n", source];
 		}
 	}
 }

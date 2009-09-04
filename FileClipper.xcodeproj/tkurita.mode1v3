@@ -228,7 +228,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C17FC4C105137DA00391FF8</string>
+						<string>2C17FC62105138B300391FF8</string>
 						<key>history</key>
 						<array>
 							<string>2C17FC281051370000391FF8</string>
@@ -326,12 +326,12 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>2C9E7E23104B893800C5B158</string>
-								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>2CE13263103196E000578ACF</string>
 								<string>2CF7417C09B9EA5600EF8406</string>
+								<string>2CF7409909B9C8FF00EF8406</string>
 								<string>2CF7409A09B9C8FF00EF8406</string>
 								<string>2CF7409B09B9C8FF00EF8406</string>
+								<string>2C9E85A9104E4D2700C5B158</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1058C7A0FEA54F0111CA2CBB</string>
 								<string>2C9E7EB1104BDCE000C5B158</string>
@@ -340,13 +340,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>55</integer>
-									<integer>52</integer>
+									<integer>49</integer>
+									<integer>46</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 640}, {303, 584}}</string>
+							<string>{{0, 393}, {303, 584}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -383,7 +383,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>InfoPlist.strings</string>
+								<string>FileProcessor.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -391,11 +391,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>InfoPlist.strings</string>
+										<string>FileProcessor.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C17FC49105137DA00391FF8</string>
+										<string>2C17FC61105138B300391FF8</string>
 										<key>history</key>
 										<array>
 											<string>2CF7421509B9EF2600EF8406</string>
@@ -463,18 +463,18 @@
 											<string>2C9E88E81050EA8F00C5B158</string>
 											<string>2C9E88FC1050EBDC00C5B158</string>
 											<string>2C9E88FD1050EBDC00C5B158</string>
-											<string>2C9E88FF1050EBDC00C5B158</string>
-											<string>2C9E89161051076000C5B158</string>
 											<string>2C9E89181051076000C5B158</string>
 											<string>2C9E89191051076000C5B158</string>
-											<string>2C17FC2F105137DA00391FF8</string>
 											<string>2C17FC30105137DA00391FF8</string>
-											<string>2C17FC31105137DA00391FF8</string>
-											<string>2C17FC32105137DA00391FF8</string>
 											<string>2C17FC33105137DA00391FF8</string>
 											<string>2C17FC34105137DA00391FF8</string>
 											<string>2C17FC35105137DA00391FF8</string>
-											<string>2C9E847D104DF29D00C5B158</string>
+											<string>2C17FC55105138B300391FF8</string>
+											<string>2C17FC56105138B300391FF8</string>
+											<string>2C17FC57105138B300391FF8</string>
+											<string>2C17FC58105138B300391FF8</string>
+											<string>2C17FC59105138B300391FF8</string>
+											<string>2C17FC5A105138B300391FF8</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -575,6 +575,12 @@
 											<string>2C17FC46105137DA00391FF8</string>
 											<string>2C17FC47105137DA00391FF8</string>
 											<string>2C17FC48105137DA00391FF8</string>
+											<string>2C17FC5B105138B300391FF8</string>
+											<string>2C17FC5C105138B300391FF8</string>
+											<string>2C17FC5D105138B300391FF8</string>
+											<string>2C17FC5E105138B300391FF8</string>
+											<string>2C17FC5F105138B300391FF8</string>
+											<string>2C17FC60105138B300391FF8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -774,6 +780,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2C17FC63105138B300391FF8</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2C4C9FB10F722D3800C2F097</string>
 		<string>2C17FC4A105137DA00391FF8</string>
