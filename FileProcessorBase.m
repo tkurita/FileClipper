@@ -2,7 +2,7 @@
 #import "PathExtra.h"
 
 @implementation FileProcessorBase
-@synthesize location, sourceItems, owner, currentSource, newName;
+@synthesize location, sourceItems, owner, currentSource, newName, loginShell;
 
 - (id)init
 {
@@ -27,6 +27,50 @@
 	[path retain];
 	[location autorelease];
 	location = path;
+}
+
+- (NSTask*)loginShellTask:(NSArray*)arguments
+{
+	NSTask* task = [NSTask new];
+	[task setLaunchPath:loginShell];
+	[task setArguments:arguments];
+	[task setStandardError:[NSPipe pipe]];
+	[task setStandardOutput:[NSPipe pipe]];
+	return [task autorelease];
+}
+
+- (BOOL)trySVN:(NSString *)command withSource:(NSString *)source
+{
+	NSTask* svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"",source, nil]];
+	BOOL result = NO;
+	[svntask launch];
+	[svntask waitUntilExit];
+	if ([svntask terminationStatus] != 0) {
+		goto bail;
+	}
+	
+	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"", location, nil]];
+	[svntask launch];
+	[svntask waitUntilExit];
+	
+	if ([svntask terminationStatus] != 0) {
+		goto bail;
+	}
+	
+	NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
+	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", svncommand, source, 
+									[location stringByAppendingPathComponent:newName], nil]];
+	[svntask launch];
+	[svntask waitUntilExit];
+	if ([svntask terminationStatus] != 0) {
+		NSLog([[[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
+									 encoding:NSUTF8StringEncoding] autorelease]);
+		goto bail;
+	}
+	
+	result = YES;
+bail:
+	return result;
 }
 
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
