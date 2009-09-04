@@ -47,6 +47,7 @@
 				<string key="NSWindowTitle">Error</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<object class="NSView" key="NSWindowView" id="1059635860">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -88,7 +89,7 @@
 													<string>WebURLsWithTitlesPboardType</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{385, 72}</string>
+											<string key="NSFrameSize">{385, 14}</string>
 											<reference key="NSSuperview" ref="905589756"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="931613030">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -165,8 +166,8 @@
 												<nil key="NSDefaultParagraphStyle"/>
 											</object>
 											<int key="NSTVFlags">6</int>
-											<string key="NSMaxSize">{465, 1e+07}</string>
-											<string key="NSMinize">{223, 72}</string>
+											<string key="NSMaxSize">{787, 1e+07}</string>
+											<string key="NSMinize">{223, 0}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</object>
@@ -356,7 +357,6 @@
 					<string>221.IBPluginDependency</string>
 					<string>221.ImportedFromIB2</string>
 					<string>250.IBEditorWindowLastContentRect</string>
-					<string>250.IBPluginDependency</string>
 					<string>250.IBWindowTemplateEditedContentRect</string>
 					<string>250.NSWindowTemplate.visibleAtLaunch</string>
 					<string>251.IBPluginDependency</string>
@@ -383,9 +383,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>{{79, 218}, {400, 150}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{79, 218}, {400, 150}}</string>
-					<reference ref="5"/>
+					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

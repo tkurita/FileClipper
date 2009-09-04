@@ -9,5 +9,7 @@
 			<string>Finder</string>
 		</dict>
 	</array>
+	<key>SVNCommand</key>
+	<string>/usr/bin/svn</string>
 </dict>
 </plist>

@@ -3,16 +3,67 @@
 
 @implementation FileProcessor
 
-- (void) startTask:(id)sender
+NSTask* makeSVNTask((NSArray *)arguments)
+{
+	NSString* svncommand = [[NSUserDefaults standardUserDefaults] stringForKey:@"SVNCommand"];
+	NSTask* task = [NSTask new];
+	[task setLaunchPath:svncommand];
+	[task setArguments:arguments];
+	[task setStandardError:[NSPipe pipe]];
+	[task setStandardOutput:[NSPipe pipe]];
+	return [task autorelease];
+}
+
+- (BOOL)trySVN:(NSString *)source
+{
+	NSTask* svntask = makeSVNTask([NSArray arrayWithObjects:@"info", source, nil]);
+	[svntask launch];
+	[svntask waitUntilExit];
+	if ([svntask terminationStatus] != 0) {
+		result = NO;
+		goto bail;
+	}
+	
+	svntask = makeSVNTask([NSArray arrayWithObjects:@"info", location, nil]);
+	[svntask launch];
+	[svntask waitUntilExit];
+	
+	if ([svntask terminationStatus] != 0) {
+		result = NO;
+		goto bail;
+	}
+
+	svntask = makeSVNTask([NSArray arrayWithObjects:@"mv", source, 
+						   [location stringByAppendingPathComponent:newName], nil]);
+	[svntask launch];
+	[svntask waitUntilExit];
+	if ([svntask terminationStatus] != 0) {
+		NSLog([NSString stringWithData:[[[svntask standardError] fileHandleForReading] availableData]
+					encodingCandidates:NSUTF8StringEncoding]);
+		result = NO;
+		goto bail;
+	}
+	
+	retult = YES;
+bail:
+	return result;
+}
+
+- (void)startTask:(id)sender
 {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSEnumerator* enumerator = [sourceItems objectEnumerator];
 	NSString* source;
 	NSFileManager* file_manager = [NSFileManager defaultManager];
 	while (source = [enumerator nextObject]) {
-		if (![[source stringByDeletingLastPathComponent] isEqualToString:location]) {
-			NSString* newname = [[source lastPathComponent] uniqueNameAtLocation:location];
-			[file_manager movePath:source toPath:[location stringByAppendingPathComponent:newname] handler:self];
+		source = [source cleanPath];
+		self.newName = [source lastPathComponent];
+		if (![[source stringByDeletingLastPathComponent] isEqualToString:location] 
+				|| [self resolveNewName:source]) {
+			if (![self trySVN:source]) {
+				//self.newName = [newName uniqueNameAtLocation:location];
+				[file_manager movePath:source toPath:[location stringByAppendingPathComponent:newName] handler:self];
+			}
 		}
 	}
 	[pool release];
