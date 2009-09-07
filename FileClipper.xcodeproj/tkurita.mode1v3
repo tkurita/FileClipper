@@ -206,48 +206,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>2C5D94DF10551A7C00B8479B</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Localizable.strings</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>2C5D94E010551A7C00B8479B</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Localizable.strings</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>2C5D94E110551A7C00B8479B</string>
-						<key>history</key>
-						<array>
-							<string>2C5D94D9105519C400B8479B</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1006, 406}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 431 1006 447 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -359,7 +318,7 @@
 							<real>281</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>96 34 1276 664 0 0 1440 878 </string>
+						<string>81 189 1276 664 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -389,7 +348,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5D94DE10551A7C00B8479B</string>
+										<string>2C5D94E410551ACD00B8479B</string>
 										<key>history</key>
 										<array>
 											<string>2C9E7FE0104CEE7E00C5B158</string>
@@ -412,7 +371,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {951, 531}}</string>
 								<key>RubberWindowFrame</key>
-								<string>96 34 1276 664 0 0 1440 878 </string>
+								<string>81 189 1276 664 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -432,7 +391,7 @@
 								<key>Frame</key>
 								<string>{{0, 536}, {951, 66}}</string>
 								<key>RubberWindowFrame</key>
-								<string>96 34 1276 664 0 0 1440 878 </string>
+								<string>81 189 1276 664 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -598,14 +557,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2C5D94DF10551A7C00B8479B</string>
 		<string>2C4C9FB10F722D3800C2F097</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>2C5D94DF10551A7C00B8479B</string>
 		<string>/Users/tkurita/Dev/Projects/FileClipper/trunk/FileClipper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>96 34 1276 664 0 0 1440 878 </string>
+	<string>81 189 1276 664 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

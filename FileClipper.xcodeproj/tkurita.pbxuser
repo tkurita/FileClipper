@@ -42,8 +42,6 @@
 			2CF73DBE09B88D4C00EF8406 /* Move to Here */,
 			2CF73E2F09B8971D00EF8406 /* Copy to Here */,
 			2CF73E8D09B8997400EF8406 /* Make Symbolic Link to Here */,
-			2C4102FC0D854BEF00AC0593 /* SVN Copy */,
-			2C4103720D85597300AC0593 /* SVN Move */,
 			2C9E85B8104E4D8D00C5B158 /* Make Hard Link to Here */,
 		);
 		perUserDictionary = {
@@ -298,6 +296,7 @@
 			2C5D94DD10551A7C00B8479B /* PBXTextBookmark */ = 2C5D94DD10551A7C00B8479B /* PBXTextBookmark */;
 			2C5D94DE10551A7C00B8479B /* PBXTextBookmark */ = 2C5D94DE10551A7C00B8479B /* PBXTextBookmark */;
 			2C5D94E110551A7C00B8479B /* PBXTextBookmark */ = 2C5D94E110551A7C00B8479B /* PBXTextBookmark */;
+			2C5D94E410551ACD00B8479B /* PBXTextBookmark */ = 2C5D94E410551ACD00B8479B /* PBXTextBookmark */;
 			2C5FB15710460F87006C3DC9 = 2C5FB15710460F87006C3DC9 /* PBXTextBookmark */;
 			2C5FB1C210461473006C3DC9 = 2C5FB1C210461473006C3DC9 /* PBXTextBookmark */;
 			2C5FB1CA10461473006C3DC9 = 2C5FB1CA10461473006C3DC9 /* PBXTextBookmark */;
@@ -600,81 +599,10 @@
 		vrLen = 651;
 		vrLoc = 0;
 	};
-	2C4102E50D854BEF00AC0593 /* SVN Copy */ = {
-		activeExec = 0;
-		executables = (
-			2C4102FC0D854BEF00AC0593 /* SVN Copy */,
-		);
-	};
-	2C4102FC0D854BEF00AC0593 /* SVN Copy */ = {
-		isa = PBXExecutable;
-		activeArgIndices = (
-		);
-		argumentStrings = (
-		);
-		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
-		configStateDict = {
-		};
-		customDataFormattersEnabled = 1;
-		debuggerPlugin = GDBDebugging;
-		disassemblyDisplayState = 0;
-		dylibVariantSuffix = "";
-		enableDebugStr = 1;
-		environmentEntries = (
-		);
-		executableSystemSymbolLevel = 0;
-		executableUserSymbolLevel = 0;
-		libgmallocEnabled = 0;
-		name = "SVN Copy";
-		sourceDirectories = (
-		);
-	};
-	2C41035C0D85597300AC0593 /* SVN Move */ = {
-		activeExec = 0;
-		executables = (
-			2C4103720D85597300AC0593 /* SVN Move */,
-		);
-	};
-	2C4103720D85597300AC0593 /* SVN Move */ = {
-		isa = PBXExecutable;
-		activeArgIndices = (
-		);
-		argumentStrings = (
-		);
-		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
-		configStateDict = {
-			"PBXLSLaunchAction-1" = {
-				PBXLSLaunchAction = 1;
-				PBXLSLaunchStartAction = 1;
-				PBXLSLaunchStdioStyle = 2;
-				PBXLSLaunchStyle = 0;
-				class = ASKDebuggerLaunchConfig;
-				displayName = "AppleScript デバッガ";
-				identifier = com.apple.AppleScriptStudio.ASKDebugLaunchConfig;
-				remoteHostInfo = "";
-				startActionInfo = "";
-			};
-		};
-		customDataFormattersEnabled = 1;
-		debuggerPlugin = GDBDebugging;
-		disassemblyDisplayState = 0;
-		dylibVariantSuffix = "";
-		enableDebugStr = 1;
-		environmentEntries = (
-		);
-		executableSystemSymbolLevel = 0;
-		executableUserSymbolLevel = 0;
-		libgmallocEnabled = 0;
-		name = "SVN Move";
-		sourceDirectories = (
-		);
-	};
 	2C48998F0DE43333001A564D /* History.rd */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {890, 1180}}";
-			sepNavSelRange = "{51, 0}";
+			sepNavSelRange = "{18, 96}";
 			sepNavVisRange = "{0, 831}";
 			sepNavVisRect = "{{0, 0}, {628, 660}}";
 			sepNavWindowFrame = "{{15, 145}, {667, 733}}";
@@ -1837,6 +1765,16 @@
 		rLoc = 185;
 		rType = 0;
 		vrLen = 785;
+		vrLoc = 0;
+	};
+	2C5D94E410551ACD00B8479B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C48998F0DE43333001A564D /* History.rd */;
+		name = "History.rd: 4";
+		rLen = 96;
+		rLoc = 18;
+		rType = 0;
+		vrLen = 831;
 		vrLoc = 0;
 	};
 	2C5FB15710460F87006C3DC9 /* PBXTextBookmark */ = {
@@ -3736,9 +3674,9 @@
 	};
 	2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {890, 2744}}";
-			sepNavSelRange = "{4129, 0}";
-			sepNavVisRange = "{0, 1063}";
+			sepNavIntBoundsRect = "{{0, 0}, {720, 2772}}";
+			sepNavSelRange = "{2765, 43}";
+			sepNavVisRange = "{2309, 1003}";
 			sepNavVisRect = "{{0, 0}, {805, 452}}";
 		};
 	};
