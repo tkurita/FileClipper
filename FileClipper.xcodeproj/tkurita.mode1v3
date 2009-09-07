@@ -228,10 +228,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C17FC62105138B300391FF8</string>
+						<string>2C5D93F11054E22400B8479B</string>
 						<key>history</key>
 						<array>
-							<string>2C17FC281051370000391FF8</string>
+							<string>2C5D93D21054A15600B8479B</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -327,6 +327,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>2C9E7E23104B893800C5B158</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>2C5D93C71054A14B00B8479B</string>
 								<string>2CF7417C09B9EA5600EF8406</string>
 								<string>2CF7409909B9C8FF00EF8406</string>
 								<string>2CF7409A09B9C8FF00EF8406</string>
@@ -340,13 +341,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>49</integer>
-									<integer>46</integer>
+									<integer>18</integer>
+									<integer>17</integer>
+									<integer>15</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 393}, {303, 584}}</string>
+							<string>{{0, 0}, {303, 584}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -367,7 +369,7 @@
 							<real>281</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>38 117 1276 664 0 0 1440 878 </string>
+						<string>38 162 1276 664 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -395,7 +397,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C17FC61105138B300391FF8</string>
+										<string>2C5D93EE1054E22400B8479B</string>
 										<key>history</key>
 										<array>
 											<string>2CF7421509B9EF2600EF8406</string>
@@ -474,7 +476,7 @@
 											<string>2C17FC57105138B300391FF8</string>
 											<string>2C17FC58105138B300391FF8</string>
 											<string>2C17FC59105138B300391FF8</string>
-											<string>2C17FC5A105138B300391FF8</string>
+											<string>2C5D93CF1054A15600B8479B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -553,34 +555,7 @@
 											<string>2C9E88C51050D59100C5B158</string>
 											<string>2C9E89011050EBDC00C5B158</string>
 											<string>2C9E89021050EBDC00C5B158</string>
-											<string>2C17FBE21051123700391FF8</string>
-											<string>2C17FBE31051123700391FF8</string>
-											<string>2C17FBE41051123700391FF8</string>
-											<string>2C17FC36105137DA00391FF8</string>
-											<string>2C17FC37105137DA00391FF8</string>
-											<string>2C17FC38105137DA00391FF8</string>
-											<string>2C17FC39105137DA00391FF8</string>
-											<string>2C17FC3A105137DA00391FF8</string>
-											<string>2C17FC3B105137DA00391FF8</string>
-											<string>2C17FC3C105137DA00391FF8</string>
-											<string>2C17FC3D105137DA00391FF8</string>
-											<string>2C17FC3E105137DA00391FF8</string>
 											<string>2C17FC3F105137DA00391FF8</string>
-											<string>2C17FC40105137DA00391FF8</string>
-											<string>2C17FC41105137DA00391FF8</string>
-											<string>2C17FC42105137DA00391FF8</string>
-											<string>2C17FC43105137DA00391FF8</string>
-											<string>2C17FC44105137DA00391FF8</string>
-											<string>2C17FC45105137DA00391FF8</string>
-											<string>2C17FC46105137DA00391FF8</string>
-											<string>2C17FC47105137DA00391FF8</string>
-											<string>2C17FC48105137DA00391FF8</string>
-											<string>2C17FC5B105138B300391FF8</string>
-											<string>2C17FC5C105138B300391FF8</string>
-											<string>2C17FC5D105138B300391FF8</string>
-											<string>2C17FC5E105138B300391FF8</string>
-											<string>2C17FC5F105138B300391FF8</string>
-											<string>2C17FC60105138B300391FF8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -594,7 +569,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {951, 436}}</string>
 								<key>RubberWindowFrame</key>
-								<string>38 117 1276 664 0 0 1440 878 </string>
+								<string>38 162 1276 664 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -614,7 +589,7 @@
 								<key>Frame</key>
 								<string>{{0, 441}, {951, 161}}</string>
 								<key>RubberWindowFrame</key>
-								<string>38 117 1276 664 0 0 1440 878 </string>
+								<string>38 162 1276 664 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -638,9 +613,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2C17FBE61051123700391FF8</string>
+				<string>2C5D93EF1054E22400B8479B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2C17FBE71051123700391FF8</string>
+				<string>2C5D93F01054E22400B8479B</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -780,14 +755,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2C17FC63105138B300391FF8</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>2C4C9FB10F722D3800C2F097</string>
 		<string>2C17FC4A105137DA00391FF8</string>
 		<string>/Users/tkurita/Dev/Projects/FileClipper/trunk/FileClipper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>38 117 1276 664 0 0 1440 878 </string>
+	<string>38 162 1276 664 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -988,13 +961,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>2C17FBE81051123700391FF8</string>
+				<string>2C5D93F21054E22400B8479B</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>2C17FBE91051123700391FF8</string>
-				<string>2C17FBEA1051123700391FF8</string>
-				<string>2C17FBEB1051123700391FF8</string>
-				<string>2C17FBEC1051123700391FF8</string>
-				<string>2C17FBED1051123700391FF8</string>
+				<string>2C5D93F31054E22400B8479B</string>
+				<string>2C5D93F41054E22400B8479B</string>
+				<string>2C5D93F51054E22400B8479B</string>
+				<string>2C5D93F61054E22400B8479B</string>
+				<string>2C5D93F71054E22400B8479B</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

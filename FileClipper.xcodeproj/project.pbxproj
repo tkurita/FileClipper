@@ -100,7 +100,6 @@
 
 /* Begin PBXBuildFile section */
 		2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
-		2C4102EF0D854BEF00AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2C4102F10D854BEF00AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2C4102F20D854BEF00AC0593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2C4102F30D854BEF00AC0593 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
@@ -108,13 +107,19 @@
 		2C4102F60D854BEF00AC0593 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2C4102F70D854BEF00AC0593 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2C4103640D85597300AC0593 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
-		2C4103650D85597300AC0593 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2C4103670D85597300AC0593 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2C4103680D85597300AC0593 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2C4103690D85597300AC0593 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2C41036A0D85597300AC0593 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2C41036C0D85597300AC0593 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2C41036D0D85597300AC0593 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2C5D93C81054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93C91054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93CA1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93CB1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93CC1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93CD1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93CE1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
 		2C5FB13A10460EF2006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
 		2C5FB13B10460EF2006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
 		2C5FB13C10460EF5006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
@@ -205,7 +210,6 @@
 		2C9E85C1104E4DE000C5B158 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2C9E85C2104E4DE500C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E85C3104E4DEF00C5B158 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
-		2C9E85C4104E4DF200C5B158 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2C9E85C5104E4DF600C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
 		2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
 		2C9E85C7104E4E0700C5B158 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FB16A1046100F006C3DC9 /* SmartActivate.c */; };
@@ -236,13 +240,9 @@
 		2CAB363509BE6A3800A9C0EC /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2CAB363709BE6A3800A9C0EC /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2CAB364E09BE6BE200A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
-		2CAB37A509BEAD0800A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
-		2CAB385D09BEB20D00A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
-		2CAB385E09BEB20E00A9C0EC /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2CAB38AA09BEB8CC00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CAB38AB09BEB8CC00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CAB38AC09BEB8CD00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
-		2CD403F50F7373CF00B96300 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAB375409BEA71900A9C0EC /* MainMenu.nib */; };
 		2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -380,7 +380,7 @@
 		2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWindow.h; sourceTree = "<group>"; };
 		2CAB364B09BE6BE200A9C0EC /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		2CAB375409BEA71900A9C0EC /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		2CAB375409BEA71900A9C0EC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
 		2CE13264103196E000578ACF /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
 		2CE13265103196E000578ACF /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
@@ -577,7 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */,
-				2CAB375409BEA71900A9C0EC /* MainMenu.nib */,
+				2C5D93C71054A14B00B8479B /* MainMenu.nib */,
 				2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */,
 				65359356078DD41800E8BB2F /* AppleScriptKit.sdef */,
 				2CF73B5809B86EB100EF8406 /* Info.plist */,
@@ -938,7 +938,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */,
-				2C4102EF0D854BEF00AC0593 /* MainMenu.nib in Resources */,
+				2C5D93CD1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C5FB1BA10461400006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E2B104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
 			);
@@ -949,7 +949,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4103640D85597300AC0593 /* Localizable.strings in Resources */,
-				2C4103650D85597300AC0593 /* MainMenu.nib in Resources */,
+				2C5D93CE1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C5FB1BB10461401006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E29104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
 			);
@@ -960,7 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E85C3104E4DEF00C5B158 /* FactorySettings.plist in Resources */,
-				2C9E85C4104E4DF200C5B158 /* MainMenu.nib in Resources */,
+				2C5D93CC1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C9E85C5104E4DF600C5B158 /* ProgressWindow.xib in Resources */,
 				2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */,
 			);
@@ -970,7 +970,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD403F50F7373CF00B96300 /* MainMenu.nib in Resources */,
+				2C5D93C91054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CF7419409B9EC4500EF8406 /* InfoPlist.strings in Resources */,
 				2CF743E509B9FC6C00EF8406 /* Localizable.strings in Resources */,
 				2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */,
@@ -986,7 +986,7 @@
 			files = (
 				2CF7419009B9EC1F00EF8406 /* InfoPlist.strings in Resources */,
 				2CF743E609B9FC6C00EF8406 /* Localizable.strings in Resources */,
-				2CAB385E09BEB20E00A9C0EC /* MainMenu.nib in Resources */,
+				2C5D93CB1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE20C0E4C42A4002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E28104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
@@ -1000,7 +1000,7 @@
 			files = (
 				2CF7418309B9EA7900EF8406 /* InfoPlist.strings in Resources */,
 				2CF743E709B9FC6C00EF8406 /* Localizable.strings in Resources */,
-				2CAB37A509BEAD0800A9C0EC /* MainMenu.nib in Resources */,
+				2C5D93C81054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B51046138D006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E2A104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
@@ -1014,7 +1014,7 @@
 			files = (
 				2CF740BD09B9CB0700EF8406 /* InfoPlist.strings in Resources */,
 				2CF743E809B9FC6C00EF8406 /* Localizable.strings in Resources */,
-				2CAB385D09BEB20D00A9C0EC /* MainMenu.nib in Resources */,
+				2C5D93CA1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */,
 				2C9E7E27104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
@@ -1205,6 +1205,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2C5D93C71054A14B00B8479B /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CAB375409BEA71900A9C0EC /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
 		2C9E7E78104B905200C5B158 /* ServicesMenu.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
