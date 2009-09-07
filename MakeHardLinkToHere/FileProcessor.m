@@ -13,7 +13,7 @@
 		NSString *destination = [location stringByAppendingPathComponent:newname];
 		if (![file_manager linkPath:source toPath:destination handler:self] ){
 			[self displayErrorLog:
-			 [NSString stringWithFormat:@"Fail to make hard link from %@ to %@\n", source, destination]];
+			 [NSString stringWithFormat:@"Fail to make hard link from %@ to %@.\n", source, destination]];
 		}
 	}
 }

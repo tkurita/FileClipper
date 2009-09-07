@@ -13,7 +13,8 @@
 		NSString *relpath = [source relativePathWithBase:location];
 		if (symlink([relpath fileSystemRepresentation], 
 					[[location stringByAppendingPathComponent:newname] fileSystemRepresentation]) != 0) {
-			[self displayErrorLog:[NSString stringWithFormat:@"Error to make symbolic link : %d\n", errno]];
+			[self displayErrorLog:[NSString stringWithFormat:
+								   NSLocalizedString(@"Fail to make symbolic link with error : %d\n", @""), errno]];
 		}
 	}
 }

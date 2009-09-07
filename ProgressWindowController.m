@@ -13,7 +13,7 @@
 {
 	NSString *newpath = [fileProcessor.location stringByAppendingPathComponent:[newNameField stringValue]];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:newpath]) {
-		[messageField setStringValue:@"Same name exists."];
+		[messageField setStringValue:NSLocalizedString(@"SameNameExists", @"")];
 		return;
 	}
 	[NSApp endSheet:askWindow returnCode:NSOKButton];

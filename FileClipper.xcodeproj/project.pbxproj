@@ -120,6 +120,13 @@
 		2C5D93CC1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
 		2C5D93CD1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
 		2C5D93CE1054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
+		2C5D93FB1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D93FC1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D93FD1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D93FE1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D93FF1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D94001054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
+		2C5D94011054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
 		2C5FB13A10460EF2006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
 		2C5FB13B10460EF2006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
 		2C5FB13C10460EF5006C3DC9 /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1326F103196E000578ACF /* PaletteWindowController.m */; };
@@ -161,12 +168,6 @@
 		2C5FB1BA10461400006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1BB10461401006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C9E7E17104B892300C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E15104B892300C5B158 /* FileProcessor.m */; };
-		2C9E7E26104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
-		2C9E7E27104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
-		2C9E7E28104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
-		2C9E7E29104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
-		2C9E7E2A104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
-		2C9E7E2B104B89CB00C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
 		2C9E7E32104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E7E34104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E7E36104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
@@ -210,7 +211,6 @@
 		2C9E85C1104E4DE000C5B158 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
 		2C9E85C2104E4DE500C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E85C3104E4DEF00C5B158 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
-		2C9E85C5104E4DF600C5B158 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */; };
 		2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
 		2C9E85C7104E4E0700C5B158 /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FB16A1046100F006C3DC9 /* SmartActivate.c */; };
 		2C9E85C8104E4E0B00C5B158 /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FB16C1046100F006C3DC9 /* SmartActivate.m */; };
@@ -330,7 +330,7 @@
 		2C9E7E0F104B88F100C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E15104B892300C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
-		2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressWindow.xib; sourceTree = "<group>"; };
+		2C9E7E25104B89CB00C5B158 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProgressWindow.xib; sourceTree = "<group>"; };
 		2C9E7E2F104B8A1100C5B158 /* ProgressWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWindowController.h; sourceTree = "<group>"; };
 		2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressWindowController.m; sourceTree = "<group>"; };
 		2C9E7E79104B905200C5B158 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ServicesMenu.strings; sourceTree = "<group>"; };
@@ -415,8 +415,8 @@
 		2CF7418609B9EB7D00EF8406 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7418F09B9EC0500EF8406 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7419509B9EC5100EF8406 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2CF7431E09B9FC3E00EF8406 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2CF743EB09B9FC7F00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CF7431E09B9FC3E00EF8406 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CF743EB09B9FC7F00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65359356078DD41800E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
 		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -578,7 +578,7 @@
 			children = (
 				2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */,
 				2C5D93C71054A14B00B8479B /* MainMenu.nib */,
-				2C9E7E25104B89CB00C5B158 /* ProgressWindow.xib */,
+				2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */,
 				65359356078DD41800E8BB2F /* AppleScriptKit.sdef */,
 				2CF73B5809B86EB100EF8406 /* Info.plist */,
 				2CF743E409B9FC6C00EF8406 /* Localizable.strings */,
@@ -940,7 +940,7 @@
 				2C4102EE0D854BEF00AC0593 /* Localizable.strings in Resources */,
 				2C5D93CD1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C5FB1BA10461400006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E2B104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D94001054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,7 +951,7 @@
 				2C4103640D85597300AC0593 /* Localizable.strings in Resources */,
 				2C5D93CE1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C5FB1BB10461401006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E29104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D94011054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,7 +961,7 @@
 			files = (
 				2C9E85C3104E4DEF00C5B158 /* FactorySettings.plist in Resources */,
 				2C5D93CC1054A14B00B8479B /* MainMenu.nib in Resources */,
-				2C9E85C5104E4DF600C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D93FF1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,7 +975,7 @@
 				2CF743E509B9FC6C00EF8406 /* Localizable.strings in Resources */,
 				2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B7104613FE006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E26104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D93FC1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E83E3104D2A3100C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,7 +989,7 @@
 				2C5D93CB1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE20C0E4C42A4002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E28104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D93FE1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1003,7 +1003,7 @@
 				2C5D93C81054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B51046138D006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E2A104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D93FB1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E7E7A104B905200C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1017,7 +1017,7 @@
 				2C5D93CA1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */,
 				2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */,
-				2C9E7E27104B89CB00C5B158 /* ProgressWindow.xib in Resources */,
+				2C5D93FD1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1211,6 +1211,14 @@
 				2CAB375409BEA71900A9C0EC /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C9E7E25104B89CB00C5B158 /* English */,
+			);
+			name = ProgressWindow.xib;
 			sourceTree = "<group>";
 		};
 		2C9E7E78104B905200C5B158 /* ServicesMenu.strings */ = {

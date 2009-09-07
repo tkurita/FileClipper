@@ -29,7 +29,7 @@
 {
 	NSArray *array = [FilesInPasteboard getContents];
 	if (!array) {
-		NSRunAlertPanel (NSLocalizedString(@"NoFilesInClipboard", @""), @"", @"OK", nil, nil);
+		NSRunAlertPanel(NSLocalizedString(@"NoFilesInClipboard", @""), @"", @"OK", nil, nil);
 		return;
 	}
 	
@@ -89,7 +89,7 @@
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
-		NSRunAlertPanel (nil, msg, @"OK", nil, nil);
+		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		goto bail;
 	}
 	
@@ -103,7 +103,7 @@
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
-		NSRunAlertPanel (nil, msg, @"OK", nil, nil);
+		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		goto bail;
 	}
 		
@@ -121,7 +121,25 @@ bail:
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	NSLog(@"applicationDidFinishLaunching");	
+	if (!AXAPIEnabled())
+    {
+		[NSApp activateIgnoringOtherApps:YES];
+		int ret = NSRunAlertPanel(NSLocalizedString(@"GUIScriptingIsNotEnabled", @""), 
+								  NSLocalizedString(@"AskLaunchPreferences", @""), 
+								  NSLocalizedString(@"LauchSystemPreferences", @""),
+								  NSLocalizedString(@"Cancel",""), @"");
+		switch (ret)
+        {
+            case NSAlertDefaultReturn:
+                [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/UniversalAccessPref.prefPane"];
+                break;
+			default:
+                break;
+        }
+        
+		[NSApp terminate:self];
+		return;
+    }
 }
 
 - (void)awakeFromNib
@@ -142,7 +160,9 @@ bail:
 																	 error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
-	}	
+		NSRunAlertPanel(nil, "Fail to load FinderController.scpt", @"OK", nil, nil);
+		[NSApp terminate:self];
+	}
 }
 
 - (void)processAtLocationFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
