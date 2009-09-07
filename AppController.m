@@ -3,7 +3,7 @@
 #import "WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
 
-#define	 useLog 1
+#define	useLog 0
 
 @implementation AppController
 
@@ -160,7 +160,7 @@ bail:
 																	 error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
-		NSRunAlertPanel(nil, "Fail to load FinderController.scpt", @"OK", nil, nil);
+		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 }

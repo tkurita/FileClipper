@@ -22,7 +22,7 @@
 		self.newName = [source lastPathComponent];
 		if ([self resolveNewName:source]) {
 			if (![self trySVN:@"cp" withSource:source]) {
-				[file_manager copyPath:source toPath:[location stringByAppendingPathComponent:newname] handler:self];
+				[file_manager copyPath:source toPath:[location stringByAppendingPathComponent:newName] handler:self];
 			}
 		}
 	}
