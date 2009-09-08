@@ -3,7 +3,9 @@
 #import "WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
 
-#define	useLog 0
+#define	useLog 1
+
+static BOOL processStarted = NO;
 
 @implementation AppController
 
@@ -21,7 +23,9 @@
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
 {
+#if useLog
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
+#endif	
 	return YES;
 }
 
@@ -57,33 +61,27 @@
 		NSLog(@"%f, %f", position.x, position.y);
 #endif
 		NSWindow *window = [wc window];
-		NSRect frame = [window frame];
-		NSPoint newposition = NSMakePoint(position.x - frame.size.width/2, 
-										position.y - frame.size.height/2);
-#if useLog
-		NSLog(@"%f, %f", newposition.x, newposition.y);
-#endif
-		[window setFrameOrigin:newposition];
-		
+		if (position.x != FLT_MAX) {
+			NSRect frame = [window frame];
+			NSPoint newposition = NSMakePoint(position.x - frame.size.width/2, 
+											position.y - frame.size.height/2);
+	#if useLog
+			NSLog(@"%f, %f", newposition.x, newposition.y);
+	#endif
+			[window setFrameOrigin:newposition];
+		} else {
+			[window center];
+		}
 	}
 	[wc processFiles:array toLocation:path];
 }
 
-
-- (void)applicationDidBecomeActive:(NSNotification *)aNotification
+- (void)processForInsertionLocation
 {
-#if useLog
-	NSLog(@"applicationDidBecomeActive");
-#endif
-	if (launchedFromServices) {
-		launchedFromServices = NO;
-		return;
-	}
-
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
 	script_result = [finderController executeHandlerWithName:@"insertion_location"
-																arguments:nil error:&err_info];
+												   arguments:nil error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
@@ -96,7 +94,7 @@
 	NSString *location_path = [script_result stringValue];
 	
 	script_result = [finderController executeHandlerWithName:@"center_of_finderwindow"
-												arguments:nil error:&err_info];
+												   arguments:nil error:&err_info];
 	
 	if (err_info) {
 		NSLog([err_info description]);
@@ -106,17 +104,45 @@
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		goto bail;
 	}
-		
+	
 	unsigned int nitem = [script_result numberOfItems];
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	if (nitem > 1) {
 		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.x];
 		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.y];
 	}
-
+	
 	[self processAtLocation:location_path centerPosition:center_position];
 bail:
-	return;
+	return;	
+}
+
+
+- (void)applicationDidBecomeActive:(NSNotification *)aNotification
+{
+#if useLog
+	NSLog(@"applicationDidBecomeActive");
+#endif
+	if (processStarted) {
+		processStarted = NO;
+		return;
+	}
+
+	[self processForInsertionLocation];
+}
+
+
+- (void)delayedProcess:(id)sender
+{
+	if (processStarted) {
+#if useLog		
+		NSLog(@"process stated is detected in delayedProcess");
+#endif		
+		return;
+	}
+	[self processForInsertionLocation];
+	processStarted = YES;
+	[NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -140,11 +166,11 @@ bail:
 		[NSApp terminate:self];
 		return;
     }
+	[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
 }
 
 - (void)awakeFromNib
 {
-	launchedFromServices = NO;
 	NSString *defaults_plist = [[NSBundle mainBundle] pathForResource:@"FactorySettings" ofType:@"plist"];
 	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
 	
@@ -170,7 +196,7 @@ bail:
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
 #endif
-	launchedFromServices = YES;
+	processStarted = YES;
 	NSArray *types = [pboard types];
 	NSArray *filenames;
 	if (![types containsObject:NSFilenamesPboardType] 
@@ -179,9 +205,9 @@ bail:
 								   @"Pasteboard couldn't give string.");
         return;
     }
-	
-	[self application:NSApp openFiles:filenames];
-	//[NSApp activateIgnoringOtherApps:YES];
+	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
+	[self processAtLocation:[filenames objectAtIndex:0] centerPosition:center_position];
+	[NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void)dealloc

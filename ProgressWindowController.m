@@ -1,6 +1,8 @@
 #import "ProgressWindowController.h"
 #import "FileProcessor.h"
 
+#define useLog 1
+
 @implementation ProgressWindowController
 
 - (IBAction)showWindow:(id)sender
@@ -26,14 +28,11 @@
 
 - (void)taskEnded:(id)sender
 {
+#if useLog
+	NSLog(@"task Ended.");
+#endif	
 	[indicator stopAnimation:self];
 	[self close];	
-}
-
-
-- (void)threadExit:(NSNotification *)aNotification
-{
-	[self performSelectorOnMainThread:@selector(taskEnded:) withObject:[aNotification object] waitUntilDone:NO];
 }
 
 - (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(FileProcessor *)processor
@@ -64,6 +63,9 @@
 
 - (void)windowWillClose:(NSNotification *)notification
 {
+#if useLog
+	NSLog(@"windowWillClose");
+#endif	
 	[super windowWillClose:notification];
 	[self autorelease];
 }

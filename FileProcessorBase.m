@@ -1,6 +1,8 @@
 #import "FileProcessorBase.h"
 #import "PathExtra.h"
 
+#define useLog 0
+
 @implementation FileProcessorBase
 @synthesize location, sourceItems, owner, currentSource, newName, loginShell;
 
@@ -107,7 +109,7 @@ bail:
 	} else {
 		self.newName = [source lastPathComponent];
 	}
-	return (newName && ![newName isEqualToString:[source lastPathComponent]]);
+	return (newName != nil);
 }
 
 - (void)doTask:(id)sender

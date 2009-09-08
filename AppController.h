@@ -7,7 +7,6 @@
 {
 	IBOutlet id errorWindow;
 	IBOutlet id errorTextView;
-	BOOL launchedFromServices;
 	OSAScript* finderController;
 }
 
