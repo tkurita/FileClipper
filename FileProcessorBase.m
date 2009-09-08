@@ -77,8 +77,9 @@ bail:
 
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
 {
+	NSLog(@"error in file manager");
 	NSLog([errorInfo description]);
-	return NO;
+	return YES;
 }
 
 - (void) displayErrorLog:(NSString *)aText

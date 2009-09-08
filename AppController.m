@@ -6,6 +6,7 @@
 #define	useLog 1
 
 static BOOL processStarted = NO;
+static BOOL IS_FIRST_PROCESS = YES;
 
 @implementation AppController
 
@@ -127,21 +128,34 @@ bail:
 		processStarted = NO;
 		return;
 	}
-
+	NSLog(@"start process in applicationDidBecomeActive");
 	[self processForInsertionLocation];
 }
 
 
 - (void)delayedProcess:(id)sender
 {
-	if (processStarted) {
+	if (!IS_FIRST_PROCESS) {
 #if useLog		
 		NSLog(@"process stated is detected in delayedProcess");
 #endif		
 		return;
 	}
+	/*
+	if (DELAYNUMBER < DELAYNUMBER_LIMIT) {
+		DELAYNUMBER++;
+		//[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
+		[[NSRunLoop mainRunLoop] performSelector:@selector(delayedProcess:) target:self argument:self
+										   order:10000 modes:[NSArray arrayWithObject:NSDefaultRunLoopMode]];
+		NSLog(@"DELAYED");
+		return;
+	}
+	*/
+	
+	NSLog(@"start in delayedProcess");
 	[self processForInsertionLocation];
 	processStarted = YES;
+	IS_FIRST_PROCESS = NO;
 	[NSApp activateIgnoringOtherApps:YES];
 }
 
@@ -166,7 +180,11 @@ bail:
 		[NSApp terminate:self];
 		return;
     }
-	[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
+	//[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
+	/*[[NSRunLoop mainRunLoop] performSelector:@selector(delayedProcess:) target:self argument:self
+									   order:10000 modes:[NSArray arrayWithObject:NSDefaultRunLoopMode]];
+	*/
+	[self performSelector:@selector(delayedProcess:) withObject:self afterDelay:0.3];
 }
 
 - (void)awakeFromNib
@@ -197,6 +215,7 @@ bail:
 	NSLog(@"start processAtLocationFromPasteboard");
 #endif
 	processStarted = YES;
+	IS_FIRST_PROCESS = NO;
 	NSArray *types = [pboard types];
 	NSArray *filenames;
 	if (![types containsObject:NSFilenamesPboardType] 
