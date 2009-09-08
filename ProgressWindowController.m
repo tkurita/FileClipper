@@ -10,7 +10,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 + (void)initialize
 {
 	if (!WORKING_WINDOW_CONTROLLERS) {
-		WORKING_WINDOW_CONTROLLERS = [NSMutableArray array];
+		WORKING_WINDOW_CONTROLLERS = [NSMutableArray new];
 	}
 }
 
@@ -46,6 +46,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 #if useLog
 	NSLog(@"task Ended.");
 #endif	
+	[[NSWorkspace sharedWorkspace] noteFileSystemChanged:[(FileProcessor *)sender location]];
 	[indicator stopAnimation:self];
 	isTaskFinished = YES;
 	[self close];	

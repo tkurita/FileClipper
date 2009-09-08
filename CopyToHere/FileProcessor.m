@@ -22,7 +22,12 @@
 		self.newName = [source lastPathComponent];
 		if ([self resolveNewName:source]) {
 			if (![self trySVN:@"cp" withSource:source]) {
-				[file_manager copyPath:source toPath:[location stringByAppendingPathComponent:newName] handler:self];
+				NSString *destination = [location stringByAppendingPathComponent:newName];
+				NSLog(@"Copy source : %@", source);
+				NSLog(@"Copy destination : %@", destination);
+				[file_manager copyPath:source toPath:destination handler:self];
+				[[NSWorkspace sharedWorkspace] noteFileSystemChanged:location]; // it looks not effects
+				[[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:) withObject:destination waitUntilDone:NO];
 			}
 		}
 	}

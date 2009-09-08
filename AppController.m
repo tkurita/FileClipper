@@ -2,6 +2,7 @@
 #import "ProgressWindowController.h"
 #import "WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
+#import "PathExtra.h"
 
 #define	useLog 1
 
@@ -78,6 +79,21 @@ static BOOL IS_FIRST_PROCESS = YES;
 	[wc processFiles:array toLocation:path];
 }
 
+- (void)updateOnFinder:(NSString *)aPath
+{
+	NSDictionary *err_info = nil;
+	NSAppleEventDescriptor *script_result = nil;
+	script_result = [finderController executeHandlerWithName:@"update_on_finder"
+								   arguments:[NSArray arrayWithObject:aPath] error:&err_info];
+	if (err_info) {
+		NSLog([err_info description]);
+		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
+						 [err_info objectForKey:OSAScriptErrorMessage],
+						 [err_info objectForKey:OSAScriptErrorNumber]];
+		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
+	}
+}
+
 - (void)processForInsertionLocation
 {
 	NSDictionary *err_info = nil;
@@ -142,22 +158,12 @@ bail:
 #endif		
 		return;
 	}
-	/*
-	if (DELAYNUMBER < DELAYNUMBER_LIMIT) {
-		DELAYNUMBER++;
-		//[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
-		[[NSRunLoop mainRunLoop] performSelector:@selector(delayedProcess:) target:self argument:self
-										   order:10000 modes:[NSArray arrayWithObject:NSDefaultRunLoopMode]];
-		NSLog(@"DELAYED");
-		return;
-	}
-	*/
 	
 	NSLog(@"start in delayedProcess");
-	[self processForInsertionLocation];
 	processStarted = YES;
 	IS_FIRST_PROCESS = NO;
 	[NSApp activateIgnoringOtherApps:YES];
+	[self processForInsertionLocation];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -181,10 +187,7 @@ bail:
 		[NSApp terminate:self];
 		return;
     }
-	//[self performSelectorOnMainThread:@selector(delayedProcess:) withObject:self waitUntilDone:NO];
-	/*[[NSRunLoop mainRunLoop] performSelector:@selector(delayedProcess:) target:self argument:self
-									   order:10000 modes:[NSArray arrayWithObject:NSDefaultRunLoopMode]];
-	*/
+
 	[self performSelector:@selector(delayedProcess:) withObject:self afterDelay:0.3];
 }
 
@@ -226,8 +229,12 @@ bail:
         return;
     }
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
-	[self processAtLocation:[filenames objectAtIndex:0] centerPosition:center_position];
+	NSString *location = [filenames objectAtIndex:0];
+	if (![location isFolder] || [location isPackage]) {
+		location = [location stringByDeletingLastPathComponent];
+	}
 	[NSApp activateIgnoringOtherApps:YES];
+	[self processAtLocation:location centerPosition:center_position];
 }
 
 - (void)dealloc

@@ -22,3 +22,11 @@ on center_of_finderwindow()
 	end if
 	return {}
 end center_of_finderwindow
+
+on update_on_finder(a_path)
+	log a_path
+	set an_item to POSIX file a_path
+	tell application "Finder"
+		update an_item
+	end tell
+end update_on_finder
