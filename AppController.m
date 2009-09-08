@@ -26,8 +26,9 @@ static BOOL IS_FIRST_PROCESS = YES;
 {
 #if useLog
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
-#endif	
-	return YES;
+#endif
+	
+	return ([[ProgressWindowController workingControllers] count] < 1);
 }
 
 - (void)processAtLocation:(NSString *)path centerPosition:(NSPoint)position

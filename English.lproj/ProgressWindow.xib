@@ -40,7 +40,7 @@
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{336, 457}, {213, 107}}</string>
-				<int key="NSWTFlags">1886913536</int>
+				<int key="NSWTFlags">1618478080</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">ProgressWindow</string>
 				<object class="NSMutableString" key="NSViewClass">
@@ -577,7 +577,7 @@
 					<string key="className">FileProcessorBase</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">startTask:</string>
+						<string key="NS.key.0">startThreadTask:</string>
 						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -652,7 +652,7 @@
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">FileClipper.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../FileClipper.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>

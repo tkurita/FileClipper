@@ -8,7 +8,10 @@
 	IBOutlet id newNameField;
 	IBOutlet FileProcessor* fileProcessor;
 	IBOutlet id messageField;
+	BOOL isTaskFinished;
 }
+
++ (NSArray *)workingControllers;
 
 - (IBAction)okAction:(id)sender;
 - (IBAction)cancelAction:(id)sender;
