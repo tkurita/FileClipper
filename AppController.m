@@ -19,7 +19,7 @@ static BOOL IS_FIRST_PROCESS = YES;
     endRange.location = [[errorTextView textStorage] length];
     endRange.length = 0;
     [errorTextView replaceCharactersInRange:endRange withString:aText];
-    endRange.length = [errorTextView length];
+    endRange.length = [[errorTextView textStorage] length];
     [errorTextView scrollRangeToVisible:endRange];
 }
 
@@ -29,7 +29,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	
-	return ([[ProgressWindowController workingControllers] count] < 1);
+	return (([[ProgressWindowController workingControllers] count] < 1) && ![errorWindow isVisible]);
 }
 
 - (void)processAtLocation:(NSString *)path centerPosition:(NSPoint)position
@@ -96,6 +96,9 @@ static BOOL IS_FIRST_PROCESS = YES;
 
 - (void)processForInsertionLocation
 {
+#if useLog
+	NSLog(@"start processForInsertionLocation");
+#endif
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
 	script_result = [finderController executeHandlerWithName:@"insertion_location"
@@ -138,6 +141,7 @@ bail:
 
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification
 {
+	IS_FIRST_PROCESS = NO;
 #if useLog
 	NSLog(@"applicationDidBecomeActive");
 #endif

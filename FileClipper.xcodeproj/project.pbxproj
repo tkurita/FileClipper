@@ -310,8 +310,6 @@
 		2CE13267103196E000578ACF /* FrontAppMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontAppMonitor.m; sourceTree = "<group>"; };
 		2CE13268103196E000578ACF /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
 		2CE13269103196E000578ACF /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
-		2CE1326A103196E000578ACF /* NDAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAlias.h; sourceTree = "<group>"; };
-		2CE1326B103196E000578ACF /* NDAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAlias.m; sourceTree = "<group>"; };
 		2CE1326C103196E000578ACF /* NSURL+NDCarbonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+NDCarbonUtilities.h"; sourceTree = "<group>"; };
 		2CE1326D103196E000578ACF /* NSURL+NDCarbonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NDCarbonUtilities.m"; sourceTree = "<group>"; };
 		2CE1326E103196E000578ACF /* PaletteWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteWindowController.h; sourceTree = "<group>"; };
@@ -505,6 +503,32 @@
 			path = SmartActivateLib;
 			sourceTree = "<group>";
 		};
+		2C7DC8261057B80200579B20 /* unused */ = {
+			isa = PBXGroup;
+			children = (
+				2CE13268103196E000578ACF /* HFSTypeUtils.h */,
+				2CE13269103196E000578ACF /* HFSTypeUtils.m */,
+				2CE13264103196E000578ACF /* DropBox.h */,
+				2CE13265103196E000578ACF /* DropBox.m */,
+				2CE13272103196E000578ACF /* StringExtra.h */,
+				2CE13273103196E000578ACF /* StringExtra.m */,
+			);
+			name = unused;
+			sourceTree = "<group>";
+		};
+		2C7DC8371057B86500579B20 /* unused */ = {
+			isa = PBXGroup;
+			children = (
+				2C9E84D5104DF35900C5B158 /* NSOpenPanel+NDAlias.h */,
+				2C9E84D6104DF35900C5B158 /* NSOpenPanel+NDAlias.m */,
+				2C9E84D7104DF35900C5B158 /* NSPathControl+NDAlias.h */,
+				2C9E84D8104DF35900C5B158 /* NSPathControl+NDAlias.m */,
+				2C9E84D9104DF35900C5B158 /* NSSavePanel+NDAlias.h */,
+				2C9E84DA104DF35900C5B158 /* NSSavePanel+NDAlias.m */,
+			);
+			name = unused;
+			sourceTree = "<group>";
+		};
 		2C9E7E23104B893800C5B158 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +550,7 @@
 		2C9E84CB104DF35900C5B158 /* NDAlias */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DC8371057B86500579B20 /* unused */,
 				2C9E84CC104DF35900C5B158 /* NDAlias+AliasFile.h */,
 				2C9E84CD104DF35900C5B158 /* NDAlias+AliasFile.m */,
 				2C9E84CE104DF35900C5B158 /* NDAlias.h */,
@@ -535,12 +560,6 @@
 				2C9E84D2104DF35900C5B158 /* NDResourceFork.h */,
 				2C9E84D3104DF35900C5B158 /* NDResourceFork.m */,
 				2C9E84D4104DF35900C5B158 /* NDSDKCompatibility.h */,
-				2C9E84D5104DF35900C5B158 /* NSOpenPanel+NDAlias.h */,
-				2C9E84D6104DF35900C5B158 /* NSOpenPanel+NDAlias.m */,
-				2C9E84D7104DF35900C5B158 /* NSPathControl+NDAlias.h */,
-				2C9E84D8104DF35900C5B158 /* NSPathControl+NDAlias.m */,
-				2C9E84D9104DF35900C5B158 /* NSSavePanel+NDAlias.h */,
-				2C9E84DA104DF35900C5B158 /* NSSavePanel+NDAlias.m */,
 				2C9E84DB104DF35900C5B158 /* NSString+NDCarbonUtilities.h */,
 				2C9E84DC104DF35900C5B158 /* NSString+NDCarbonUtilities.m */,
 				2C9E84DD104DF35900C5B158 /* NSURL+NDCarbonUtilities.h */,
@@ -562,22 +581,15 @@
 		2CE13263103196E000578ACF /* CocoaLib */ = {
 			isa = PBXGroup;
 			children = (
-				2CE13264103196E000578ACF /* DropBox.h */,
-				2CE13265103196E000578ACF /* DropBox.m */,
+				2C7DC8261057B80200579B20 /* unused */,
 				2CE13266103196E000578ACF /* FrontAppMonitor.h */,
 				2CE13267103196E000578ACF /* FrontAppMonitor.m */,
-				2CE13268103196E000578ACF /* HFSTypeUtils.h */,
-				2CE13269103196E000578ACF /* HFSTypeUtils.m */,
-				2CE1326A103196E000578ACF /* NDAlias.h */,
-				2CE1326B103196E000578ACF /* NDAlias.m */,
 				2CE1326C103196E000578ACF /* NSURL+NDCarbonUtilities.h */,
 				2CE1326D103196E000578ACF /* NSURL+NDCarbonUtilities.m */,
 				2CE1326E103196E000578ACF /* PaletteWindowController.h */,
 				2CE1326F103196E000578ACF /* PaletteWindowController.m */,
 				2CE13270103196E000578ACF /* PathExtra.h */,
 				2CE13271103196E000578ACF /* PathExtra.m */,
-				2CE13272103196E000578ACF /* StringExtra.h */,
-				2CE13273103196E000578ACF /* StringExtra.m */,
 				2CE13274103196E000578ACF /* WindowVisibilityController.h */,
 				2CE13275103196E000578ACF /* WindowVisibilityController.m */,
 			);
