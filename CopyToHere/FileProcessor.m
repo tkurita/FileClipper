@@ -1,7 +1,8 @@
 #import "FileProcessor.h"
 #import "PathExtra.h"
+#import "ProgressWindowController.h"
 
-#define useLog 1
+#define useLog 0
 
 @implementation FileProcessor
 
@@ -78,8 +79,8 @@ static void statusCallback (FSFileOperationRef fileOp,
 	if ([self resolveNewName:source]) {
 		if (![self trySVN:@"cp" withSource:source]) {
 		//if (YES) {
-			NSString *destination = [location stringByAppendingPathComponent:newName];
 #if useLog
+			NSString *destination = [location stringByAppendingPathComponent:newName];
 			NSLog(@"Copy source : %@", source);
 			NSLog(@"Copy destination : %@", destination);
 #endif			
@@ -100,7 +101,14 @@ static void statusCallback (FSFileOperationRef fileOp,
 				NSLog(@"Error in FSPathCopyObjectAsync with number %d", status);
 				CFRelease(fileOp);
 				goto bail;
-			}			
+			}
+			NSString *loc_name = [location lastPathComponent];
+			NSString *source_name = [source lastPathComponent];
+			if (![source_name isEqualToString:newName]) 
+				loc_name = [loc_name stringByAppendingPathComponent:newName];
+			NSString *status_msg = [NSString stringWithFormat:NSLocalizedString(@"Copying \"%@\"\n to \"%@\"", @""), 
+											source_name, loc_name];
+			[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 		}
 	}
 

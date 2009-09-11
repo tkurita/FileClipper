@@ -1,4 +1,5 @@
 #import "AppController.h"
+#import "ProgressWindow.h"
 #import "ProgressWindowController.h"
 #import "WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
@@ -68,9 +69,27 @@ static BOOL IS_FIRST_PROCESS = YES;
 			NSRect frame = [window frame];
 			NSPoint newposition = NSMakePoint(position.x - frame.size.width/2, 
 											position.y - frame.size.height/2);
+			newposition.x = floor(newposition.x);
+			newposition.y = floor(newposition.y);
 	#if useLog
-			NSLog(@"%f, %f", newposition.x, newposition.y);
+			NSLog(@"newposition before shift %f, %f", newposition.x, newposition.y);
 	#endif
+			NSArray *windows = [NSApp windows];
+			for (id a_win in windows) {
+				if ((window != a_win) && [a_win isKindOfClass:[ProgressWindow class]]) {
+					NSRect rect = [a_win frame];
+#if useLog
+					NSLog(@"window position %f, %f", rect.origin.x, rect.origin.y);
+#endif							
+					if (NSEqualPoints(rect.origin, newposition)) {
+						NSLog(@"position shifted");
+						newposition.x += rect.size.width/3;
+					}
+				}
+			}
+#if useLog
+			NSLog(@"newposition after shift %f, %f", newposition.x, newposition.y);
+#endif			
 			[window setFrameOrigin:newposition];
 		} else {
 			[window center];

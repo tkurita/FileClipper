@@ -36,6 +36,11 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	[NSApp endSheet:askWindow returnCode:NSOKButton];
 }
 
+- (IBAction)replaceAction:(id)sender
+{
+	[NSApp endSheet:askWindow returnCode:NSOKButton];
+}
+
 - (IBAction)cancelAction:(id)sender
 {
 	[NSApp endSheet:askWindow returnCode:NSCancelButton];
@@ -44,6 +49,12 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 - (IBAction)cancelTask:(id)sender
 {
 	fileProcessor.isCanceled = YES;
+}
+
+- (void)setStatusMessage:(NSString *)string
+{
+	[statusLabel setStringValue:string];
+	[statusLabel setHidden:NO];
 }
 
 - (void)taskEnded:(id)sender
