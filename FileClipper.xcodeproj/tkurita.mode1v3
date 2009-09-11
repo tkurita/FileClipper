@@ -225,7 +225,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2CCF032E105A5C72001E9511</string>
+						<string>2CCF0381105A8CD1001E9511</string>
 						<key>history</key>
 						<array>
 							<string>2CCF032D105A5C72001E9511</string>
@@ -282,8 +282,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -375,6 +373,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -392,7 +392,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CCF032B105A5C72001E9511</string>
+										<string>2CCF037F105A8CD1001E9511</string>
 										<key>history</key>
 										<array>
 											<string>2C5D954910552D1200B8479B</string>
@@ -421,11 +421,12 @@
 											<string>2C6FE0C8105A370400E80491</string>
 											<string>2C6FE0C9105A370400E80491</string>
 											<string>2CCF0305105A545C001E9511</string>
-											<string>2CCF031C105A5550001E9511</string>
-											<string>2CCF031D105A5550001E9511</string>
 											<string>2CCF0326105A5C72001E9511</string>
-											<string>2CCF0327105A5C72001E9511</string>
-											<string>2CCF0328105A5C72001E9511</string>
+											<string>2CCF0333105A6A43001E9511</string>
+											<string>2CCF034B105A79C7001E9511</string>
+											<string>2CCF0378105A8CD1001E9511</string>
+											<string>2CCF0379105A8CD1001E9511</string>
+											<string>2CCF037A105A8CD1001E9511</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -461,9 +462,16 @@
 											<string>2C6FE0801059F1EA00E80491</string>
 											<string>2C6FE0CE105A370400E80491</string>
 											<string>2CCF0308105A545C001E9511</string>
-											<string>2CCF031F105A5550001E9511</string>
 											<string>2CCF0329105A5C72001E9511</string>
 											<string>2CCF032A105A5C72001E9511</string>
+											<string>2CCF0336105A6A43001E9511</string>
+											<string>2CCF0337105A6A43001E9511</string>
+											<string>2CCF0338105A6A43001E9511</string>
+											<string>2CCF033A105A6A43001E9511</string>
+											<string>2CCF037B105A8CD1001E9511</string>
+											<string>2CCF037C105A8CD1001E9511</string>
+											<string>2CCF037D105A8CD1001E9511</string>
+											<string>2CCF037E105A8CD1001E9511</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -475,14 +483,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {851, 188}}</string>
+								<string>{{0, 0}, {851, 402}}</string>
 								<key>RubberWindowFrame</key>
 								<string>96 181 1176 694 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>188pt</string>
+							<string>402pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -490,7 +498,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppController.m</string>
+								<string>ProgressWindowController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -498,11 +506,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppController.m</string>
+										<string>ProgressWindowController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CCF032C105A5C72001E9511</string>
+										<string>2CCF0380105A8CD1001E9511</string>
 										<key>history</key>
 										<array>
 											<string>2C5D954910552D1200B8479B</string>
@@ -528,14 +536,14 @@
 											<string>2C7DC8B11057C86D00579B20</string>
 											<string>2C7DC8C81057C9DF00579B20</string>
 											<string>2C7DC8DB1057D23600579B20</string>
-											<string>2C6FE05F1059EF7C00E80491</string>
 											<string>2C6FE0C7105A370400E80491</string>
-											<string>2C6FE0C8105A370400E80491</string>
-											<string>2C6FE0C9105A370400E80491</string>
 											<string>2C6FE0DE105A37D400E80491</string>
 											<string>2C6FE0E6105A40AA00E80491</string>
-											<string>2C6FE0E7105A40AA00E80491</string>
-											<string>2C6FE129105A477700E80491</string>
+											<string>2CCF034E105A79C7001E9511</string>
+											<string>2CCF0363105A8B1E001E9511</string>
+											<string>2CCF0364105A8B1E001E9511</string>
+											<string>2CCF0365105A8B1E001E9511</string>
+											<string>2C6FE05F1059EF7C00E80491</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -571,6 +579,11 @@
 											<string>2C6FE03E1059EC0D00E80491</string>
 											<string>2C6FE0801059F1EA00E80491</string>
 											<string>2C6FE0CE105A370400E80491</string>
+											<string>2CCF0350105A79C7001E9511</string>
+											<string>2CCF0366105A8B1E001E9511</string>
+											<string>2CCF0367105A8B1E001E9511</string>
+											<string>2CCF0368105A8B1E001E9511</string>
+											<string>2CCF0369105A8B1E001E9511</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -582,14 +595,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 193}, {851, 388}}</string>
+								<string>{{0, 407}, {851, 174}}</string>
 								<key>RubberWindowFrame</key>
 								<string>96 181 1176 694 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>388pt</string>
+							<string>174pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>

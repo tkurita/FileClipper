@@ -7,6 +7,8 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 @implementation ProgressWindowController
 
+@synthesize fileProcessor;
+
 + (void)initialize
 {
 	if (!WORKING_WINDOW_CONTROLLERS) {
@@ -73,15 +75,51 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	if (returnCode == NSOKButton) {
 		processor.newName = [newNameField stringValue];
 	}
+	
 	[sheet orderOut:self];
+	[processor unlock];
+}
+
+- (BOOL)panel:(id)sender isValidFilename:(NSString *)filename
+{
+	if ([fileProcessor.currentSource isEqualToString:filename]) {
+		[sender setMessage:NSLocalizedString(@"Same to the copy source.", @"")];
+		return NO;
+	}
+	
+	for (ProgressWindowController* wc in WORKING_WINDOW_CONTROLLERS) {
+		if (wc != self) {
+			NSString *destination = [wc.fileProcessor.location stringByAppendingPathComponent:
+									 wc.fileProcessor.newName];
+			if ([filename isEqualToString:destination]) {
+				[sender setMessage:[NSString stringWithFormat:NSLocalizedString(@"%@ is busy.", @""), [filename lastPathComponent]]];
+				return NO;
+			}
+		}
+	}
+	return YES;
+}
+
+- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode contextInfo:(FileProcessor *)processor
+{
+	if (returnCode == NSOKButton) {
+		NSString *path = [sheet filename];
+		processor.newName = [path lastPathComponent];
+		processor.location = [path stringByDeletingLastPathComponent];
+	}
 	[processor unlock];
 }
 
 - (void)askNewName:(FileProcessor *)processor
 {
-	[newNameField setStringValue:[processor.currentSource lastPathComponent]];
-	[NSApp beginSheet:askWindow modalForWindow:[self window] modalDelegate:self 
-		didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:processor];
+	NSSavePanel *save_panel = [NSSavePanel savePanel];
+	[save_panel setDelegate:self];
+	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
+	[save_panel beginSheetForDirectory:processor.location
+				file:[processor.currentSource lastPathComponent] 
+				modalForWindow:[self window] modalDelegate:self
+						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
+						   contextInfo:processor];
 	[processor lock];
 }
 

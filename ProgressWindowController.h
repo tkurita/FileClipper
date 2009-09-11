@@ -12,6 +12,8 @@
 	BOOL isTaskFinished;
 }
 
+@property (assign) FileProcessor* fileProcessor;
+
 + (NSArray *)workingControllers;
 
 - (IBAction)okAction:(id)sender;
