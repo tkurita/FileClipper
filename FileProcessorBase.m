@@ -4,12 +4,13 @@
 #define useLog 0
 
 @implementation FileProcessorBase
-@synthesize location, sourceItems, owner, currentSource, newName, loginShell;
+@synthesize location, sourceItems, owner, currentSource, newName, loginShell, enumerator, isCanceled;
 
 - (id)init
 {
 	if (self = [super init]) {
 		lock = [NSLock new];
+		isCanceled = NO;
 	}
 	return self;
 }
@@ -43,6 +44,7 @@
 
 - (BOOL)trySVN:(NSString *)command withSource:(NSString *)source
 {
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSTask* svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"",source, nil]];
 	BOOL result = NO;
 	[svntask launch];
@@ -72,6 +74,7 @@
 	
 	result = YES;
 bail:
+	[pool release];
 	return result;
 }
 
@@ -133,6 +136,7 @@ bail:
 	[location release];
 	[newName release];
 	[lock release];
+	[enumerator release];
 	[super dealloc];
 }
 @end

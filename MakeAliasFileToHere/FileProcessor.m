@@ -7,7 +7,7 @@
 
 - (void)doTask:(id)sender
 {
-	NSEnumerator* enumerator = [sourceItems objectEnumerator];
+	enumerator = [sourceItems objectEnumerator];
 	NSString* source;
 	while (source = [enumerator nextObject]) {
 		NSString* newname = [[source lastPathComponent] uniqueNameAtLocation:location];

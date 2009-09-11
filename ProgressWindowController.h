@@ -15,6 +15,7 @@
 
 - (IBAction)okAction:(id)sender;
 - (IBAction)cancelAction:(id)sender;
+- (IBAction)cancelTask:(id)sender;
 
 #pragma mark public
 - (void)processFiles:(NSArray *)array toLocation:(NSString *)path;

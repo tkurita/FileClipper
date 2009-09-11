@@ -144,13 +144,17 @@ bail:
 	IS_FIRST_PROCESS = NO;
 #if useLog
 	NSLog(@"applicationDidBecomeActive");
+	NSLog([[NSApp currentEvent] description]);
 #endif
 	if (processStarted) {
 		processStarted = NO;
 		return;
 	}
-	NSLog(@"start process in applicationDidBecomeActive");
-	[self processForInsertionLocation];
+	NSEvent *event = [NSApp currentEvent];
+	if ([event type] == NSAppKitDefined && [event subtype] == NSApplicationActivatedEventType) {
+		NSLog(@"start process in applicationDidBecomeActive");
+		[self processForInsertionLocation];
+	}
 }
 
 

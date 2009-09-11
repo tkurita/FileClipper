@@ -41,6 +41,11 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	[NSApp endSheet:askWindow returnCode:NSCancelButton];
 }
 
+- (IBAction)cancelTask:(id)sender
+{
+	fileProcessor.isCanceled = YES;
+}
+
 - (void)taskEnded:(id)sender
 {
 #if useLog

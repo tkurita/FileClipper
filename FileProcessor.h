@@ -2,6 +2,7 @@
 #import "FileProcessorBase.h"
 
 @interface FileProcessor : FileProcessorBase {
+
 }
 
 @end
