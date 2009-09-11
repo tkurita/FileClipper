@@ -266,6 +266,14 @@
 			2CCF0423105AAC7C001E9511 /* PBXTextBookmark */ = 2CCF0423105AAC7C001E9511 /* PBXTextBookmark */;
 			2CCF0424105AAC7C001E9511 /* PBXTextBookmark */ = 2CCF0424105AAC7C001E9511 /* PBXTextBookmark */;
 			2CCF0425105AAC7C001E9511 /* PBXTextBookmark */ = 2CCF0425105AAC7C001E9511 /* PBXTextBookmark */;
+			2CCF043D105AAD38001E9511 /* PBXTextBookmark */ = 2CCF043D105AAD38001E9511 /* PBXTextBookmark */;
+			2CCF043E105AAD38001E9511 /* PBXTextBookmark */ = 2CCF043E105AAD38001E9511 /* PBXTextBookmark */;
+			2CCF043F105AAD38001E9511 /* PBXBookmark */ = 2CCF043F105AAD38001E9511 /* PBXBookmark */;
+			2CCF0440105AAD38001E9511 /* PBXTextBookmark */ = 2CCF0440105AAD38001E9511 /* PBXTextBookmark */;
+			2CCF0441105AAD38001E9511 /* PBXTextBookmark */ = 2CCF0441105AAD38001E9511 /* PBXTextBookmark */;
+			2CCF0442105AAD38001E9511 /* PBXTextBookmark */ = 2CCF0442105AAD38001E9511 /* PBXTextBookmark */;
+			2CCF0443105AAD38001E9511 /* PlistBookmark */ = 2CCF0443105AAD38001E9511 /* PlistBookmark */;
+			2CCF0444105AAD38001E9511 /* PBXTextBookmark */ = 2CCF0444105AAD38001E9511 /* PBXTextBookmark */;
 			2CE1326E103196E000578ACF = 2CE1326E103196E000578ACF /* PaletteWindowController.h */;
 			2CE1326F103196E000578ACF = 2CE1326F103196E000578ACF /* PaletteWindowController.m */;
 			2CE3BACA1058CC8F002253AF = 2CE3BACA1058CC8F002253AF /* PBXTextBookmark */;
@@ -349,9 +357,9 @@
 	};
 	2C48998F0DE43333001A564D /* History.rd */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {608, 2160}}";
-			sepNavSelRange = "{84, 0}";
-			sepNavVisRange = "{0, 1108}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 2182}}";
+			sepNavSelRange = "{98, 22}";
+			sepNavVisRange = "{0, 937}";
 			sepNavVisRect = "{{0, 0}, {628, 660}}";
 			sepNavWindowFrame = "{{15, 145}, {667, 733}}";
 		};
@@ -1334,7 +1342,7 @@
 	};
 	2C9E8610104E788A00C5B158 /* FileProcessorBase.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {799, 596}}";
+			sepNavIntBoundsRect = "{{0, 0}, {799, 573}}";
 			sepNavSelRange = "{316, 0}";
 			sepNavVisRange = "{0, 1009}";
 			sepNavWindowFrame = "{{452, 153}, {858, 668}}";
@@ -1402,9 +1410,9 @@
 	};
 	2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 3906}}";
-			sepNavSelRange = "{181, 0}";
-			sepNavVisRange = "{0, 1151}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 3948}}";
+			sepNavSelRange = "{7211, 0}";
+			sepNavVisRange = "{6394, 1571}";
 			sepNavVisRect = "{{0, 0}, {805, 452}}";
 			sepNavWindowFrame = "{{15, 121}, {1077, 752}}";
 		};
@@ -1577,7 +1585,7 @@
 		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
 		name = "AppController.m: 45";
 		rLen = 0;
-		rLoc = 1333;
+		rLoc = 1379;
 		rType = 0;
 		vrLen = 1434;
 		vrLoc = 1715;
@@ -1704,7 +1712,7 @@
 		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
 		name = "AppController.m: 45";
 		rLen = 0;
-		rLoc = 1333;
+		rLoc = 1379;
 		rType = 0;
 		vrLen = 1391;
 		vrLoc = 1758;
@@ -1734,7 +1742,7 @@
 		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
 		name = "AppController.m: 45";
 		rLen = 0;
-		rLoc = 1333;
+		rLoc = 1379;
 		rType = 0;
 		vrLen = 1391;
 		vrLoc = 1758;
@@ -1754,7 +1762,7 @@
 		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
 		name = "AppController.m: 45";
 		rLen = 0;
-		rLoc = 1333;
+		rLoc = 1379;
 		rType = 0;
 		vrLen = 1391;
 		vrLoc = 1758;
@@ -1764,12 +1772,87 @@
 		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
 		name = "AppController.m: 7";
 		rLen = 0;
-		rLoc = 181;
+		rLoc = 227;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 0;
 	};
 	2CCF0425105AAC7C001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C9E8610104E788A00C5B158 /* FileProcessorBase.h */;
+		name = "FileProcessorBase.h: 15";
+		rLen = 0;
+		rLoc = 316;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 0;
+	};
+	2CCF043D105AAD38001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C48998F0DE43333001A564D /* History.rd */;
+		name = "History.rd: 8";
+		rLen = 22;
+		rLoc = 98;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 0;
+	};
+	2CCF043E105AAD38001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
+		name = "AppController.m: 230";
+		rLen = 0;
+		rLoc = 7211;
+		rType = 0;
+		vrLen = 1571;
+		vrLoc = 6394;
+	};
+	2CCF043F105AAD38001E9511 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+	};
+	2CCF0440105AAD38001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
+		name = "AppController.m: 7";
+		rLen = 0;
+		rLoc = 227;
+		rType = 0;
+		vrLen = 1151;
+		vrLoc = 0;
+	};
+	2CCF0441105AAD38001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C48998F0DE43333001A564D /* History.rd */;
+		name = "History.rd: 8";
+		rLen = 22;
+		rLoc = 98;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 0;
+	};
+	2CCF0442105AAD38001E9511 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
+		name = "AppController.m: 230";
+		rLen = 0;
+		rLoc = 7211;
+		rType = 0;
+		vrLen = 1571;
+		vrLoc = 6394;
+	};
+	2CCF0443105AAD38001E9511 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CCF0444105AAD38001E9511 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2C9E8610104E788A00C5B158 /* FileProcessorBase.h */;
 		name = "FileProcessorBase.h: 15";

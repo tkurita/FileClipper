@@ -4,6 +4,7 @@
 #import "WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
 #import "PathExtra.h"
+#import "DonationReminder/DonationReminder.h"
 
 #define	useLog 1
 
@@ -226,6 +227,7 @@ bail:
     }
 
 	[self performSelector:@selector(delayedProcess:) withObject:self afterDelay:0.3];
+	[DonationReminder remindDonation];
 }
 
 - (void)awakeFromNib

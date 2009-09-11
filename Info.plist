@@ -52,5 +52,7 @@
 			</array>
 		</dict>
 	</array>
+	<key>DonationURL</key>
+	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
 </dict>
 </plist>

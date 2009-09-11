@@ -190,6 +190,7 @@
 		2CCF03F9105AAB45001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CCF03FB105AAB5A001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CCF0401105AAC35001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF043A105AAD30001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -445,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCF043A105AAD30001E9511 /* DonationReminder.framework in Frameworks */,
 				2CF73E2909B8971D00EF8406 /* Cocoa.framework in Frameworks */,
 				2CF73E2A09B8971D00EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1821046109F006C3DC9 /* Carbon.framework in Frameworks */,
