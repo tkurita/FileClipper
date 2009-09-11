@@ -30,7 +30,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 - (IBAction)okAction:(id)sender
 {
-	NSString *newpath = [fileProcessor.location stringByAppendingPathComponent:[newNameField stringValue]];
+	NSString *newpath = [fileProcessor.currentLocation stringByAppendingPathComponent:[newNameField stringValue]];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:newpath]) {
 		[messageField setStringValue:NSLocalizedString(@"SameNameExists", @"")];
 		return;
@@ -64,7 +64,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 #if useLog
 	NSLog(@"task Ended.");
 #endif	
-	[[NSWorkspace sharedWorkspace] noteFileSystemChanged:[(FileProcessor *)sender location]];
+	[[NSWorkspace sharedWorkspace] noteFileSystemChanged:[(FileProcessor *)sender currentLocation]];
 	[indicator stopAnimation:self];
 	isTaskFinished = YES;
 	[self close];	
@@ -89,7 +89,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	
 	for (ProgressWindowController* wc in WORKING_WINDOW_CONTROLLERS) {
 		if (wc != self) {
-			NSString *destination = [wc.fileProcessor.location stringByAppendingPathComponent:
+			NSString *destination = [wc.fileProcessor.currentLocation stringByAppendingPathComponent:
 									 wc.fileProcessor.newName];
 			if ([filename isEqualToString:destination]) {
 				[sender setMessage:[NSString stringWithFormat:NSLocalizedString(@"%@ is busy.", @""), [filename lastPathComponent]]];
@@ -105,7 +105,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	if (returnCode == NSOKButton) {
 		NSString *path = [sheet filename];
 		processor.newName = [path lastPathComponent];
-		processor.location = [path stringByDeletingLastPathComponent];
+		processor.currentLocation = [path stringByDeletingLastPathComponent];
 	}
 	[processor unlock];
 }
@@ -115,7 +115,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setDelegate:self];
 	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
-	[save_panel beginSheetForDirectory:processor.location
+	[save_panel beginSheetForDirectory:processor.currentLocation
 				file:[processor.currentSource lastPathComponent] 
 				modalForWindow:[self window] modalDelegate:self
 						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
@@ -123,12 +123,12 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	[processor lock];
 }
 
-- (void)processFiles:(NSArray *)array toLocation:(NSString *)path
+- (void)processFiles:(NSArray *)array toLocations:(NSArray *)locations
 {
 	[self showWindow:self];
 	[WORKING_WINDOW_CONTROLLERS addObject:self];
 	fileProcessor.sourceItems = array;
-	fileProcessor.location = path;
+	fileProcessor.locations = locations;
 	[NSThread detachNewThreadSelector:@selector(startThreadTask:) toTarget:fileProcessor withObject:self];
 }
 

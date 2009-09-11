@@ -33,8 +33,18 @@ static BOOL IS_FIRST_PROCESS = YES;
 	return (([[ProgressWindowController workingControllers] count] < 1) && ![errorWindow isVisible]);
 }
 
-- (void)processAtLocation:(NSString *)path centerPosition:(NSPoint)position
+- (void)processAtLocations:(NSArray *)filenames centerPosition:(NSPoint)position
 {
+	NSMutableArray *locations = [NSMutableArray arrayWithCapacity:[filenames count]];
+	
+	for (NSString *path in filenames) {
+		if (![path isFolder] || [path isPackage]) {
+			path = [path stringByDeletingLastPathComponent];
+		}
+		if (![locations containsObject:path])
+			[locations addObject:[path cleanPath]];
+	}
+	
 	NSArray *array = [FilesInPasteboard getContents];
 	if (!array) {
 		NSRunAlertPanel(NSLocalizedString(@"NoFilesInClipboard", @""), @"", @"OK", nil, nil);
@@ -95,7 +105,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 			[window center];
 		}
 	}
-	[wc processFiles:array toLocation:path];
+	[wc processFiles:array toLocations:locations];
 }
 
 - (void)updateOnFinder:(NSString *)aPath
@@ -152,7 +162,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.y];
 	}
 	
-	[self processAtLocation:location_path centerPosition:center_position];
+	[self processAtLocations:[NSArray arrayWithObject:location_path] centerPosition:center_position];
 bail:
 	return;	
 }
@@ -256,12 +266,9 @@ bail:
         return;
     }
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
-	NSString *location = [filenames objectAtIndex:0];
-	if (![location isFolder] || [location isPackage]) {
-		location = [location stringByDeletingLastPathComponent];
-	}
+		
 	[NSApp activateIgnoringOtherApps:YES];
-	[self processAtLocation:location centerPosition:center_position];
+	[self processAtLocations:filenames centerPosition:center_position];
 }
 
 - (void)dealloc

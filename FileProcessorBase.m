@@ -4,7 +4,7 @@
 #define useLog 0
 
 @implementation FileProcessorBase
-@synthesize location, sourceItems, owner, currentSource, newName, loginShell, enumerator, isCanceled;
+@synthesize locations, currentLocation, sourceItems, owner, currentSource, newName, loginShell, enumerator, isCanceled;
 
 - (id)init
 {
@@ -15,21 +15,13 @@
 	return self;
 }
 
-- (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path owner:(id)ownerObject
+- (id)initWithSourceItems:(NSArray *)array toLocations:(NSArray *)pathes owner:(id)ownerObject
 {
 	self = [self init];
-	self.location = path;
+	self.locations = pathes;
 	self.sourceItems = array;
 	self.owner = ownerObject;
 	return self;
-}
-
-- (void)setLocation:(NSString *)path
-{
-	path = [path cleanPath];
-	[path retain];
-	[location autorelease];
-	location = path;
 }
 
 - (NSTask*)loginShellTask:(NSArray*)arguments
@@ -53,7 +45,7 @@
 		goto bail;
 	}
 	
-	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"", location, nil]];
+	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"", currentLocation, nil]];
 	[svntask launch];
 	[svntask waitUntilExit];
 	
@@ -63,7 +55,7 @@
 	
 	NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
 	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", svncommand, source, 
-									[location stringByAppendingPathComponent:newName], nil]];
+									[currentLocation stringByAppendingPathComponent:newName], nil]];
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
@@ -106,7 +98,7 @@ bail:
 {
 	self.currentSource = source;
 	self.newName = nil;
-	if ([[location stringByAppendingPathComponent:[source lastPathComponent]] fileExists]) {
+	if ([[currentLocation stringByAppendingPathComponent:[source lastPathComponent]] fileExists]) {
 		[owner performSelectorOnMainThread:@selector(askNewName:) withObject:self waitUntilDone:YES];
 		[lock lock];
 		[lock unlock];
@@ -124,7 +116,13 @@ bail:
 - (void)startThreadTask:(id)sender
 {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	[self doTask:sender];
+	for (NSString *path in locations) {
+		self.currentLocation = path;
+		for (NSString *source in sourceItems) {
+			self.currentSource = source;
+			[self doTask:sender];
+		}
+	}
 	[pool release];
 	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
 	[NSThread exit];
@@ -133,7 +131,8 @@ bail:
 - (void) dealloc
 {
 	[sourceItems release];
-	[location release];
+	[locations release];
+	[currentLocation release];
 	[newName release];
 	[lock release];
 	[enumerator release];

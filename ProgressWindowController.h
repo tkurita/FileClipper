@@ -24,7 +24,7 @@
 - (void)setStatusMessage:(NSString *)string;
 
 #pragma mark public
-- (void)processFiles:(NSArray *)array toLocation:(NSString *)path;
+- (void)processFiles:(NSArray *)array toLocations:(NSArray *)locations;
 
 
 @end

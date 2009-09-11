@@ -2,7 +2,8 @@
 
 @interface FileProcessorBase : NSObject {
 	IBOutlet id owner;
-	NSString *location;
+	NSArray *locations;
+	NSString *currentLocation;
 	NSArray *sourceItems;
 	NSString* currentSource;
 	NSString* newName;
@@ -11,7 +12,8 @@
 	NSEnumerator *enumerator;
 	BOOL isCanceled;
 }
-@property (retain) NSString* location;
+@property (retain) NSArray* locations;
+@property (retain) NSString* currentLocation;
 @property (retain) NSArray* sourceItems;
 @property (assign) id owner;
 @property (assign) NSString* currentSource;
@@ -20,7 +22,7 @@
 @property (retain) NSEnumerator *enumerator;
 @property (assign) BOOL isCanceled;
 
-- (id)initWithSourceItems:(NSArray *)array toLocation:(NSString *)path owner:(id)ownerObject;
+- (id)initWithSourceItems:(NSArray *)array toLocations:(NSArray *)pathes owner:(id)ownerObject;
 - (void)startThreadTask:(id)sender;
 - (void)displayErrorLog:(NSString *)aText;
 - (void)lock;

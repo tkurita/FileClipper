@@ -181,6 +181,15 @@
 		2CAB38AA09BEB8CC00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CAB38AB09BEB8CC00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
 		2CAB38AC09BEB8CD00A9C0EC /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
+		2CCF03EC105AAAE2001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03ED105AAAE3001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03EE105AAAE3001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03EF105AAAE3001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03F0105AAAE3001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03F7105AAB33001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03F9105AAB45001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF03FB105AAB5A001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
+		2CCF0401105AAC35001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -238,12 +247,65 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2CCF03FC105AAB78001E9511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CCF03EC105AAAE2001E9511 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF03FD105AAB78001E9511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CCF03F7105AAB33001E9511 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF03FE105AAB78001E9511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				2CCF03F9105AAB45001E9511 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF03FF105AAB78001E9511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CCF03FB105AAB5A001E9511 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF041F105AAC53001E9511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CCF0401105AAC35001E9511 /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2C48998F0DE43333001A564D /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = History.rd; path = ../History.rd; sourceTree = SOURCE_ROOT; };
+		2C48998F0DE43333001A564D /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
 		2C5FB16A1046100F006C3DC9 /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
 		2C5FB16B1046100F006C3DC9 /* SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartActivate.h; sourceTree = "<group>"; };
 		2C5FB16C1046100F006C3DC9 /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
@@ -304,6 +366,7 @@
 		2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2CAB375409BEA71900A9C0EC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
+		2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
 		2CE13264103196E000578ACF /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
 		2CE13265103196E000578ACF /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2CE13266103196E000578ACF /* FrontAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontAppMonitor.h; sourceTree = "<group>"; };
@@ -350,6 +413,7 @@
 				2C9E85D2104E4F5000C5B158 /* AppleScriptKit.framework in Frameworks */,
 				2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */,
 				2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */,
+				2CCF03F0105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +425,7 @@
 				2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1811046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB2104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
+				2CCF03ED105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +437,7 @@
 				2CF73DF509B895AD00EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB17F1046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB4104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
+				2CCF03EF105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +460,7 @@
 				2CF73E8809B8997400EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1801046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB3104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
+				2CCF03EE105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +479,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */,
 				2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */,
 				2C5FB17E1046109F006C3DC9 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -682,6 +750,7 @@
 				2C9E85B3104E4D8D00C5B158 /* Resources */,
 				2C9E85B4104E4D8D00C5B158 /* Sources */,
 				2C9E85B5104E4D8D00C5B158 /* Frameworks */,
+				2CCF041F105AAC53001E9511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -701,6 +770,7 @@
 				2CF73B5209B86EB100EF8406 /* Resources */,
 				2CF73B5309B86EB100EF8406 /* Sources */,
 				2CF73B5409B86EB100EF8406 /* Frameworks */,
+				2CCF03FD105AAB78001E9511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -720,6 +790,7 @@
 				2CF73DB909B88D4C00EF8406 /* Resources */,
 				2CF73DBA09B88D4C00EF8406 /* Sources */,
 				2CF73DBB09B88D4C00EF8406 /* Frameworks */,
+				2CCF03FF105AAB78001E9511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -739,6 +810,7 @@
 				2CF73E2309B8971D00EF8406 /* Resources */,
 				2CF73E2509B8971D00EF8406 /* Sources */,
 				2CF73E2809B8971D00EF8406 /* Frameworks */,
+				2CCF03FC105AAB78001E9511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -758,6 +830,7 @@
 				2CF73E8009B8997400EF8406 /* Resources */,
 				2CF73E8309B8997400EF8406 /* Sources */,
 				2CF73E8609B8997400EF8406 /* Frameworks */,
+				2CCF03FE105AAB78001E9511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1117,6 +1190,11 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1143,6 +1221,11 @@
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1187,6 +1270,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1204,6 +1292,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1219,6 +1312,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1236,6 +1334,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1251,6 +1354,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1268,6 +1376,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1283,6 +1396,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1300,6 +1418,11 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;

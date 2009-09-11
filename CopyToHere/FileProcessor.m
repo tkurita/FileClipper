@@ -80,13 +80,13 @@ static void statusCallback (FSFileOperationRef fileOp,
 		if (![self trySVN:@"cp" withSource:source]) {
 		//if (YES) {
 #if useLog
-			NSString *destination = [location stringByAppendingPathComponent:newName];
+			NSString *destination = [currentLocation stringByAppendingPathComponent:newName];
 			NSLog(@"Copy source : %@", source);
 			NSLog(@"Copy destination : %@", destination);
 #endif			
 			FSFileOperationRef fileOp = FSFileOperationCreate(NULL);
 			const char *source_char = [source fileSystemRepresentation];
-			const char *loc_char = [location fileSystemRepresentation];
+			const char *loc_char = [currentLocation fileSystemRepresentation];
 			status = FSFileOperationScheduleWithRunLoop(fileOp, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
 			if (status != noErr) {
 				NSLog(@"Error in FSFileOperationScheduleWithRunLoop with number %d", status);
@@ -102,7 +102,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 				CFRelease(fileOp);
 				goto bail;
 			}
-			NSString *loc_name = [location lastPathComponent];
+			NSString *loc_name = [currentLocation lastPathComponent];
 			NSString *source_name = [source lastPathComponent];
 			if (![source_name isEqualToString:newName]) 
 				loc_name = [loc_name stringByAppendingPathComponent:newName];
@@ -120,29 +120,24 @@ bail:
 {
 	NSLog(@"start startThreadTask");
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-    BOOL done = NO;
-	self.enumerator = [sourceItems objectEnumerator];
-	[self doTask:sender];
-    // Add your sources or timers to the run loop and do any other setup.
-	
-    do
-    {
-        // Start the run loop but return after each source is handled.
-        SInt32    result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
-		
-        // If a source explicitly stopped the run loop, or if there are no
-        // sources or timers, go ahead and exit.
-        if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished)) {
+	for (NSString *path in locations) {
+		self.currentLocation = path;
+		BOOL done = NO;
+		self.enumerator = [sourceItems objectEnumerator];
+		[self doTask:sender];
+		do
+		{
+			SInt32    result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
+			if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished)) {
 #if useLog
-            NSLog(@"run loop is stoped");
+				NSLog(@"run loop is stoped");
 #endif
-			done = YES;
+				done = YES;
+			}
 		}
-        // Check for any other exit conditions here and set the
-        // done variable as needed.
-    }
-    while (!done);
-	
+		while (!done);
+		if (isCanceled) break;
+	}
 	[pool release];
 	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
 	[NSThread exit];
