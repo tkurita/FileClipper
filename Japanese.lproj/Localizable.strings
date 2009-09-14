@@ -5,7 +5,3 @@
 "Cancel" = "キャンセル";
 "GUIScriptingIsNotEnabled" = "GUI スクリプティングが使用可能になっていません。";
 "AskLaunchPreferences" = "システム環境設定で「補助装置を使用可能にする」を ON にしてください。";
-"Fail to make symbolic link with error : %d\n" = "シンボリックリンクの作成に失敗しました。 エラー : %d\n";
-"Fail to make alias file at %@.\n" = "%@ にエイリアスファイルの作成に失敗しました。\n";
-"Fail to make alias for %@.\n" = "%@ のエイリアスの作成に失敗しました。\n";
-"Fail to make hard link from %@ to %@.\n" = "%@ から %@ へのハードリンクの作成に失敗しました。\n";

@@ -74,6 +74,13 @@ static void statusCallback (FSFileOperationRef fileOp,
 	source = [source cleanPath];
 	self.newName = [source lastPathComponent];
 	OSStatus status;
+
+	NSString *status_msg = [NSString stringWithFormat:
+							NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizabel.strings", @""), 
+							newName, currentLocation];
+	[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+	
+	
 	if ([self resolveNewName:source]) {
 		if (![self trySVN:@"cp" withSource:source]) {
 			//if (YES) {
@@ -102,12 +109,13 @@ static void statusCallback (FSFileOperationRef fileOp,
 			}
 			NSString *loc_name = [currentLocation lastPathComponent];
 			NSString *source_name = [source lastPathComponent];
-			if (![source_name isEqualToString:newName]) 
+			if (![source_name isEqualToString:newName]) {
 				loc_name = [loc_name stringByAppendingPathComponent:newName];
-			NSString *status_msg = [NSString stringWithFormat:
-									NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizabel.strings", @""), 
-									source_name, loc_name];
-			[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+				status_msg = [NSString stringWithFormat:
+										NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizabel.strings", @""), 
+										source_name, loc_name];
+				[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+			}
 		}
 	}
 	

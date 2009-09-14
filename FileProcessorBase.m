@@ -124,6 +124,10 @@ bail:
 		self.currentLocation = path;
 		for (NSString *source in sourceItems) {
 			self.currentSource = source;
+			NSString *status_msg = [NSString stringWithFormat:
+									NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizabel.strings", @""), 
+									[source lastPathComponent], currentLocation];
+			[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 			[self doTask:sender];
 		}
 	}
