@@ -13,14 +13,19 @@ static BOOL IS_FIRST_PROCESS = YES;
 
 @implementation AppController
 
-- (void)displayErrorLog:(NSString *)aText
+- (void)displayErrorLog:(NSString *)format, ...
 {
+    va_list argumentList;
+    va_start(argumentList, format);
+	NSString *msg = [[[NSString alloc] initWithFormat:format arguments:argumentList] autorelease];
+    va_end(argumentList);
+	msg = [msg stringByAppendingString:@"\n"];
 	[errorWindow orderFront:self];
     NSRange endRange;
 	
     endRange.location = [[errorTextView textStorage] length];
     endRange.length = 0;
-    [errorTextView replaceCharactersInRange:endRange withString:aText];
+    [errorTextView replaceCharactersInRange:endRange withString:msg];
     endRange.length = [[errorTextView textStorage] length];
     [errorTextView scrollRangeToVisible:endRange];
 }

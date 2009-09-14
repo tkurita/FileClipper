@@ -115,6 +115,10 @@
 		2C5FB1B7104613FE006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
+		2C7F3BBC105E1A330041D337 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
+		2C7F3EB8105E4FF40041D337 /* PaticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EB7105E4FF40041D337 /* PaticularLocalizable.strings */; };
+		2C7F3EC1105E50E60041D337 /* PaticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC0105E50E60041D337 /* PaticularLocalizable.strings */; };
+		2C7F3EC5105E52470041D337 /* PaticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC4105E52470041D337 /* PaticularLocalizable.strings */; };
 		2C9E7E17104B892300C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E15104B892300C5B158 /* FileProcessor.m */; };
 		2C9E7E32104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E7E34104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
@@ -160,7 +164,6 @@
 		2C9E85CD104E4E4E00C5B158 /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE13275103196E000578ACF /* WindowVisibilityController.m */; };
 		2C9E85CE104E4E5600C5B158 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2C9E85D1104E4F5000C5B158 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2C9E85D2104E4F5000C5B158 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FB17E1046109F006C3DC9 /* Carbon.framework */; };
 		2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */; };
 		2C9E85DE104E509900C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */; };
@@ -191,22 +194,28 @@
 		2CCF03FB105AAB5A001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CCF0401105AAC35001E9511 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
 		2CCF043A105AAD30001E9511 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */; };
-		2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2CCF064E105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */; };
+		2CCF064F105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */; };
+		2CCF0650105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */; };
+		2CCF0651105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */; };
+		2CCF0652105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */; };
+		2CCF0658105AC388001E9511 /* PaticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF0657105AC388001E9511 /* PaticularLocalizable.strings */; };
+		2CCF0673105AC66D001E9511 /* PaticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF0672105AC66D001E9511 /* PaticularLocalizable.strings */; };
+		2CCF06E9105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */; };
+		2CCF06EA105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
+		2CCF06EB105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73C4909B8737A00EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2CF73DF409B895AD00EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2CF73DF509B895AD00EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73DF609B895B400EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2CF73DF709B895B400EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73E2609B8971D00EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2CF73E2709B8971D00EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73E2909B8971D00EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2CF73E2A09B8971D00EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF73E8409B8997400EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
 		2CF73E8509B8997400EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73E8709B8997400EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2CF73E8809B8997400EF8406 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		2CF740BD09B9CB0700EF8406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF740BC09B9CB0700EF8406 /* InfoPlist.strings */; };
 		2CF7418309B9EA7900EF8406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF7418209B9EA7400EF8406 /* InfoPlist.strings */; };
 		2CF7419009B9EC1F00EF8406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF7418D09B9EBF200EF8406 /* InfoPlist.strings */; };
@@ -312,7 +321,14 @@
 		2C5FB16C1046100F006C3DC9 /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
 		2C5FB17E1046109F006C3DC9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
-		2C9E7E0F104B88F100C5B158 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F3BAF105E19650041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F3C0C105E20910041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F3EA1105E4CB90041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F3EAD105E4EC30041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F3EB5105E4FE80041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F3EBE105E50DE0041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F3EC2105E52420041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F3ECD105E53510041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E15104B892300C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E25104B89CB00C5B158 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProgressWindow.xib; sourceTree = "<group>"; };
@@ -368,6 +384,11 @@
 		2CAB375409BEA71900A9C0EC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
 		2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
+		2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
+		2CCF0655105AC380001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2CCF0670105AC663001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorCopyMoveAsync.h; sourceTree = "<group>"; };
+		2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorCopyMoveAsync.m; sourceTree = "<group>"; };
 		2CE13264103196E000578ACF /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
 		2CE13265103196E000578ACF /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2CE13266103196E000578ACF /* FrontAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontAppMonitor.h; sourceTree = "<group>"; };
@@ -402,7 +423,6 @@
 		2CF7431E09B9FC3E00EF8406 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CF743EB09B9FC7F00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65359356078DD41800E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
-		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,10 +431,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E85D1104E4F5000C5B158 /* Cocoa.framework in Frameworks */,
-				2C9E85D2104E4F5000C5B158 /* AppleScriptKit.framework in Frameworks */,
 				2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */,
 				2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */,
 				2CCF03F0105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
+				2CCF0652105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +443,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */,
-				2CF73B5E09B86F0400EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1811046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB2104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
 				2CCF03ED105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
+				2CCF064F105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,10 +455,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF73DF409B895AD00EF8406 /* Cocoa.framework in Frameworks */,
-				2CF73DF509B895AD00EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB17F1046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB4104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
 				2CCF03EF105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
+				2CCF0651105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +468,9 @@
 			files = (
 				2CCF043A105AAD30001E9511 /* DonationReminder.framework in Frameworks */,
 				2CF73E2909B8971D00EF8406 /* Cocoa.framework in Frameworks */,
-				2CF73E2A09B8971D00EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1821046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB6104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
+				2CCF064E105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,10 +479,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF73E8709B8997400EF8406 /* Cocoa.framework in Frameworks */,
-				2CF73E8809B8997400EF8406 /* AppleScriptKit.framework in Frameworks */,
 				2C5FB1801046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB3104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
 				2CCF03EE105AAAE3001E9511 /* DonationReminder.framework in Frameworks */,
+				2CCF0650105AB1E8001E9511 /* AppleScriptKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,11 +501,11 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */,
 				2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */,
 				2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */,
 				2C5FB17E1046109F006C3DC9 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -523,8 +543,8 @@
 				2CE13263103196E000578ACF /* CocoaLib */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				2CF7417C09B9EA5600EF8406 /* CopyToHere */,
-				2CF7409909B9C8FF00EF8406 /* MakeSymbolicLinkToHere */,
 				2CF7409A09B9C8FF00EF8406 /* MoveToHere */,
+				2CF7409909B9C8FF00EF8406 /* MakeSymbolicLinkToHere */,
 				2CF7409B09B9C8FF00EF8406 /* MakeAliasFileToHere */,
 				2C9E85A9104E4D2700C5B158 /* MakeHardLinkToHere */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -610,9 +630,10 @@
 				2CAB363009BE6A3800A9C0EC /* ProgressWindow.h */,
 				2C9E7E2F104B8A1100C5B158 /* ProgressWindowController.h */,
 				2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */,
-				2C9E7E0F104B88F100C5B158 /* FileProcessor.h */,
 				2C9E8608104E784700C5B158 /* FileProcessorBase.m */,
 				2C9E8610104E788A00C5B158 /* FileProcessorBase.h */,
+				2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */,
+				2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -644,6 +665,8 @@
 				2C9E85AB104E4D2700C5B158 /* InfoPlist.strings */,
 				2C9E85AD104E4D2700C5B158 /* ServicesMenu.strings */,
 				2C9E85B0104E4D2700C5B158 /* FileProcessor.m */,
+				2C7F3ECD105E53510041D337 /* FileProcessor.h */,
+				2C7F3EC4105E52470041D337 /* PaticularLocalizable.strings */,
 			);
 			path = MakeHardLinkToHere;
 			sourceTree = "<group>";
@@ -673,6 +696,8 @@
 				2CF740BC09B9CB0700EF8406 /* InfoPlist.strings */,
 				2C9E81E4104D23B100C5B158 /* ServicesMenu.strings */,
 				2C9E83D9104D245C00C5B158 /* FileProcessor.m */,
+				2C7F3EA1105E4CB90041D337 /* FileProcessor.h */,
+				2C7F3EB7105E4FF40041D337 /* PaticularLocalizable.strings */,
 			);
 			path = MakeSymbolicLinkToHere;
 			sourceTree = "<group>";
@@ -684,6 +709,8 @@
 				2CF7418D09B9EBF200EF8406 /* InfoPlist.strings */,
 				2C9E7E10104B88F100C5B158 /* FileProcessor.m */,
 				2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */,
+				2CCF0672105AC66D001E9511 /* PaticularLocalizable.strings */,
+				2C7F3C0C105E20910041D337 /* FileProcessor.h */,
 			);
 			path = MoveToHere;
 			sourceTree = "<group>";
@@ -694,7 +721,9 @@
 				2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */,
 				2CF7419309B9EC4500EF8406 /* InfoPlist.strings */,
 				2C9E7E15104B892300C5B158 /* FileProcessor.m */,
+				2C7F3EAD105E4EC30041D337 /* FileProcessor.h */,
 				2C9E83E2104D2A3100C5B158 /* ServicesMenu.strings */,
+				2C7F3EC0105E50E60041D337 /* PaticularLocalizable.strings */,
 			);
 			path = MakeAliasFileToHere;
 			sourceTree = "<group>";
@@ -706,6 +735,8 @@
 				2CAAE1850E4C4103002A8807 /* BundleIcon.icns */,
 				2CF7418209B9EA7400EF8406 /* InfoPlist.strings */,
 				2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */,
+				2C7F3BAF105E19650041D337 /* FileProcessor.h */,
+				2CCF0657105AC388001E9511 /* PaticularLocalizable.strings */,
 			);
 			path = CopyToHere;
 			sourceTree = "<group>";
@@ -724,6 +755,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCF06E9105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +770,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCF06EB105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,9 +889,9 @@
 			projectRoot = "";
 			targets = (
 				2CF73E1E09B8971D00EF8406 /* Copy to Here */,
-				2CF73B5509B86EB100EF8406 /* Make Alias File to Here */,
-				2CF73E7B09B8997400EF8406 /* Make Symbolic Link to Here */,
 				2CF73DBC09B88D4C00EF8406 /* Move to Here */,
+				2CF73E7B09B8997400EF8406 /* Make Symbolic Link to Here */,
+				2CF73B5509B86EB100EF8406 /* Make Alias File to Here */,
 				2C9E85B6104E4D8D00C5B158 /* Make Hard Link to Here */,
 				2CAB356709BE675400A9C0EC /* BuildAll */,
 			);
@@ -874,6 +907,7 @@
 				2C5D93CC1054A14B00B8479B /* MainMenu.nib in Resources */,
 				2C5D93FF1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */,
+				2C7F3EC5105E52470041D337 /* PaticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,6 +922,7 @@
 				2C5FB1B7104613FE006C3DC9 /* FactorySettings.plist in Resources */,
 				2C5D93FC1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E83E3104D2A3100C5B158 /* ServicesMenu.strings in Resources */,
+				2C7F3EC1105E50E60041D337 /* PaticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,6 +937,7 @@
 				2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */,
 				2C5D93FE1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */,
+				2CCF0673105AC66D001E9511 /* PaticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +952,7 @@
 				2C5FB1B51046138D006C3DC9 /* FactorySettings.plist in Resources */,
 				2C5D93FB1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E7E7A104B905200C5B158 /* ServicesMenu.strings in Resources */,
+				2CCF0658105AC388001E9511 /* PaticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +967,7 @@
 				2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */,
 				2C5D93FD1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */,
+				2C7F3EB8105E4FF40041D337 /* PaticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1037,7 @@
 				2C9E7FF6104CEEEC00C5B158 /* FileProcessor.m in Sources */,
 				2C9E8043104CF22F00C5B158 /* PathExtra.m in Sources */,
 				2C9E860C104E784700C5B158 /* FileProcessorBase.m in Sources */,
+				2CCF06EA105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1058,7 @@
 				2C9E7FD5104CDF7000C5B158 /* FileProcessor.m in Sources */,
 				2C9E8040104CF22D00C5B158 /* PathExtra.m in Sources */,
 				2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */,
+				2C7F3BBC105E1A330041D337 /* FileProcessorCopyMoveAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,6 +1124,30 @@
 			name = ProgressWindow.xib;
 			sourceTree = "<group>";
 		};
+		2C7F3EB7105E4FF40041D337 /* PaticularLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C7F3EB5105E4FE80041D337 /* English */,
+			);
+			name = PaticularLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		2C7F3EC0105E50E60041D337 /* PaticularLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C7F3EBE105E50DE0041D337 /* English */,
+			);
+			name = PaticularLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		2C7F3EC4105E52470041D337 /* PaticularLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C7F3EC2105E52420041D337 /* English */,
+			);
+			name = PaticularLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		2C9E7E78104B905200C5B158 /* ServicesMenu.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1138,6 +1202,22 @@
 			name = ServicesMenu.strings;
 			sourceTree = "<group>";
 		};
+		2CCF0657105AC388001E9511 /* PaticularLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCF0655105AC380001E9511 /* English */,
+			);
+			name = PaticularLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		2CCF0672105AC66D001E9511 /* PaticularLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCF0670105AC663001E9511 /* English */,
+			);
+			name = PaticularLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		2CF740BC09B9CB0700EF8406 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1189,13 +1269,9 @@
 		2C9E85BA104E4D8E00C5B158 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -1203,6 +1279,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeHardLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
@@ -1219,19 +1296,16 @@
 		2C9E85BB104E4D8E00C5B158 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeHardLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
@@ -1282,6 +1356,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Alias File to Here";
@@ -1302,6 +1377,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Alias File to Here";
@@ -1324,6 +1400,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Move to Here";
@@ -1344,6 +1421,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Move to Here";
@@ -1354,6 +1432,7 @@
 		2CF73E2C09B8971D00EF8406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1366,6 +1445,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Copy to Here";
@@ -1376,6 +1456,7 @@
 		2CF73E2D09B8971D00EF8406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1386,6 +1467,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Copy to Here";
@@ -1408,6 +1490,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
@@ -1428,6 +1511,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
@@ -1438,7 +1522,9 @@
 		4E71A80A08A2C90C0034BBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(NATIVE_ARCH)";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1450,8 +1536,10 @@
 		4E71A80B08A2C90C0034BBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

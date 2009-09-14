@@ -24,7 +24,7 @@
 
 - (id)initWithSourceItems:(NSArray *)array toLocations:(NSArray *)pathes owner:(id)ownerObject;
 - (void)startThreadTask:(id)sender;
-- (void)displayErrorLog:(NSString *)aText;
+- (void)displayErrorLog:(NSString *)format, ...;
 - (void)lock;
 - (void)unlock;
 

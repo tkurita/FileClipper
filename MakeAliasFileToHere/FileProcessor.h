@@ -1,8 +1,8 @@
 #import <Cocoa/Cocoa.h>
 #import "FileProcessorBase.h"
 
-@interface FileProcessor : FileProcessorBase {
-
+@interface FileProcessor : FileProcessorBase
+{
 }
 
 @end

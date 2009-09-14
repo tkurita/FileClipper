@@ -77,11 +77,15 @@ bail:
 	return YES;
 }
 
-- (void) displayErrorLog:(NSString *)aText
+- (void)displayErrorLog:(NSString *)format, ...
 {
+    va_list argumentList;
+    va_start(argumentList, format);
+	NSString *msg = [[NSString alloc] initWithFormat:format arguments:argumentList];
 	[[NSApp delegate] 
-		performSelectorOnMainThread:@selector(displayErrorLog:) 
-		withObject:aText waitUntilDone:NO];
+		 performSelectorOnMainThread:@selector(displayErrorLog:) 
+		 withObject:msg waitUntilDone:NO];	
+    va_end(argumentList);
 }
 
 - (void)lock

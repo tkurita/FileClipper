@@ -7,23 +7,19 @@
 
 - (void)doTask:(id)sender
 {
-	enumerator = [sourceItems objectEnumerator];
-	NSString* source;
-	while (source = [enumerator nextObject]) {
-		NSString* newname = [[source lastPathComponent] uniqueNameAtLocation:location];
-		NSString* destination = [location stringByAppendingPathComponent:newname];
-		NDAlias* alias = [NDAlias aliasWithPath:source];
-		if (alias) {
-			if (![alias writeToFile:destination includeCustomIcon:NO] ) {
-				[self displayErrorLog:
-					[NSString stringWithFormat:
-						NSLocalizedString(@"Fail to make alias file at %@.\n", @""), destination]];
-			}
-		} else {
+	NSString* newname = [[currentSource lastPathComponent] uniqueNameAtLocation:currentLocation];
+	NSString* destination = [currentLocation stringByAppendingPathComponent:newname];
+	NDAlias* alias = [NDAlias aliasWithPath:currentSource];
+	if (alias) {
+		if (![alias writeToFile:destination includeCustomIcon:NO] ) {
 			[self displayErrorLog:
-			 [NSString stringWithFormat:
-			  NSLocalizedString(@"Fail to make alias for %@.\n", @""), source]];
+					NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""), 
+					destination];
 		}
+	} else {
+		[self displayErrorLog:
+			  NSLocalizedString(@"Fail to make alias for %@.", @"ParticularLocalizable", @""), 
+			currentSource];
 	}
 }
 

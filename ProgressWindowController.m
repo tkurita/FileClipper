@@ -83,7 +83,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 - (BOOL)panel:(id)sender isValidFilename:(NSString *)filename
 {
 	if ([fileProcessor.currentSource isEqualToString:filename]) {
-		[sender setMessage:NSLocalizedString(@"Same to the copy source.", @"")];
+		[sender setMessage:NSLocalizedStringFromTable(@"Same to the source item.", @"PaticularLocalizable", @"")];
 		return NO;
 	}
 	
