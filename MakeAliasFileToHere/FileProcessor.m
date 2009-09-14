@@ -18,7 +18,7 @@
 		}
 	} else {
 		[self displayErrorLog:
-			  NSLocalizedString(@"Fail to make alias for %@.", @"ParticularLocalizable", @""), 
+			  NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""), 
 			currentSource];
 	}
 }
