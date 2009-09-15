@@ -76,7 +76,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 	OSStatus status;
 
 	NSString *status_msg = [NSString stringWithFormat:
-							NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizable", @""), 
+							NSLocalizedStringFromTable(@"ProcessingFromTo", @"ParticularLocalizable", @""), 
 							newName, currentLocation];
 	[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 	
@@ -112,7 +112,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 			if (![source_name isEqualToString:newName]) {
 				loc_name = [loc_name stringByAppendingPathComponent:newName];
 				status_msg = [NSString stringWithFormat:
-										NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizable", @""), 
+										NSLocalizedStringFromTable(@"ProcessingFromTo", @"ParticularLocalizable", @""), 
 										source_name, loc_name];
 				[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 			}

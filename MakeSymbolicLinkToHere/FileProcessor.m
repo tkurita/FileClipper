@@ -20,7 +20,7 @@
 				[destination fileSystemRepresentation]) != 0) {
 		char *msg = strerror(errno);
 		[self displayErrorLog:
-			   NSLocalizedStringFromTable(@"Failed to make symbolic link with error : %d.", @"PaticularLocalizable", @""),
+			   NSLocalizedStringFromTable(@"Failed to make symbolic link with error : %d.", @"ParticularLocalizable", @""),
 			   [NSString stringWithUTF8String:msg]];
 	}
 }

@@ -241,6 +241,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -284,7 +286,11 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>2CF743E409B9FC6C00EF8406</string>
 								<string>2CF7417C09B9EA5600EF8406</string>
+								<string>2CCF0657105AC388001E9511</string>
 								<string>2CF7409A09B9C8FF00EF8406</string>
+								<string>2CF7409909B9C8FF00EF8406</string>
+								<string>2C7F3EB7105E4FF40041D337</string>
+								<string>2CF7409B09B9C8FF00EF8406</string>
 								<string>2C9E85A9104E4D2700C5B158</string>
 								<string>2C7F3EC4105E52470041D337</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -292,14 +298,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>26</integer>
-									<integer>24</integer>
-									<integer>18</integer>
+									<integer>37</integer>
+									<integer>31</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 117}, {303, 614}}</string>
+							<string>{{0, 257}, {303, 614}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,14 +336,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Localizable.strings</string>
+								<string>ParticularLocalizable.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -346,11 +349,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Localizable.strings</string>
+										<string>ParticularLocalizable.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5A1EAC105FD180000A8841</string>
+										<string>2C5A1EC5105FD33A000A8841</string>
 										<key>history</key>
 										<array>
 											<string>2C5D954910552D1200B8479B</string>
@@ -403,7 +406,13 @@
 											<string>2C5A1EA1105FD180000A8841</string>
 											<string>2C5A1EA2105FD180000A8841</string>
 											<string>2C5A1EA4105FD180000A8841</string>
-											<string>2C5A1EA5105FD180000A8841</string>
+											<string>2C5A1EB2105FD33A000A8841</string>
+											<string>2C5A1EB3105FD33A000A8841</string>
+											<string>2C5A1EB4105FD33A000A8841</string>
+											<string>2C5A1EB5105FD33A000A8841</string>
+											<string>2C5A1EB6105FD33A000A8841</string>
+											<string>2C5A1EB7105FD33A000A8841</string>
+											<string>2C5A1EB8105FD33A000A8841</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -499,6 +508,18 @@
 											<string>2C5A1EA9105FD180000A8841</string>
 											<string>2C5A1EAA105FD180000A8841</string>
 											<string>2C5A1EAB105FD180000A8841</string>
+											<string>2C5A1EB9105FD33A000A8841</string>
+											<string>2C5A1EBA105FD33A000A8841</string>
+											<string>2C5A1EBB105FD33A000A8841</string>
+											<string>2C5A1EBC105FD33A000A8841</string>
+											<string>2C5A1EBD105FD33A000A8841</string>
+											<string>2C5A1EBE105FD33A000A8841</string>
+											<string>2C5A1EBF105FD33A000A8841</string>
+											<string>2C5A1EC0105FD33A000A8841</string>
+											<string>2C5A1EC1105FD33A000A8841</string>
+											<string>2C5A1EC2105FD33A000A8841</string>
+											<string>2C5A1EC3105FD33A000A8841</string>
+											<string>2C5A1EC4105FD33A000A8841</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -698,12 +719,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>2C5A1DD2105F9E1B000A8841</string>
 		<string>2C5A1DD3105F9E1B000A8841</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2C4C9FB10F722D3800C2F097</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/FileClipper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -728,7 +749,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;エディタがありません&gt;</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -939,14 +960,12 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FileProcessorCopyMoveAsync.m</string>
+										<string>FileProcessorBase.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -967,6 +986,8 @@
 							<string>347pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1012,7 +1033,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1080,7 +1101,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -7,7 +7,7 @@
 {
 	if ([currentSource isFolder]) {
 		[self displayErrorLog:
-		 NSLocalizedStringFromTable(@"Can't make a hard link for a folder", @"PaticularLocalizable", @"")];
+		 NSLocalizedStringFromTable(@"Can't make a hard link for a folder", @"ParticularLocalizable", @"")];
 		return;
 	}
 	NSString *newname = [[currentSource lastPathComponent] uniqueNameAtLocation:currentLocation];

@@ -125,7 +125,7 @@ bail:
 		for (NSString *source in sourceItems) {
 			self.currentSource = source;
 			NSString *status_msg = [NSString stringWithFormat:
-									NSLocalizedStringFromTable(@"ProcessingFromTo", @"PaticularLocalizable.strings", @""), 
+									NSLocalizedStringFromTable(@"ProcessingFromTo", @"ParticularLocalizable.strings", @""), 
 									[source lastPathComponent], currentLocation];
 			[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 			[self doTask:sender];

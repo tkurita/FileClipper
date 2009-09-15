@@ -327,6 +327,26 @@
 			2C5A1EAA105FD180000A8841 /* PBXTextBookmark */ = 2C5A1EAA105FD180000A8841 /* PBXTextBookmark */;
 			2C5A1EAB105FD180000A8841 /* PBXTextBookmark */ = 2C5A1EAB105FD180000A8841 /* PBXTextBookmark */;
 			2C5A1EAC105FD180000A8841 /* PBXTextBookmark */ = 2C5A1EAC105FD180000A8841 /* PBXTextBookmark */;
+			2C5A1EB2105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB2105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB3105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB3105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB4105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB4105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB5105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB5105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB6105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB6105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB7105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB7105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB8105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB8105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EB9105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EB9105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBA105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBA105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBB105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBB105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBC105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBC105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBD105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBD105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBE105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBE105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EBF105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EBF105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC0105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC0105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC1105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC1105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC2105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC2105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC3105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC3105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC4105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC4105FD33A000A8841 /* PBXTextBookmark */;
+			2C5A1EC5105FD33A000A8841 /* PBXTextBookmark */ = 2C5A1EC5105FD33A000A8841 /* PBXTextBookmark */;
 			2C5D952D10552B9E00B8479B = 2C5D952D10552B9E00B8479B /* PBXTextBookmark */;
 			2C5D954910552D1200B8479B = 2C5D954910552D1200B8479B /* PBXTextBookmark */;
 			2C5D954A10552D1200B8479B = 2C5D954A10552D1200B8479B /* PBXTextBookmark */;
@@ -736,7 +756,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 126";
 		rLen = 34;
-		rLoc = 4158;
+		rLoc = 4160;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 0;
@@ -746,7 +766,7 @@
 		fRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */;
 		name = "ProgressWindowController.m: 132";
 		rLen = 0;
-		rLoc = 3477;
+		rLoc = 3478;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 2810;
@@ -806,7 +826,7 @@
 		fRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */;
 		name = "ProgressWindowController.m: 126";
 		rLen = 70;
-		rLoc = 3259;
+		rLoc = 3260;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 2810;
@@ -826,7 +846,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 126";
 		rLen = 34;
-		rLoc = 4158;
+		rLoc = 4160;
 		rType = 0;
 		vrLen = 544;
 		vrLoc = 0;
@@ -836,7 +856,7 @@
 		fRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */;
 		name = "FileProcessorBase.m: 130";
 		rLen = 16;
-		rLoc = 3446;
+		rLoc = 3447;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 2163;
@@ -846,7 +866,7 @@
 		fRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */;
 		name = "ProgressWindowController.m: 132";
 		rLen = 0;
-		rLoc = 3477;
+		rLoc = 3478;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 2810;
@@ -943,7 +963,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 126";
 		rLen = 34;
-		rLoc = 4158;
+		rLoc = 4160;
 		rType = 0;
 		vrLen = 584;
 		vrLoc = 0;
@@ -973,7 +993,7 @@
 		fRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */;
 		name = "ProgressWindowController.m: 132";
 		rLen = 0;
-		rLoc = 3477;
+		rLoc = 3478;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 2810;
@@ -1013,7 +1033,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1860;
 		vrLoc = 2307;
@@ -1033,7 +1053,7 @@
 		fRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */;
 		name = "FileProcessorBase.m: 128";
 		rLen = 0;
-		rLoc = 3325;
+		rLoc = 3326;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 2961;
@@ -1041,8 +1061,8 @@
 	2C5A1E0A105FA1EC000A8841 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
-		rLen = 19;
-		rLoc = 3781;
+		rLen = 17;
+		rLoc = 3785;
 		rType = 0;
 	};
 	2C5A1E0B105FA1EC000A8841 /* PBXTextBookmark */ = {
@@ -1060,7 +1080,7 @@
 		fRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */;
 		name = "FileProcessorBase.m: 128";
 		rLen = 0;
-		rLoc = 3325;
+		rLoc = 3326;
 		rType = 0;
 		vrLen = 754;
 		vrLoc = 2961;
@@ -1070,7 +1090,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3801;
+		rLoc = 3803;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 3257;
@@ -1080,7 +1100,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1946;
 		vrLoc = 2030;
@@ -1090,7 +1110,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1482;
 		vrLoc = 3030;
@@ -1100,7 +1120,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3801;
+		rLoc = 3803;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 3257;
@@ -1110,7 +1130,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1482;
 		vrLoc = 3030;
@@ -1127,7 +1147,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1482;
 		vrLoc = 3030;
@@ -1147,7 +1167,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3801;
+		rLoc = 3803;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 3257;
@@ -1175,8 +1195,8 @@
 	2C5A1E1D105FA2BC000A8841 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
-		rLen = 16;
-		rLoc = 3760;
+		rLen = 0;
+		rLoc = 2089;
 		rType = 0;
 	};
 	2C5A1E1E105FA2BC000A8841 /* PBXTextBookmark */ = {
@@ -1184,7 +1204,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3801;
+		rLoc = 3803;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 4320;
@@ -1224,7 +1244,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1274,7 +1294,7 @@
 		fRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */;
 		name = "ProgressWindowController.m: 132";
 		rLen = 0;
-		rLoc = 3477;
+		rLoc = 3478;
 		rType = 0;
 		vrLen = 978;
 		vrLoc = 2896;
@@ -1314,7 +1334,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1324,7 +1344,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1334,7 +1354,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1344,7 +1364,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1354,7 +1374,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3799;
+		rLoc = 3801;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3017;
@@ -1584,7 +1604,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1604,7 +1624,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1614,7 +1634,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1634,7 +1654,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1652,7 +1672,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 26";
 		rLen = 0;
-		rLoc = 1226;
+		rLoc = 1227;
 		rType = 0;
 		vrLen = 996;
 		vrLoc = 278;
@@ -1662,7 +1682,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 115";
 		rLen = 0;
-		rLoc = 3801;
+		rLoc = 3803;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 4140;
@@ -1672,7 +1692,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1722,7 +1742,7 @@
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 121";
 		rLen = 0;
-		rLoc = 4048;
+		rLoc = 4050;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 3022;
@@ -1742,7 +1762,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 26";
 		rLen = 51;
-		rLoc = 1173;
+		rLoc = 1174;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 0;
@@ -1772,7 +1792,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 26";
 		rLen = 0;
-		rLoc = 1256;
+		rLoc = 1257;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 0;
@@ -1782,7 +1802,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 26";
 		rLen = 0;
-		rLoc = 1256;
+		rLoc = 1257;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 0;
@@ -1882,7 +1902,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 26";
 		rLen = 0;
-		rLoc = 1256;
+		rLoc = 1257;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 0;
@@ -2117,6 +2137,206 @@
 		rLoc = 345;
 		rType = 0;
 		vrLen = 345;
+		vrLoc = 0;
+	};
+	2C5A1EB2105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF743EB09B9FC7F00EF8406 /* Japanese */;
+		name = "Localizable.strings: 9";
+		rLen = 0;
+		rLoc = 345;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 0;
+	};
+	2C5A1EB3105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F4007105F6B9B0041D337 /* Japanese */;
+		name = "PaticularLocalizable.strings: 5";
+		rLen = 0;
+		rLoc = 277;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	2C5A1EB4105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EC2105E52420041D337 /* English */;
+		name = "PaticularLocalizable.strings: 4";
+		rLen = 0;
+		rLoc = 339;
+		rType = 0;
+		vrLen = 339;
+		vrLoc = 0;
+	};
+	2C5A1EB5105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0670105AC663001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 49;
+		rLoc = 62;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 0;
+	};
+	2C5A1EB6105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EB5105E4FE80041D337 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 169;
+		vrLoc = 0;
+	};
+	2C5A1EB7105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EBE105E50DE0041D337 /* English */;
+		name = "ParticularLocalizable.strings: 3";
+		rLen = 0;
+		rLoc = 180;
+		rType = 0;
+		vrLen = 206;
+		vrLoc = 0;
+	};
+	2C5A1EB8105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0655105AC380001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 16;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 113;
+		vrLoc = 0;
+	};
+	2C5A1EB9105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF743EB09B9FC7F00EF8406 /* Japanese */;
+		name = "Localizable.strings: 9";
+		rLen = 0;
+		rLoc = 345;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 0;
+	};
+	2C5A1EBA105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F4007105F6B9B0041D337 /* Japanese */;
+		name = "PaticularLocalizable.strings: 5";
+		rLen = 0;
+		rLoc = 277;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	2C5A1EBB105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EC2105E52420041D337 /* English */;
+		name = "PaticularLocalizable.strings: 4";
+		rLen = 0;
+		rLoc = 339;
+		rType = 0;
+		vrLen = 339;
+		vrLoc = 0;
+	};
+	2C5A1EBC105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0670105AC663001E9511 /* English */;
+		name = "PaticularLocalizable.strings: 2";
+		rLen = 49;
+		rLoc = 62;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 0;
+	};
+	2C5A1EBD105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EBE105E50DE0041D337 /* English */;
+		name = "PaticularLocalizable.strings: 3";
+		rLen = 0;
+		rLoc = 180;
+		rType = 0;
+		vrLen = 206;
+		vrLoc = 0;
+	};
+	2C5A1EBE105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EB5105E4FE80041D337 /* English */;
+		name = "PaticularLocalizable.strings: 2";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 169;
+		vrLoc = 0;
+	};
+	2C5A1EBF105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0655105AC380001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 16;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 113;
+		vrLoc = 0;
+	};
+	2C5A1EC0105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0670105AC663001E9511 /* English */;
+		name = "PaticularLocalizable.strings: 2";
+		rLen = 49;
+		rLoc = 62;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 0;
+	};
+	2C5A1EC1105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0655105AC380001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 16;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 113;
+		vrLoc = 0;
+	};
+	2C5A1EC2105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0670105AC663001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 49;
+		rLoc = 62;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 0;
+	};
+	2C5A1EC3105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EB5105E4FE80041D337 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 0;
+		rLoc = 169;
+		rType = 0;
+		vrLen = 169;
+		vrLoc = 0;
+	};
+	2C5A1EC4105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C7F3EBE105E50DE0041D337 /* English */;
+		name = "ParticularLocalizable.strings: 3";
+		rLen = 0;
+		rLoc = 180;
+		rType = 0;
+		vrLen = 206;
+		vrLoc = 0;
+	};
+	2C5A1EC5105FD33A000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CCF0655105AC380001E9511 /* English */;
+		name = "ParticularLocalizable.strings: 2";
+		rLen = 16;
+		rLoc = 63;
+		rType = 0;
+		vrLen = 113;
 		vrLoc = 0;
 	};
 	2C5D952D10552B9E00B8479B /* PBXTextBookmark */ = {
@@ -2770,6 +2990,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {790, 417}}";
 			sepNavSelRange = "{180, 0}";
 			sepNavVisRange = "{0, 206}";
+			sepNavWindowFrame = "{{38, 100}, {1077, 752}}";
 		};
 	};
 	2C7F3EC2105E52420041D337 /* English */ = {
@@ -2911,7 +3132,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 13";
 		rLen = 0;
-		rLoc = 1262;
+		rLoc = 1263;
 		rType = 0;
 		vrLen = 560;
 		vrLoc = 0;
@@ -3030,7 +3251,7 @@
 		isa = PBXTextBookmark;
 		fRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */;
 		name = "FileProcessorCopyMoveAsync.m: 78";
-		rLen = 279;
+		rLen = 111;
 		rLoc = 1978;
 		rType = 0;
 		vrLen = 1441;
@@ -3061,7 +3282,7 @@
 		fRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */;
 		name = "FileProcessorBase.m: 130";
 		rLen = 16;
-		rLoc = 3446;
+		rLoc = 3447;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 2842;
@@ -3274,7 +3495,7 @@
 		fRef = 2C9E85B0104E4D2700C5B158 /* FileProcessor.m */;
 		name = "FileProcessor.m: 11";
 		rLen = 0;
-		rLoc = 277;
+		rLoc = 278;
 		rType = 0;
 		vrLen = 734;
 		vrLoc = 0;
@@ -3315,9 +3536,9 @@
 	};
 	2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 2156}}";
-			sepNavSelRange = "{1481, 0}";
-			sepNavVisRange = "{1007, 993}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 2212}}";
+			sepNavSelRange = "{1975, 0}";
+			sepNavVisRange = "{1612, 800}";
 			sepNavWindowFrame = "{{386, 165}, {999, 667}}";
 		};
 	};
@@ -3386,7 +3607,7 @@
 	2C9E83D9104D245C00C5B158 /* FileProcessor.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {755, 392}}";
-			sepNavSelRange = "{468, 5}";
+			sepNavSelRange = "{761, 20}";
 			sepNavVisRange = "{68, 771}";
 			sepNavWindowFrame = "{{395, 184}, {858, 668}}";
 		};
@@ -3522,9 +3743,9 @@
 	};
 	2C9E85B0104E4D2700C5B158 /* FileProcessor.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {797, 448}}";
-			sepNavSelRange = "{1226, 0}";
-			sepNavVisRange = "{278, 996}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 448}}";
+			sepNavSelRange = "{238, 20}";
+			sepNavVisRange = "{0, 1057}";
 			sepNavWindowFrame = "{{38, 224}, {838, 628}}";
 		};
 	};
