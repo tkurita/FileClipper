@@ -5,6 +5,11 @@
 
 - (void)doTask:(id)sender
 {
+	if ([currentSource isFolder]) {
+		[self displayErrorLog:
+		 NSLocalizedStringFromTable(@"Can't make a hard link for a folder", @"PaticularLocalizable", @"")];
+		return;
+	}
 	NSString *newname = [[currentSource lastPathComponent] uniqueNameAtLocation:currentLocation];
 	NSString *destination = [currentLocation stringByAppendingPathComponent:newname];
 	if (![[NSFileManager defaultManager] linkPath:currentSource toPath:destination handler:self] ){
