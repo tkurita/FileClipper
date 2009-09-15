@@ -325,15 +325,15 @@
 		2C7F3C0C105E20910041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3EA1105E4CB90041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3EAD105E4EC30041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
-		2C7F3EB5105E4FE80041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F3EB5105E4FE80041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F3EBE105E50DE0041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F3EC2105E52420041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F3ECD105E53510041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
-		2C7F4007105F6B9B0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
-		2C7F4008105F6BAC0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
-		2C7F4009105F6BBA0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
-		2C7F400A105F6BE90041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
-		2C7F400B105F6BFB0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F4007105F6B9B0041D337 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F4008105F6BAC0041D337 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F4009105F6BBA0041D337 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F400A105F6BE90041D337 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F400B105F6BFB0041D337 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F400C105F6C130041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/ProgressWindow.xib; sourceTree = "<group>"; };
 		2C7F400D105F6C1F0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
@@ -392,8 +392,8 @@
 		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
 		2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
 		2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
-		2CCF0655105AC380001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
-		2CCF0670105AC663001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2CCF0655105AC380001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2CCF0670105AC663001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorCopyMoveAsync.h; sourceTree = "<group>"; };
 		2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorCopyMoveAsync.m; sourceTree = "<group>"; };
 		2CE13264103196E000578ACF /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
@@ -428,7 +428,7 @@
 		2CF7418F09B9EC0500EF8406 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7419509B9EC5100EF8406 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7431E09B9FC3E00EF8406 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2CF743EB09B9FC7F00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CF743EB09B9FC7F00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		65359356078DD41800E8BB2F /* AppleScriptKit.sdef */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.sdef; name = AppleScriptKit.sdef; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 

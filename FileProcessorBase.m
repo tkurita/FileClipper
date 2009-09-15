@@ -74,7 +74,7 @@ bail:
 {
 	NSLog(@"error in file manager");
 	NSLog([errorInfo description]);
-	return YES;
+	return NO;
 }
 
 - (void)displayErrorLog:(NSString *)format, ...
