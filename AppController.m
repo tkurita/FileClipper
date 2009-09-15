@@ -6,7 +6,7 @@
 #import "PathExtra.h"
 #import "DonationReminder/DonationReminder.h"
 
-#define	useLog 1
+#define	useLog 0
 
 static BOOL processStarted = NO;
 static BOOL IS_FIRST_PROCESS = YES;
@@ -98,7 +98,9 @@ static BOOL IS_FIRST_PROCESS = YES;
 					NSLog(@"window position %f, %f", rect.origin.x, rect.origin.y);
 #endif							
 					if (NSEqualPoints(rect.origin, newposition)) {
+#if useLog
 						NSLog(@"position shifted");
+#endif
 						newposition.x += rect.size.width/3;
 					}
 				}
@@ -187,7 +189,9 @@ bail:
 	}
 	NSEvent *event = [NSApp currentEvent];
 	if ([event type] == NSAppKitDefined && [event subtype] == NSApplicationActivatedEventType) {
+#if useLog
 		NSLog(@"start process in applicationDidBecomeActive");
+#endif
 		[self processForInsertionLocation];
 	}
 }
@@ -201,8 +205,9 @@ bail:
 #endif		
 		return;
 	}
-	
+#if useLog	
 	NSLog(@"start in delayedProcess");
+#endif
 	processStarted = YES;
 	IS_FIRST_PROCESS = NO;
 	[NSApp activateIgnoringOtherApps:YES];

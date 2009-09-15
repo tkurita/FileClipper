@@ -1,7 +1,7 @@
 #import "ProgressWindowController.h"
 #import "FileProcessor.h"
 
-#define useLog 1
+#define useLog 0
 
 static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
