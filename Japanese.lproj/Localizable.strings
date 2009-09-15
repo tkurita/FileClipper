@@ -5,3 +5,4 @@
 "Cancel" = "キャンセル";
 "GUIScriptingIsNotEnabled" = "GUI スクリプティングが使用可能になっていません。";
 "AskLaunchPreferences" = "システム環境設定で「補助装置を使用可能にする」を ON にしてください。";
+"%@ is busy." = "%@ は使用中です。";

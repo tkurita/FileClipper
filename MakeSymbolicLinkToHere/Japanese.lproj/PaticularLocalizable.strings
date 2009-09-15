@@ -1,0 +1,2 @@
+"Failed to make symbolic link with error : %d." = "シンボリックシンクの作成に失敗しました。エラー : %d。";
+"ProcessingFromTo" = "\"%@\" から\n\"%@\" へシンボリックリンクを作っています。";

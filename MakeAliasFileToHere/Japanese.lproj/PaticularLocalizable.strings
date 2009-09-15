@@ -1,0 +1,3 @@
+"Failed to make alias file at %@." = "%@ へエイリアスファイルの作成に失敗しました。";
+"Failed to make alias for %@." = "%@ へのエイリアスの作成に失敗しました。";
+"ProcessingFromTo" = "\"%@\" から\n\"%@\" へエイリアスファイルを作っています。";

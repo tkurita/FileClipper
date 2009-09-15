@@ -1,0 +1,2 @@
+"Failed to make hard link from %@ to %@." = "%@ から %@ へハードリンクの作成に失敗しました。";
+"ProcessingFromTo" = "\"%@\" から\n\"%@\" へハードリンクを作っています。";

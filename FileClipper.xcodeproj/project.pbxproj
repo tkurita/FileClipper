@@ -329,6 +329,13 @@
 		2C7F3EBE105E50DE0041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F3EC2105E52420041D337 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
 		2C7F3ECD105E53510041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
+		2C7F4007105F6B9B0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F4008105F6BAC0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F4009105F6BBA0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F400A105F6BE90041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F400B105F6BFB0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PaticularLocalizable.strings; sourceTree = "<group>"; };
+		2C7F400C105F6C130041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/ProgressWindow.xib; sourceTree = "<group>"; };
+		2C7F400D105F6C1F0041D337 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E15104B892300C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E25104B89CB00C5B158 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProgressWindow.xib; sourceTree = "<group>"; };
@@ -1112,6 +1119,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CAB375409BEA71900A9C0EC /* English */,
+				2C7F400D105F6C1F0041D337 /* Japanese */,
 			);
 			name = MainMenu.nib;
 			sourceTree = "<group>";
@@ -1120,6 +1128,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2C9E7E25104B89CB00C5B158 /* English */,
+				2C7F400C105F6C130041D337 /* Japanese */,
 			);
 			name = ProgressWindow.xib;
 			sourceTree = "<group>";
@@ -1128,6 +1137,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2C7F3EB5105E4FE80041D337 /* English */,
+				2C7F4009105F6BBA0041D337 /* Japanese */,
 			);
 			name = PaticularLocalizable.strings;
 			sourceTree = "<group>";
@@ -1136,6 +1146,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2C7F3EBE105E50DE0041D337 /* English */,
+				2C7F4008105F6BAC0041D337 /* Japanese */,
 			);
 			name = PaticularLocalizable.strings;
 			sourceTree = "<group>";
@@ -1144,6 +1155,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2C7F3EC2105E52420041D337 /* English */,
+				2C7F4007105F6B9B0041D337 /* Japanese */,
 			);
 			name = PaticularLocalizable.strings;
 			sourceTree = "<group>";
@@ -1206,6 +1218,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CCF0655105AC380001E9511 /* English */,
+				2C7F400B105F6BFB0041D337 /* Japanese */,
 			);
 			name = PaticularLocalizable.strings;
 			sourceTree = "<group>";
@@ -1214,6 +1227,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CCF0670105AC663001E9511 /* English */,
+				2C7F400A105F6BE90041D337 /* Japanese */,
 			);
 			name = PaticularLocalizable.strings;
 			sourceTree = "<group>";
