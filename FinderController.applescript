@@ -23,10 +23,12 @@ on center_of_finderwindow()
 	return {}
 end center_of_finderwindow
 
-on update_on_finder(a_path)
-	log a_path
-	set an_item to POSIX file a_path
-	tell application "Finder"
-		update an_item
-	end tell
+on update_on_finder(path1, path2)
+	--log a_path
+	repeat with a_path in {path1, path1}
+		set an_item to POSIX file a_path
+		tell application "Finder"
+			update an_item
+		end tell
+	end repeat
 end update_on_finder

@@ -121,7 +121,8 @@ static BOOL IS_FIRST_PROCESS = YES;
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
 	script_result = [finderController executeHandlerWithName:@"update_on_finder"
-								   arguments:[NSArray arrayWithObject:aPath] error:&err_info];
+					   arguments:[NSArray arrayWithObjects:[aPath stringByDeletingLastPathComponent], aPath,  nil] 
+							   error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
