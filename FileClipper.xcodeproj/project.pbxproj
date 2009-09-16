@@ -389,7 +389,6 @@
 		2CAB364B09BE6BE200A9C0EC /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2CAB364C09BE6BE200A9C0EC /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2CAB375409BEA71900A9C0EC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		2CAB376E09BEAA3A00A9C0EC /* Main.applescript */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.applescript; path = Main.applescript; sourceTree = "<group>"; };
 		2CCF03EB105AAAE2001E9511 /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
 		2CCF064D105AB1E8001E9511 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 		2CCF0655105AC380001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/ParticularLocalizable.strings; sourceTree = "<group>"; };
@@ -499,7 +498,6 @@
 		080E96DDFE201D6D7F000001 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				2CAB376E09BEAA3A00A9C0EC /* Main.applescript */,
 				2C9E7E9C104BD85700C5B158 /* FinderController.applescript */,
 			);
 			name = Scripts;
