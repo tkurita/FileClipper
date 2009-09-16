@@ -295,7 +295,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
+									<integer>22</integer>
+									<integer>17</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -332,14 +333,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>History.rd</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -347,11 +346,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>History.rd</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C5A1F6D1060928A000A8841</string>
+										<string>2C5A1F7810609CAD000A8841</string>
 										<key>history</key>
 										<array>
 											<string>2C5D954910552D1200B8479B</string>
@@ -372,7 +371,6 @@
 											<string>2C7DC8461057B90300579B20</string>
 											<string>2C7DC8DB1057D23600579B20</string>
 											<string>2CCF03AE105AA927001E9511</string>
-											<string>2CCF0659105AC3FA001E9511</string>
 											<string>2CCF065A105AC3FA001E9511</string>
 											<string>2CCF065B105AC3FA001E9511</string>
 											<string>2C7F3BF8105E1E840041D337</string>
@@ -408,17 +406,16 @@
 											<string>2C5A1EE2105FD5CB000A8841</string>
 											<string>2C5A1EE3105FD5CB000A8841</string>
 											<string>2C5A1EFA10607E3C000A8841</string>
-											<string>2C5A1EFB10607E3C000A8841</string>
 											<string>2C5A1F3C106091E4000A8841</string>
 											<string>2C5A1F3D106091E4000A8841</string>
 											<string>2C5A1F6B1060928A000A8841</string>
-											<string>2C5A1F0010608BFC000A8841</string>
+											<string>2C5A1F7610609CAD000A8841</string>
+											<string>2CCF0659105AC3FA001E9511</string>
 										</array>
 										<key>prevStack</key>
 										<array>
 											<string>2C5D952D10552B9E00B8479B</string>
 											<string>2C5D954A10552D1200B8479B</string>
-											<string>2C5D973B1056621E00B8479B</string>
 											<string>2C5D97621056643A00B8479B</string>
 											<string>2C7DC8301057B82600579B20</string>
 											<string>2C7DC8311057B82600579B20</string>
@@ -494,7 +491,6 @@
 											<string>2C5A1E38105FA718000A8841</string>
 											<string>2C5A1E3C105FA794000A8841</string>
 											<string>2C5A1E41105FA7D2000A8841</string>
-											<string>2C5A1E48105FA81E000A8841</string>
 											<string>2C5A1E54105FA868000A8841</string>
 											<string>2C5A1E5B105FA8CE000A8841</string>
 											<string>2C5A1E65105FA9B8000A8841</string>
@@ -537,6 +533,7 @@
 											<string>2C5A1F40106091E4000A8841</string>
 											<string>2C5A1F41106091E4000A8841</string>
 											<string>2C5A1F6C1060928A000A8841</string>
+											<string>2C5A1F7710609CAD000A8841</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

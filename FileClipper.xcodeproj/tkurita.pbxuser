@@ -438,6 +438,9 @@
 			2C5A1F6B1060928A000A8841 /* PBXTextBookmark */ = 2C5A1F6B1060928A000A8841 /* PBXTextBookmark */;
 			2C5A1F6C1060928A000A8841 /* PBXTextBookmark */ = 2C5A1F6C1060928A000A8841 /* PBXTextBookmark */;
 			2C5A1F6D1060928A000A8841 /* PBXTextBookmark */ = 2C5A1F6D1060928A000A8841 /* PBXTextBookmark */;
+			2C5A1F7610609CAD000A8841 /* PBXTextBookmark */ = 2C5A1F7610609CAD000A8841 /* PBXTextBookmark */;
+			2C5A1F7710609CAD000A8841 /* PBXTextBookmark */ = 2C5A1F7710609CAD000A8841 /* PBXTextBookmark */;
+			2C5A1F7810609CAD000A8841 /* PlistBookmark */ = 2C5A1F7810609CAD000A8841 /* PlistBookmark */;
 			2C5D952D10552B9E00B8479B = 2C5D952D10552B9E00B8479B /* PBXTextBookmark */;
 			2C5D954910552D1200B8479B = 2C5D954910552D1200B8479B /* PBXTextBookmark */;
 			2C5D954A10552D1200B8479B = 2C5D954A10552D1200B8479B /* PBXTextBookmark */;
@@ -634,7 +637,7 @@
 	};
 	2C48998F0DE43333001A564D /* History.rd */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {790, 2421}}";
+			sepNavIntBoundsRect = "{{0, 0}, {790, 2445}}";
 			sepNavSelRange = "{80, 0}";
 			sepNavVisRange = "{0, 653}";
 			sepNavVisRect = "{{0, 0}, {628, 660}}";
@@ -3322,6 +3325,38 @@
 		rType = 0;
 		vrLen = 653;
 		vrLoc = 0;
+	};
+	2C5A1F7610609CAD000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C48998F0DE43333001A564D /* History.rd */;
+		name = "History.rd: 9";
+		rLen = 0;
+		rLoc = 80;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 0;
+	};
+	2C5A1F7710609CAD000A8841 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C48998F0DE43333001A564D /* History.rd */;
+		name = "History.rd: 9";
+		rLen = 0;
+		rLoc = 80;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 0;
+	};
+	2C5A1F7810609CAD000A8841 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSHasLocalizedDisplayName,
+		);
+		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
 	};
 	2C5D952D10552B9E00B8479B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
