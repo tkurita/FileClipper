@@ -132,50 +132,72 @@ static BOOL IS_FIRST_PROCESS = YES;
 	}
 }
 
+- (NSPoint)centerOfFinderWindowReturningError:(NSError **)error
+{
+	NSDictionary *err_info = nil;
+	NSAppleEventDescriptor *script_result = nil;
+	script_result = [finderController executeHandlerWithName:@"center_of_finderwindow"
+												   arguments:nil error:&err_info];
+	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
+	if (err_info) {
+		NSLog([err_info description]);
+		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
+						 [err_info objectForKey:OSAScriptErrorMessage],
+						 [err_info objectForKey:OSAScriptErrorNumber]];
+		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
+		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
+														  forKey:NSLocalizedDescriptionKey];
+		*error = [NSError errorWithDomain:@"FileClipperError" code:1 userInfo:udict];
+		goto bail;
+	}
+	
+	unsigned int nitem = [script_result numberOfItems];
+	
+	if (nitem > 1) {
+		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.x];
+		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.y];
+	}
+bail:
+	return center_position;
+}
+
+- (NSString *)insertionLocationReturningError:(NSError **)error
+{
+	NSDictionary *err_info = nil;
+	NSAppleEventDescriptor *script_result = nil;
+	script_result = [finderController executeHandlerWithName:@"insertion_location"
+												   arguments:nil error:&err_info];
+	NSString *location_path = nil;
+	if (err_info) {
+		NSLog([err_info description]);
+		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
+						 [err_info objectForKey:OSAScriptErrorMessage],
+						 [err_info objectForKey:OSAScriptErrorNumber]];
+		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
+		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
+														  forKey:NSLocalizedDescriptionKey];
+		*error = [NSError errorWithDomain:@"FileClipperError" code:2 userInfo:udict];
+		goto bail;
+	}
+	location_path = [script_result stringValue];
+bail:
+	return location_path;
+}
+
 - (void)processForInsertionLocation
 {
 #if useLog
 	NSLog(@"start processForInsertionLocation");
 #endif
-	NSDictionary *err_info = nil;
-	NSAppleEventDescriptor *script_result = nil;
-	script_result = [finderController executeHandlerWithName:@"insertion_location"
-												   arguments:nil error:&err_info];
-	if (err_info) {
-		NSLog([err_info description]);
-		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 [err_info objectForKey:OSAScriptErrorMessage],
-						 [err_info objectForKey:OSAScriptErrorNumber]];
-		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
-		goto bail;
-	}
-	
-	NSString *location_path = [script_result stringValue];
-	
-	script_result = [finderController executeHandlerWithName:@"center_of_finderwindow"
-												   arguments:nil error:&err_info];
-	
-	if (err_info) {
-		NSLog([err_info description]);
-		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 [err_info objectForKey:OSAScriptErrorMessage],
-						 [err_info objectForKey:OSAScriptErrorNumber]];
-		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
-		goto bail;
-	}
-	
-	unsigned int nitem = [script_result numberOfItems];
-	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
-	if (nitem > 1) {
-		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.x];
-		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.y];
-	}
-	
+	NSError *error = nil;
+	NSString *location_path = [self insertionLocationReturningError:&error];
+	if (error) goto bail;
+	NSPoint center_position = [self centerOfFinderWindowReturningError:&error];
+	if (error) goto bail;
 	[self processAtLocations:[NSArray arrayWithObject:location_path] centerPosition:center_position];
 bail:
 	return;	
 }
-
 
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification
 {
@@ -267,7 +289,7 @@ bail:
 {
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
-#endif
+#endif	
 	processStarted = YES;
 	IS_FIRST_PROCESS = NO;
 	NSArray *types = [pboard types];
@@ -278,7 +300,15 @@ bail:
 								   @"Pasteboard couldn't give string.");
         return;
     }
+	
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
+	NSDictionary *preactiveapp = [[NSWorkspace sharedWorkspace] activeApplication];
+	if ( [[preactiveapp objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.finder"] ) {
+		NSError *error = nil;
+		[self insertionLocationReturningError:&error];
+		if (!error) 
+			center_position = [self centerOfFinderWindowReturningError:&error];
+	}
 		
 	[NSApp activateIgnoringOtherApps:YES];
 	[self processAtLocations:filenames centerPosition:center_position];

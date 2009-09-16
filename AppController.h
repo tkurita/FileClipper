@@ -8,6 +8,7 @@
 	IBOutlet id errorWindow;
 	IBOutlet id errorTextView;
 	OSAScript* finderController;
+	BOOL preactiveIsFinder;
 }
 
 @end
