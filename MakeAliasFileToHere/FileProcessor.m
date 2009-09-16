@@ -7,11 +7,11 @@
 
 - (void)doTask:(id)sender
 {
-	NSString* newname = [[currentSource lastPathComponent] uniqueNameAtLocation:currentLocation];
+	NSString* newname = [[currentSource displayName] uniqueNameAtLocation:currentLocation];
 	NSString* destination = [currentLocation stringByAppendingPathComponent:newname];
 	NDAlias* alias = [NDAlias aliasWithPath:currentSource];
 	if (alias) {
-		if (![alias writeToFile:destination includeCustomIcon:NO] ) {
+		if (![alias writeToFile:destination includeCustomIcon:YES] ) {
 			[self displayErrorLog:
 					NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""), 
 					destination];
