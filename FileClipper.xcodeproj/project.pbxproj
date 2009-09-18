@@ -17,6 +17,7 @@
 				2CAB356F09BE676300A9C0EC /* PBXTargetDependency */,
 				2CAB356D09BE676100A9C0EC /* PBXTargetDependency */,
 				2CAB356B09BE675F00A9C0EC /* PBXTargetDependency */,
+				2C18EE131063066D00E7F55F /* PBXTargetDependency */,
 			);
 			name = BuildAll;
 			productName = BuildAll;
@@ -77,6 +78,7 @@
 /* End PBXAppleScriptBuildPhase section */
 
 /* Begin PBXBuildFile section */
+		2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C18EE03106305C600E7F55F /* BundleIcon.icns */; };
 		2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E85AB104E4D2700C5B158 /* InfoPlist.strings */; };
 		2C5D93C81054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
 		2C5D93C91054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
@@ -228,6 +230,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C18EE121063066D00E7F55F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C9E85B6104E4D8D00C5B158 /* Make Hard Link to Here */;
+			remoteInfo = "Make Hard Link to Here";
+		};
 		2CAB356A09BE675F00A9C0EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -316,6 +325,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2C18EE03106305C600E7F55F /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2C48998F0DE43333001A564D /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
 		2C5FB16A1046100F006C3DC9 /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
 		2C5FB16B1046100F006C3DC9 /* SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartActivate.h; sourceTree = "<group>"; };
@@ -668,6 +678,7 @@
 		2C9E85A9104E4D2700C5B158 /* MakeHardLinkToHere */ = {
 			isa = PBXGroup;
 			children = (
+				2C18EE03106305C600E7F55F /* BundleIcon.icns */,
 				2C9E85AB104E4D2700C5B158 /* InfoPlist.strings */,
 				2C9E85AD104E4D2700C5B158 /* ServicesMenu.strings */,
 				2C9E85B0104E4D2700C5B158 /* FileProcessor.m */,
@@ -915,6 +926,7 @@
 				2C9E85C6104E4E0200C5B158 /* Localizable.strings in Resources */,
 				2C7F3EC5105E52470041D337 /* ParticularLocalizable.strings in Resources */,
 				2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */,
+				2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,6 +1104,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2C18EE131063066D00E7F55F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C9E85B6104E4D8D00C5B158 /* Make Hard Link to Here */;
+			targetProxy = 2C18EE121063066D00E7F55F /* PBXContainerItemProxy */;
+		};
 		2CAB356B09BE675F00A9C0EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2CF73DBC09B88D4C00EF8406 /* Move to Here */;
