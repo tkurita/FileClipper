@@ -207,6 +207,7 @@
 		2CCF06E9105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */; };
 		2CCF06EA105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
 		2CCF06EB105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */; };
+		2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E85AD104E4D2700C5B158 /* ServicesMenu.strings */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73C4909B8737A00EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
@@ -927,6 +928,7 @@
 				2C7F3EC5105E52470041D337 /* ParticularLocalizable.strings in Resources */,
 				2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */,
 				2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */,
+				2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -398,6 +398,11 @@
 			2CDE875E106C5470000AC7FA /* PBXTextBookmark */ = 2CDE875E106C5470000AC7FA /* PBXTextBookmark */;
 			2CDE875F106C5470000AC7FA /* PBXTextBookmark */ = 2CDE875F106C5470000AC7FA /* PBXTextBookmark */;
 			2CDE8760106C5470000AC7FA /* PlistBookmark */ = 2CDE8760106C5470000AC7FA /* PlistBookmark */;
+			2CDE8770106C54CD000AC7FA /* PlistBookmark */ = 2CDE8770106C54CD000AC7FA /* PlistBookmark */;
+			2CDE8771106C54CD000AC7FA /* PBXTextBookmark */ = 2CDE8771106C54CD000AC7FA /* PBXTextBookmark */;
+			2CDE8772106C54CD000AC7FA /* PlistBookmark */ = 2CDE8772106C54CD000AC7FA /* PlistBookmark */;
+			2CDE8773106C54CD000AC7FA /* PBXTextBookmark */ = 2CDE8773106C54CD000AC7FA /* PBXTextBookmark */;
+			2CDE8774106C54CD000AC7FA /* PBXTextBookmark */ = 2CDE8774106C54CD000AC7FA /* PBXTextBookmark */;
 			2CE1326E103196E000578ACF = 2CE1326E103196E000578ACF /* PaletteWindowController.h */;
 			2CE1326F103196E000578ACF = 2CE1326F103196E000578ACF /* PaletteWindowController.m */;
 			2CE3BACA1058CC8F002253AF = 2CE3BACA1058CC8F002253AF /* PBXTextBookmark */;
@@ -3427,6 +3432,60 @@
 		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
 		rLen = 0;
 		rLoc = 2147483647;
+	};
+	2CDE8770106C54CD000AC7FA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSHasLocalizedDisplayName,
+		);
+		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CDE8771106C54CD000AC7FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C9E85B2104E4D2700C5B158 /* Japanese */;
+		name = "ServicesMenu.strings: 2";
+		rLen = 0;
+		rLoc = 35;
+		rType = 0;
+		vrLen = 35;
+		vrLoc = 0;
+	};
+	2CDE8772106C54CD000AC7FA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSHasLocalizedDisplayName,
+		);
+		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	2CDE8773106C54CD000AC7FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C9E85B2104E4D2700C5B158 /* Japanese */;
+		name = "ServicesMenu.strings: 2";
+		rLen = 0;
+		rLoc = 35;
+		rType = 0;
+		vrLen = 35;
+		vrLoc = 0;
+	};
+	2CDE8774106C54CD000AC7FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C9E85AE104E4D2700C5B158 /* English */;
+		name = "ServicesMenu.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 48;
+		vrLoc = 0;
 	};
 	2CE13264103196E000578ACF /* DropBox.h */ = {
 		uiCtxt = {
