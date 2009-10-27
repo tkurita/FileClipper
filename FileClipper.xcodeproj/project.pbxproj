@@ -738,9 +738,9 @@
 				2CAAE20B0E4C42A4002A8807 /* BundleIcon.icns */,
 				2CF7418D09B9EBF200EF8406 /* InfoPlist.strings */,
 				2C9E7E10104B88F100C5B158 /* FileProcessor.m */,
+				2C7F3C0C105E20910041D337 /* FileProcessor.h */,
 				2C9E81DC104D22FF00C5B158 /* ServicesMenu.strings */,
 				2CCF0672105AC66D001E9511 /* ParticularLocalizable.strings */,
-				2C7F3C0C105E20910041D337 /* FileProcessor.h */,
 			);
 			path = MoveToHere;
 			sourceTree = "<group>";

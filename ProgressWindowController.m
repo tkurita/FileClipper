@@ -115,6 +115,8 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setDelegate:self];
 	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
+	[[self window] orderFront:self];
+	//[NSApp activateIgnoringOtherApps:YES];
 	[save_panel beginSheetForDirectory:processor.currentLocation
 				file:[processor.currentSource lastPathComponent] 
 				modalForWindow:[self window] modalDelegate:self

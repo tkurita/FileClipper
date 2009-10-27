@@ -82,7 +82,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 	
 	
 	if ([self resolveNewName:source]) {
-		if (![self trySVN:@"cp" withSource:source]) {
+		if (![self trySVN:svnCpMvCommand withSource:source]) {
 			//if (YES) {
 #if useLog
 			NSString *destination = [currentLocation stringByAppendingPathComponent:newName];
@@ -103,7 +103,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 										   kFSFileOperationDefaultOptions|kFSFileOperationOverwrite, 
 										   statusCallback,2,&context);
 			if (status != noErr) {
-				[self displayErrorLog:@"Failed to FSPathCopyObjectAsync with error: %d", status];
+				[self displayErrorLog:@"Failed to FSPathCopy/MoveObjectAsync with error: %d", status];
 				CFRelease(fileOp);
 				goto bail;
 			}
