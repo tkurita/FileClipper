@@ -35,7 +35,8 @@ static BOOL AUTO_QUIT = YES;
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	
-	return (AUTO_QUIT && ([[ProgressWindowController workingControllers] count] < 1) && ![errorWindow isVisible]);
+	return (AUTO_QUIT && ([[ProgressWindowController workingControllers] count] < 1) 
+			&& ![errorWindow isVisible] && ![DonationReminder isWindowOpened]);
 }
 
 - (void)processAtLocations:(NSArray *)filenames centerPosition:(NSPoint)position
