@@ -1,7 +1,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ProgressWindow : NSWindow {
+@interface ProgressWindow : NSPanel {
 
 }
 

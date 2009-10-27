@@ -8,8 +8,7 @@
 
 #define	useLog 0
 
-static BOOL processStarted = NO;
-static BOOL IS_FIRST_PROCESS = YES;
+static BOOL AUTO_QUIT = YES;
 
 @implementation AppController
 
@@ -36,7 +35,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	
-	return (([[ProgressWindowController workingControllers] count] < 1) && ![errorWindow isVisible]);
+	return (AUTO_QUIT && ([[ProgressWindowController workingControllers] count] < 1) && ![errorWindow isVisible]);
 }
 
 - (void)processAtLocations:(NSArray *)filenames centerPosition:(NSPoint)position
@@ -53,6 +52,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 	
 	NSArray *array = [FilesInPasteboard getContents];
 	if (!array) {
+		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(NSLocalizedString(@"NoFilesInClipboard", @""), @"", @"OK", nil, nil);
 		return;
 	}
@@ -128,6 +128,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
+		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 	}
 }
@@ -144,6 +145,7 @@ static BOOL IS_FIRST_PROCESS = YES;
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
+		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
 														  forKey:NSLocalizedDescriptionKey];
@@ -173,6 +175,7 @@ bail:
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
+		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
 														  forKey:NSLocalizedDescriptionKey];
@@ -191,6 +194,9 @@ bail:
 #endif
 	NSError *error = nil;
 	NSString *location_path = [self insertionLocationReturningError:&error];
+#if useLog
+	NSLog(@"location_path %@", location_path);
+#endif	
 	if (error) goto bail;
 	NSPoint center_position = [self centerOfFinderWindowReturningError:&error];
 	if (error) goto bail;
@@ -199,42 +205,13 @@ bail:
 	return;	
 }
 
-- (void)applicationDidBecomeActive:(NSNotification *)aNotification
+- (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
 {
-	IS_FIRST_PROCESS = NO;
 #if useLog
-	NSLog(@"applicationDidBecomeActive");
-	NSLog([[NSApp currentEvent] description]);
+	NSLog(@"applicationOpenUntitledFile");
 #endif
-	if (processStarted) {
-		processStarted = NO;
-		return;
-	}
-	NSEvent *event = [NSApp currentEvent];
-	if ([event type] == NSAppKitDefined && [event subtype] == NSApplicationActivatedEventType) {
-#if useLog
-		NSLog(@"start process in applicationDidBecomeActive");
-#endif
-		[self processForInsertionLocation];
-	}
-}
-
-
-- (void)delayedProcess:(id)sender
-{
-	if (!IS_FIRST_PROCESS) {
-#if useLog		
-		NSLog(@"process stated is detected in delayedProcess");
-#endif		
-		return;
-	}
-#if useLog	
-	NSLog(@"start in delayedProcess");
-#endif
-	processStarted = YES;
-	IS_FIRST_PROCESS = NO;
-	[NSApp activateIgnoringOtherApps:YES];
 	[self processForInsertionLocation];
+	return YES;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -259,7 +236,6 @@ bail:
 		return;
     }
 
-	[self performSelector:@selector(delayedProcess:) withObject:self afterDelay:0.3];
 	[DonationReminder remindDonation];
 }
 
@@ -280,6 +256,7 @@ bail:
 																	 error:&err_info];
 	if (err_info) {
 		NSLog([err_info description]);
+		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
@@ -290,8 +267,6 @@ bail:
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
 #endif	
-	processStarted = YES;
-	IS_FIRST_PROCESS = NO;
 	NSArray *types = [pboard types];
 	NSArray *filenames;
 	if (![types containsObject:NSFilenamesPboardType] 
@@ -310,7 +285,6 @@ bail:
 			center_position = [self centerOfFinderWindowReturningError:&error];
 	}
 		
-	[NSApp activateIgnoringOtherApps:YES];
 	[self processAtLocations:filenames centerPosition:center_position];
 }
 

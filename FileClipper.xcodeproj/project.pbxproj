@@ -1331,6 +1331,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
@@ -1349,6 +1350,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Make Hard Link to Here";
+				VERSIONING_SYSTEM = "apple-generic";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1402,6 +1404,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1414,6 +1417,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Alias File to Here";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1446,6 +1450,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1458,6 +1463,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Move to Here";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1492,6 +1498,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1504,6 +1511,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Copy to Here";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1536,6 +1544,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1548,6 +1557,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

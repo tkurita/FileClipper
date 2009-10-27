@@ -48,7 +48,7 @@
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<string key="NSWindowContentMinSize">{213, 107}</string>
 				<object class="NSView" key="NSWindowView" id="826591662">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -58,7 +58,6 @@
 							<object class="NSPSMatrix" key="NSDrawMatrix"/>
 							<string key="NSFrame">{{91, 44}, {32, 32}}</string>
 							<reference key="NSSuperview" ref="826591662"/>
-							<reference key="NSWindow"/>
 							<int key="NSpiFlags">20490</int>
 							<double key="NSMaxValue">1.000000e+02</double>
 						</object>
@@ -67,7 +66,6 @@
 							<int key="NSvFlags">-2147483380</int>
 							<string key="NSFrame">{{-3, 0}, {219, 40}}</string>
 							<reference key="NSSuperview" ref="826591662"/>
-							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="133830586">
 								<int key="NSCellFlags">604110336</int>
@@ -101,8 +99,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{213, 107}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMinSize">{213, 129}</string>
@@ -711,10 +707,18 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
 					<string key="className">FileProcessor</string>
-					<string key="superclassName">FileProcessorBase</string>
+					<string key="superclassName">FileProcessorCopyMoveAsync</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">FileProcessor.h</string>
+						<string key="minorKey">CopyToHere/FileProcessor.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">FileProcessor</string>
+					<string key="superclassName">FileProcessorCopyMoveAsync</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">MoveToHere/FileProcessor.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -743,6 +747,14 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">FileProcessorCopyMoveAsync</string>
+					<string key="superclassName">FileProcessorBase</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">FileProcessorCopyMoveAsync.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">PaletteWindowController</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="outlets">
@@ -756,7 +768,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">ProgressWindow</string>
-					<string key="superclassName">NSWindow</string>
+					<string key="superclassName">NSPanel</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">ProgressWindow.h</string>
