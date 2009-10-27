@@ -243,6 +243,7 @@ bail:
 		[NSApp terminate:self];
 	}
 	
+	[guiscripting_checker release];
 	[DonationReminder remindDonation];
 }
 
