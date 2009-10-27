@@ -31,6 +31,7 @@
 			contextName = "";
 			files = (
 				2C9E85BE104E4DCF00C5B158 /* FinderController.applescript in AppleScript */,
+				2C60E25D1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +42,7 @@
 			contextName = "";
 			files = (
 				2C9E7E9D104BD85700C5B158 /* FinderController.applescript in AppleScript */,
+				2C60E25F1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +53,7 @@
 			contextName = "";
 			files = (
 				2C9E7E9F104BD85700C5B158 /* FinderController.applescript in AppleScript */,
+				2C60E2601096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +64,7 @@
 			contextName = "";
 			files = (
 				2C9E7EA1104BD85700C5B158 /* FinderController.applescript in AppleScript */,
+				2C60E2611096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +75,7 @@
 			contextName = "";
 			files = (
 				2C9E7E9E104BD85700C5B158 /* FinderController.applescript in AppleScript */,
+				2C60E25E1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +123,11 @@
 		2C5FB1B7104613FE006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
+		2C60E25D1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C60E25E1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C60E25F1096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C60E2601096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C60E2611096FF9C0072275A /* CheckGUIScripting.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C7F3BBC105E1A330041D337 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
 		2C7F3EB8105E4FF40041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EB7105E4FF40041D337 /* ParticularLocalizable.strings */; };
 		2C7F3EC1105E50E60041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC0105E50E60041D337 /* ParticularLocalizable.strings */; };
@@ -333,6 +343,7 @@
 		2C5FB16C1046100F006C3DC9 /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
 		2C5FB17E1046109F006C3DC9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
+		2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = CheckGUIScripting.applescript; sourceTree = "<group>"; };
 		2C7F3BAF105E19650041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3C0C105E20910041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3EA1105E4CB90041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
@@ -511,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9E7E9C104BD85700C5B158 /* FinderController.applescript */,
+				2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";

@@ -214,28 +214,35 @@ bail:
 	return YES;
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-	if (!AXAPIEnabled())
-    {
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
+													 ofType:@"scpt" inDirectory:@"Scripts"];
+	NSDictionary *err_info = nil;
+	NSAppleScript *guiscripting_checker = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
+																				 error:&err_info];
+	if (err_info) {
+		NSLog([err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
-		int ret = NSRunAlertPanel(NSLocalizedString(@"GUIScriptingIsNotEnabled", @""), 
-								  NSLocalizedString(@"AskLaunchPreferences", @""), 
-								  NSLocalizedString(@"LauchSystemPreferences", @""),
-								  NSLocalizedString(@"Cancel",""), @"");
-		switch (ret)
-        {
-            case NSAlertDefaultReturn:
-                [[NSWorkspace sharedWorkspace] openFile:@"/System/Library/PreferencePanes/UniversalAccessPref.prefPane"];
-                break;
-			default:
-                break;
-        }
-        
+		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
 		return;
-    }
-
+	}
+	
+	NSAppleEventDescriptor *result = [guiscripting_checker executeAndReturnError:&err_info];
+	
+	if (err_info) {
+		NSLog([err_info description]);
+		[NSApp activateIgnoringOtherApps:YES];
+		NSRunAlertPanel(nil, @"Fail to chack GUI scripting", @"OK", nil, nil);
+		[NSApp terminate:self];
+		return;
+	}
+	
+	if ([result descriptorType] != typeTrue) {
+		[NSApp terminate:self];
+	}
+	
 	[DonationReminder remindDonation];
 }
 
