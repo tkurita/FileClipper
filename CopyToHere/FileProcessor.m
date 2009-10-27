@@ -10,7 +10,7 @@
 {
 	if (self = [super init]) {
 		processPathAsync = FSPathCopyObjectAsync;
-		svnCpMvCommand = @"cp"
+		svnCpMvCommand = @"cp";
 	}
 	return self;
 }
