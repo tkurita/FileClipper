@@ -9,7 +9,7 @@
 #define	useLog 0
 
 static BOOL AUTO_QUIT = YES;
-
+static BOOL PROCESSING = NO;
 @implementation AppController
 
 - (void)displayErrorLog:(NSString *)format, ...
@@ -35,8 +35,43 @@ static BOOL AUTO_QUIT = YES;
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	
-	return (AUTO_QUIT && ([[ProgressWindowController workingControllers] count] < 1) 
+	return (!PROCESSING && AUTO_QUIT 
+			&& ([[ProgressWindowController workingControllers] count] < 1) 
 			&& ![errorWindow isVisible] && ![DonationReminder isWindowOpened]);
+}
+
+- (void)checkGUIScripting
+{
+	PROCESSING = YES;
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
+													 ofType:@"scpt" inDirectory:@"Scripts"];
+	NSDictionary *err_info = nil;
+	 NSAppleScript *guiscripting_checker = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
+	 error:&err_info];
+	if (err_info) {
+		NSLog([err_info description]);
+		[NSApp activateIgnoringOtherApps:YES];
+		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
+		[NSApp terminate:self];
+		return;
+	}
+	
+	NSAppleEventDescriptor *result = [guiscripting_checker executeAndReturnError:&err_info];
+	NSLog([result description]);
+	if (err_info) {
+		NSLog([err_info description]);
+		[NSApp activateIgnoringOtherApps:YES];
+		NSRunAlertPanel(nil, @"Fail to chack GUI scripting", @"OK", nil, nil);
+		[NSApp terminate:self];
+		return;
+	}
+	
+	if ([result descriptorType] != typeTrue) {
+		[NSApp terminate:self];
+	}
+	
+	[guiscripting_checker release];
+	PROCESSING = NO;
 }
 
 - (void)processAtLocations:(NSArray *)filenames centerPosition:(NSPoint)position
@@ -193,6 +228,7 @@ bail:
 #if useLog
 	NSLog(@"start processForInsertionLocation");
 #endif
+	[self checkGUIScripting];
 	NSError *error = nil;
 	NSString *location_path = [self insertionLocationReturningError:&error];
 #if useLog
@@ -217,34 +253,7 @@ bail:
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
-													 ofType:@"scpt" inDirectory:@"Scripts"];
-	NSDictionary *err_info = nil;
-	NSAppleScript *guiscripting_checker = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
-																				 error:&err_info];
-	if (err_info) {
-		NSLog([err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
-		[NSApp terminate:self];
-		return;
-	}
-	
-	NSAppleEventDescriptor *result = [guiscripting_checker executeAndReturnError:&err_info];
-	
-	if (err_info) {
-		NSLog([err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Fail to chack GUI scripting", @"OK", nil, nil);
-		[NSApp terminate:self];
-		return;
-	}
-	
-	if ([result descriptorType] != typeTrue) {
-		[NSApp terminate:self];
-	}
-	
-	[guiscripting_checker release];
+
 	[DonationReminder remindDonation];
 }
 
@@ -276,6 +285,7 @@ bail:
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
 #endif	
+	[self checkGUIScripting];
 	NSArray *types = [pboard types];
 	NSArray *filenames;
 	if (![types containsObject:NSFilenamesPboardType] 
@@ -284,7 +294,6 @@ bail:
 								   @"Pasteboard couldn't give string.");
         return;
     }
-	
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	NSDictionary *preactiveapp = [[NSWorkspace sharedWorkspace] activeApplication];
 	if ( [[preactiveapp objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.finder"] ) {

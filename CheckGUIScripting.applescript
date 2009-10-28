@@ -12,7 +12,7 @@ on run
 		set_delegate(me)
 		set is_enabled to do()
 	end tell
-	log is_enabled
+	--log is_enabled
 	return is_enabled
 end run
 
