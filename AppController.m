@@ -10,6 +10,7 @@
 
 static BOOL AUTO_QUIT = YES;
 static BOOL PROCESSING = NO;
+
 @implementation AppController
 
 - (void)displayErrorLog:(NSString *)format, ...
@@ -43,21 +44,9 @@ static BOOL PROCESSING = NO;
 - (void)checkGUIScripting
 {
 	PROCESSING = YES;
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
-													 ofType:@"scpt" inDirectory:@"Scripts"];
 	NSDictionary *err_info = nil;
-	 NSAppleScript *guiscripting_checker = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
-	 error:&err_info];
-	if (err_info) {
-		NSLog([err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
-		[NSApp terminate:self];
-		return;
-	}
-	
-	NSAppleEventDescriptor *result = [guiscripting_checker executeAndReturnError:&err_info];
-	NSLog([result description]);
+	NSAppleEventDescriptor *result = [guiScriptingChecker executeAndReturnError:&err_info];
+
 	if (err_info) {
 		NSLog([err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
@@ -70,7 +59,6 @@ static BOOL PROCESSING = NO;
 		[NSApp terminate:self];
 	}
 	
-	[guiscripting_checker release];
 	PROCESSING = NO;
 }
 
@@ -276,6 +264,17 @@ bail:
 		NSLog([err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
+		[NSApp terminate:self];
+	}
+	
+	path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
+										   ofType:@"scpt" inDirectory:@"Scripts"];
+	guiScriptingChecker = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
+															 error:&err_info];
+	if (err_info) {
+		NSLog([err_info description]);
+		[NSApp activateIgnoringOtherApps:YES];
+		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 }
