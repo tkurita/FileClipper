@@ -52,7 +52,21 @@
 	if ([svntask terminationStatus] != 0) {
 		goto bail;
 	}
-	
+	/*
+	NSString *out_text = [[[NSString alloc] initWithData:
+								[[[svntask standardOutput] fileHandleForReading] availableData]
+												encoding:NSUTF8StringEncoding] autorelease];
+	*/
+	NSString *err_text = [[[NSString alloc] initWithData:
+								[[[svntask standardError] fileHandleForReading] availableData]
+												encoding:NSUTF8StringEncoding] autorelease];
+	if (0 != ([err_text rangeOfString:@"(Not a versioned resource)"].length)) {
+		goto bail;
+	}
+	/*
+	NSLog(@"stdout : %@", out_text);
+	NSLog(@"stderr : %@", err_text);
+	*/
 	NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
 	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", svncommand, source, 
 									[currentLocation stringByAppendingPathComponent:newName], nil]];
