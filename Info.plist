@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>8</string>
 	<key>CFBundleShortVersionString</key>
 	<string>3.0.6</string>
 	<key>NSHumanReadableCopyright</key>
