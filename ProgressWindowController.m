@@ -1,5 +1,6 @@
 #import "ProgressWindowController.h"
 #import "FileProcessor.h"
+#import "SmartActivate.h"
 
 #define useLog 0
 
@@ -117,6 +118,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
 	[[self window] orderFront:self];
 	//[NSApp activateIgnoringOtherApps:YES];
+	[SmartActivate activateSelf];
 	[save_panel beginSheetForDirectory:processor.currentLocation
 				file:[processor.currentSource lastPathComponent] 
 				modalForWindow:[self window] modalDelegate:self
