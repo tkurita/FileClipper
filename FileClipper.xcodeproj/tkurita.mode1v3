@@ -241,6 +241,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -289,19 +291,18 @@
 								<string>2CF7409A09B9C8FF00EF8406</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
-									<integer>25</integer>
+									<integer>23</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 40}, {303, 595}}</string>
+							<string>{{0, 252}, {303, 595}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -333,14 +334,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ProgressWindowController.m</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,11 +347,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ProgressWindowController.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>2CA5C47512E2E2D5003F4F1B</string>
+										<string>Info.plist</string>
 										<key>history</key>
 										<array>
 											<string>2C5D954910552D1200B8479B</string>
@@ -360,7 +355,6 @@
 											<string>2C7DC82B1057B82600579B20</string>
 											<string>2C7DC8381057B90300579B20</string>
 											<string>2C7DC8391057B90300579B20</string>
-											<string>2C7DC83C1057B90300579B20</string>
 											<string>2C7DC83D1057B90300579B20</string>
 											<string>2C7DC83E1057B90300579B20</string>
 											<string>2C7DC83F1057B90300579B20</string>
@@ -435,15 +429,8 @@
 											<string>2CA5C46612E2E2D5003F4F1B</string>
 											<string>2CA5C46712E2E2D5003F4F1B</string>
 											<string>2CA5C46812E2E2D5003F4F1B</string>
-											<string>2CA5C46912E2E2D5003F4F1B</string>
-											<string>2CA5C46A12E2E2D5003F4F1B</string>
 											<string>2CA5C46B12E2E2D5003F4F1B</string>
 											<string>2CA5C46C12E2E2D5003F4F1B</string>
-											<string>2CA5C46D12E2E2D5003F4F1B</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>2CA5C47412E2E2D5003F4F1B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -528,13 +515,7 @@
 											<string>2C565F161122A62A005B56EA</string>
 											<string>2C565F171122A62A005B56EA</string>
 											<string>2C565F211122A6C3005B56EA</string>
-											<string>2CA5C45012E2DDF7003F4F1B</string>
 											<string>2CA5C46E12E2E2D5003F4F1B</string>
-											<string>2CA5C46F12E2E2D5003F4F1B</string>
-											<string>2CA5C47012E2E2D5003F4F1B</string>
-											<string>2CA5C47112E2E2D5003F4F1B</string>
-											<string>2CA5C47212E2E2D5003F4F1B</string>
-											<string>2CA5C47312E2E2D5003F4F1B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -592,9 +573,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>2CA5C45212E2DDF7003F4F1B</string>
+				<string>2CA5C4B512E30E4D003F4F1B</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>2CA5C45312E2DDF7003F4F1B</string>
+				<string>2CA5C4B612E30E4D003F4F1B</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -735,8 +716,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>2C4C9FB10F722D3800C2F097</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/FileClipper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -819,7 +798,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C4C9FB10F722D3800C2F097</string>
-				<string>2CA5C47612E2E2D5003F4F1B</string>
+				<string>2CA5C4B712E30E4D003F4F1B</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
