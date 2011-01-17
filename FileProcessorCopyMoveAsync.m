@@ -82,7 +82,9 @@ static void statusCallback (FSFileOperationRef fileOp,
 	
 	
 	if ([self resolveNewName:source]) {
-		if (![self trySVN:svnCpMvCommand withSource:source]) {
+		if ([self trySVN:svnCpMvCommand withSource:source]) {
+			[self doTask:sender];
+		} else {
 			//if (YES) {
 #if useLog
 			NSString *destination = [currentLocation stringByAppendingPathComponent:newName];
