@@ -1,11 +1,11 @@
---property loader : proxy_with({autocollect:true}) of application (get "FileClipperLib")
-property loader : proxy() of application (get "FileClipperLib")
+property InsertionLocator : module
 
-on load(a_name)
-	return loader's load(a_name)
-end load
+on compiled()
+	boot (module loader of application (get "FileClipperLib")) for me
+	InsertionLocator's set_allow_closed_folder(false)
+end compiled
 
-property InsertionLocator : load("InsertionLocator")'s set_allow_closed_folder(false)
+property _ : compiled()
 
 on insertion_location()
 	set a_location to InsertionLocator's do()

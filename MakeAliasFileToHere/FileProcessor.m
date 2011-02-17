@@ -7,8 +7,11 @@
 
 - (void)doTask:(id)sender
 {
-	NSString* newname = [[currentSource displayName] uniqueNameAtLocation:currentLocation];
-	NSString* destination = [currentLocation stringByAppendingPathComponent:newname];
+	//NSString* newname = [[currentSource displayName] uniqueNameAtLocation:currentLocation];
+	if (![self resolveNewName:currentSource]) {
+		return;
+	}
+	NSString* destination = [currentLocation stringByAppendingPathComponent:self.newName];
 	NDAlias* alias = [NDAlias aliasWithPath:currentSource];
 	if (alias) {
 		if (![alias writeToFile:destination includeCustomIcon:YES] ) {

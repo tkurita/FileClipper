@@ -283,10 +283,10 @@ bail:
 {
 #if useLog
 	NSLog(@"start processAtLocationFromPasteboard");
-#endif	
+#endif
 	[self checkGUIScripting];
 	NSArray *types = [pboard types];
-	NSArray *filenames;
+	NSArray *filenames = nil;
 	if (![types containsObject:NSFilenamesPboardType] 
 		|| !(filenames = [pboard propertyListForType:NSFilenamesPboardType])) {
         *error = NSLocalizedString(@"Error: Pasteboard doesn't contain file paths.",
@@ -301,7 +301,6 @@ bail:
 		if (!error) 
 			center_position = [self centerOfFinderWindowReturningError:&error];
 	}
-		
 	[self processAtLocations:filenames centerPosition:center_position];
 }
 
