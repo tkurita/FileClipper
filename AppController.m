@@ -48,7 +48,7 @@ static BOOL PROCESSING = NO;
 	NSAppleEventDescriptor *result = [guiScriptingChecker executeAndReturnError:&err_info];
 
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@",[err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to chack GUI scripting", @"OK", nil, nil);
 		[NSApp terminate:self];
@@ -148,7 +148,7 @@ static BOOL PROCESSING = NO;
 					   arguments:[NSArray arrayWithObjects:[aPath stringByDeletingLastPathComponent], aPath,  nil] 
 							   error:&err_info];
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
@@ -165,7 +165,7 @@ static BOOL PROCESSING = NO;
 												   arguments:nil error:&err_info];
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
@@ -195,7 +195,7 @@ bail:
 												   arguments:nil error:&err_info];
 	NSString *location_path = nil;
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 [err_info objectForKey:OSAScriptErrorMessage],
 						 [err_info objectForKey:OSAScriptErrorNumber]];
@@ -261,7 +261,7 @@ bail:
 	finderController = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
 																	 error:&err_info];
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@", [err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];
@@ -272,7 +272,7 @@ bail:
 	guiScriptingChecker = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
 															 error:&err_info];
 	if (err_info) {
-		NSLog([err_info description]);
+		NSLog(@"Error : %@", [err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
 		[NSApp terminate:self];

@@ -27,7 +27,7 @@
 												 mutabilityOption:NSPropertyListImmutable
 														   format:&format
 												 errorDescription:&error];
-		 if (error) NSLog(error);
+		 if (error) NSLog(@"Error : %@", error);
 	
 	} else {
 		NSString *a_path = [pasteboard stringForType:NSStringPboardType];

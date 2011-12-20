@@ -73,7 +73,7 @@
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
-		NSLog([[[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
+		NSLog(@"%@", [[[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
 									 encoding:NSUTF8StringEncoding] autorelease]);
 		goto bail;
 	}
@@ -86,8 +86,7 @@ bail:
 
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
 {
-	NSLog(@"error in file manager");
-	NSLog([errorInfo description]);
+	NSLog(@"Error in file manager : %@", [errorInfo description]);
 	return NO;
 }
 

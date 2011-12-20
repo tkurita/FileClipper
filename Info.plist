@@ -7,13 +7,13 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>9</string>
+	<string>11</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.7</string>
+	<string>3.0.8</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>copyright 1999-2011, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.0.7 copyright 1999-2011, Tetsuro KURITA</string>
+	<string>3.0.8 copyright 1999-2011, Tetsuro KURITA</string>
 	<key>CFBundleIconFile</key>
 	<string>BundleIcon</string>
 	<key>CFBundleIdentifier</key>
@@ -55,6 +55,6 @@
 		</dict>
 	</array>
 	<key>DonationURL</key>
-	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
+	<string>http://www.script-factory.net/donationproxy.html</string>
 </dict>
 </plist>
