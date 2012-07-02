@@ -288,6 +288,7 @@
 			2CA08AA515A20CFA00A6C24A /* PBXTextBookmark */ = 2CA08AA515A20CFA00A6C24A /* PBXTextBookmark */;
 			2CA08AA615A20CFA00A6C24A /* PlistBookmark */ = 2CA08AA615A20CFA00A6C24A /* PlistBookmark */;
 			2CA08AA715A20CFA00A6C24A /* PlistBookmark */ = 2CA08AA715A20CFA00A6C24A /* PlistBookmark */;
+			2CA08ABD15A20D4600A6C24A /* PlistBookmark */ = 2CA08ABD15A20D4600A6C24A /* PlistBookmark */;
 			2CA5C46512E2E2D5003F4F1B = 2CA5C46512E2E2D5003F4F1B /* PBXTextBookmark */;
 			2CA5C46612E2E2D5003F4F1B = 2CA5C46612E2E2D5003F4F1B /* PBXTextBookmark */;
 			2CAB364C09BE6BE200A9C0EC = 2CAB364C09BE6BE200A9C0EC /* AppController.m */;
@@ -2069,6 +2070,18 @@
 		rLoc = 9223372036854775807;
 	};
 	2CA08AA715A20CFA00A6C24A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSUIElement,
+		);
+		name = /Users/tkurita/Dev/Projects/FileClipper/FileClipper/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	2CA08ABD15A20D4600A6C24A /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 2CF73B5809B86EB100EF8406 /* Info.plist */;
 		fallbackIsa = PBXBookmark;
