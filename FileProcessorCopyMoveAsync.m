@@ -114,7 +114,8 @@ static void statusCallback (FSFileOperationRef fileOp,
 			if (![source_name isEqualToString:newName]) {
 				loc_name = [loc_name stringByAppendingPathComponent:newName];
 				status_msg = [NSString stringWithFormat:
-										NSLocalizedStringFromTable(@"ProcessingFromTo", @"ParticularLocalizable", @""), 
+										NSLocalizedStringFromTable(@"ProcessingFromTo", 
+																   @"ParticularLocalizable", @""), 
 										source_name, loc_name];
 				[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 			}
