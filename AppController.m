@@ -8,6 +8,12 @@
 
 #define	useLog 0
 
+#if CGFLOAT_IS_DOUBLE
+#define TYPE_CGFloat typeIEEE64BitFloatingPoint
+#else
+#define TYPE_CGFloat typeIEEE32BitFloatingPoint
+#endif
+
 static BOOL AUTO_QUIT = YES;
 static BOOL PROCESSING = NO;
 
@@ -64,6 +70,9 @@ static BOOL PROCESSING = NO;
 
 - (void)processAtLocations:(NSArray *)filenames centerPosition:(NSPoint)position
 {
+#if useLog
+	NSLog(@"start processAtLocations. centerPosition x:%f, y:%f",position.x, position.y);
+#endif	
 	NSMutableArray *locations = [NSMutableArray arrayWithCapacity:[filenames count]];
 	
 	for (NSString *path in filenames) {
@@ -85,7 +94,7 @@ static BOOL PROCESSING = NO;
 	[wc bindApplicationsFloatingOnForKey:@"applicationsFloatingOn"];
 	[wc useFloating];
 #if useLog	
-	NSLog(@"%f, %f", position.x, position.y);
+	NSLog(@"position in processAtLocations x:%f, y:%f", position.x, position.y);
 #endif	
 	if (position.x != FLT_MAX) {
 		NSEnumerator *enumerator = [[NSScreen screens] objectEnumerator];
@@ -163,6 +172,9 @@ static BOOL PROCESSING = NO;
 	NSAppleEventDescriptor *script_result = nil;
 	script_result = [finderController executeHandlerWithName:@"center_of_finderwindow"
 												   arguments:nil error:&err_info];
+#if useLog
+	NSLog(@"result of center_of_finderwindow : %@", script_result);
+#endif
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
@@ -178,12 +190,17 @@ static BOOL PROCESSING = NO;
 	}
 	
 	unsigned int nitem = [script_result numberOfItems];
-	
 	if (nitem > 1) {
-		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.x];
-		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:typeIEEE32BitFloatingPoint] data] getBytes:&center_position.y];
+		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:TYPE_CGFloat] 
+			data] getBytes:&center_position.x];
+		[[[[script_result descriptorAtIndex:2] coerceToDescriptorType:TYPE_CGFloat]
+			data] getBytes:&center_position.y];
 	}
 bail:
+#if useLog
+	NSLog(@"returend value from centerOfFinderWindowReturningError x:%f, y:%f", 
+		  center_position.x, center_position.y);
+#endif	
 	return center_position;
 }
 
@@ -302,6 +319,9 @@ bail:
 			center_position = [self centerOfFinderWindowReturningError:&error];
 	}
 	[self processAtLocations:filenames centerPosition:center_position];
+#if useLog
+	NSLog(@"end processAtLocationFromPasteboard");
+#endif	
 }
 
 - (void)dealloc
