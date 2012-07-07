@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>CFBundleShortVersionString</key>
 	<string>3.0.9</string>
 	<key>NSHumanReadableCopyright</key>
@@ -48,10 +48,22 @@
 			<string>processAtLocationFromPasteboard</string>
 			<key>NSPortName</key>
 			<string>${BUNDLE_IDENTIFIER}Service</string>
+			<key>NSSendFileTypes</key>
+			<array>
+				<string>public.item</string>
+				<string>public.folder</string>
+				<string>public.symlink</string>
+				<string>com.apple.alias-file</string>
+			</array>
 			<key>NSSendTypes</key>
 			<array>
 				<string>NSFilenamesPboardType</string>
 			</array>
+			<key>NSRequiredContext</key>
+			<dict>
+				<key>NSTextContent</key>
+				<string>FilePath</string>
+			</dict>
 		</dict>
 	</array>
 	<key>DonationURL</key>
