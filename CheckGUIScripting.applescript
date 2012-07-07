@@ -1,11 +1,3 @@
---property loader : proxy_with({autocollect:true}) of application (get "FileClipperLib")
-(*
-property loader : proxy() of application (get "FileClipperLib")
-
-on load(a_name)
-	return loader's load(a_name)
-end load
-*)
 property GUIScriptingChecker : module
 property loader : boot (module loader of application (get "FileClipperLib")) for me
 
@@ -14,7 +6,6 @@ on run
 		set_delegate(me)
 		set is_enabled to do()
 	end tell
-	--log is_enabled
 	return is_enabled
 end run
 

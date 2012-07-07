@@ -1334,7 +1334,6 @@
 				GCC_PREFIX_HEADER = "";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeHardLinkToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -1343,6 +1342,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Make Hard Link to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1362,7 +1362,6 @@
 				GCC_PREFIX_HEADER = "";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeHardLinkToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -1371,6 +1370,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Make Hard Link to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				ZERO_LINK = NO;
 			};
@@ -1415,8 +1415,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Alias File to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1438,8 +1438,8 @@
 				GCC_MODEL_TUNING = G5;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Alias File to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1463,8 +1463,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Move to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1486,8 +1486,8 @@
 				GCC_MODEL_TUNING = G5;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Move to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1512,8 +1512,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Copy to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1538,8 +1538,8 @@
 				GCC_MODEL_TUNING = G5;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Copy to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1563,8 +1563,8 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1586,8 +1586,8 @@
 				GCC_MODEL_TUNING = G5;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
+				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1602,6 +1602,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Applications/FileClipper;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};
@@ -1619,6 +1620,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Applications/FileClipper;
 				PREBINDING = NO;
 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 			};

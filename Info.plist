@@ -13,7 +13,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>copyright 1999-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.0.8 copyright 1999-2012, Tetsuro KURITA</string>
+	<string>3.0.9 copyright 1999-2012, Tetsuro KURITA</string>
 	<key>CFBundleIconFile</key>
 	<string>BundleIcon</string>
 	<key>CFBundleIdentifier</key>
@@ -31,7 +31,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleScriptEnabled</key>
-	<string>YES</string>
+	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
