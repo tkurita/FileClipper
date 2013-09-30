@@ -6,14 +6,8 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleVersion</key>
-	<string>14</string>
-	<key>CFBundleShortVersionString</key>
-	<string>3.0.9</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>copyright 1999-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.0.9 copyright 1999-2012, Tetsuro KURITA</string>
+	<string>3.1 copyright 1999-2012, Tetsuro KURITA</string>
 	<key>CFBundleIconFile</key>
 	<string>BundleIcon</string>
 	<key>CFBundleIdentifier</key>
@@ -24,14 +18,22 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.1b</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>15</string>
+	<key>DonationURL</key>
+	<string>http://www.script-factory.net/donation/en/index.html</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<true/>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleScriptEnabled</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>copyright 1999-2012, Tetsuro KURITA</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -48,6 +50,11 @@
 			<string>processAtLocationFromPasteboard</string>
 			<key>NSPortName</key>
 			<string>${BUNDLE_IDENTIFIER}Service</string>
+			<key>NSRequiredContext</key>
+			<dict>
+				<key>NSTextContent</key>
+				<string>FilePath</string>
+			</dict>
 			<key>NSSendFileTypes</key>
 			<array>
 				<string>public.item</string>
@@ -59,14 +66,7 @@
 			<array>
 				<string>NSFilenamesPboardType</string>
 			</array>
-			<key>NSRequiredContext</key>
-			<dict>
-				<key>NSTextContent</key>
-				<string>FilePath</string>
-			</dict>
 		</dict>
 	</array>
-	<key>DonationURL</key>
-	<string>http://www.script-factory.net/donation/en/index.html</string>
 </dict>
 </plist>

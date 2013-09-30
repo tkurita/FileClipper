@@ -56,7 +56,7 @@ static BOOL PROCESSING = NO;
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Fail to chack GUI scripting", @"OK", nil, nil);
+		NSRunAlertPanel(nil, @"Failed to check GUI scripting", @"OK", nil, nil);
 		[NSApp terminate:self];
 		return;
 	}
@@ -259,7 +259,9 @@ bail:
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
 
-	[DonationReminder remindDonation];
+	if ([DonationReminder remindDonation]) {
+		[NSApp activateIgnoringOtherApps:YES];
+	}
 }
 
 - (void)awakeFromNib
