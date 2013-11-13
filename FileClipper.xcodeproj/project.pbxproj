@@ -253,6 +253,11 @@
 		2CCF06EA105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
 		2CCF06EB105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */; };
 		2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E85AD104E4D2700C5B158 /* ServicesMenu.strings */; };
+		2CDEDF5B18331A7000E5771B /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */; };
+		2CDEDF5E18331A8200E5771B /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */; };
+		2CDEDF5F18331A8A00E5771B /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */; };
+		2CDEDF6018331A9300E5771B /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */; };
+		2CDEDF6118331A9B00E5771B /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73C4909B8737A00EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
@@ -449,7 +454,6 @@
 		2C9E8608104E784700C5B158 /* FileProcessorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorBase.m; sourceTree = "<group>"; };
 		2C9E8610104E788A00C5B158 /* FileProcessorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorBase.h; sourceTree = "<group>"; };
 		2CA001C117F99A8900D6FE21 /* Copy to Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Copy to Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA001C317F99A8900D6FE21 /* Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info copy.plist"; sourceTree = "<group>"; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 		2CCF0670105AC663001E9511 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/ParticularLocalizable.strings; sourceTree = "<group>"; };
 		2CCF06E7105DEC9F001E9511 /* FileProcessorCopyMoveAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorCopyMoveAsync.h; sourceTree = "<group>"; };
 		2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorCopyMoveAsync.m; sourceTree = "<group>"; };
+		2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = System/Library/Frameworks/AppleScriptKit.framework; sourceTree = SDKROOT; };
 		2CE13264103196E000578ACF /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
 		2CE13265103196E000578ACF /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2CE13266103196E000578ACF /* FrontAppMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontAppMonitor.h; sourceTree = "<group>"; };
@@ -504,6 +509,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDEDF6118331A9B00E5771B /* AppleScriptKit.framework in Frameworks */,
 				2C9E85D1104E4F5000C5B158 /* Cocoa.framework in Frameworks */,
 				2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */,
 				2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */,
@@ -526,6 +532,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDEDF6018331A9300E5771B /* AppleScriptKit.framework in Frameworks */,
 				2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1811046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB2104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
@@ -537,6 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDEDF5E18331A8200E5771B /* AppleScriptKit.framework in Frameworks */,
 				2CF73DF409B895AD00EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB17F1046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB4104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
@@ -548,6 +556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDEDF5B18331A7000E5771B /* AppleScriptKit.framework in Frameworks */,
 				2CCF043A105AAD30001E9511 /* DonationReminder.framework in Frameworks */,
 				2CF73E2909B8971D00EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1821046109F006C3DC9 /* Carbon.framework in Frameworks */,
@@ -559,6 +568,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDEDF5F18331A8A00E5771B /* AppleScriptKit.framework in Frameworks */,
 				2CF73E8709B8997400EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1801046109F006C3DC9 /* Carbon.framework in Frameworks */,
 				2C9E7EB3104BDCE000C5B158 /* OSAKit.framework in Frameworks */,
@@ -585,6 +595,7 @@
 				2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */,
 				2C5FB17E1046109F006C3DC9 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				2CDEDF5418331A5800E5771B /* AppleScriptKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -649,7 +660,6 @@
 				2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */,
 				2CF73B5809B86EB100EF8406 /* Info.plist */,
 				2CF743E409B9FC6C00EF8406 /* Localizable.strings */,
-				2CA001C317F99A8900D6FE21 /* Info copy.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1438,7 +1448,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1468,7 +1478,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
@@ -1499,7 +1509,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1527,7 +1537,7 @@
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1571,7 +1581,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1597,7 +1607,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1621,7 +1631,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1647,7 +1657,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1672,7 +1682,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1701,7 +1711,7 @@
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1725,7 +1735,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1751,7 +1761,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",

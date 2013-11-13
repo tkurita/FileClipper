@@ -56,7 +56,8 @@ static BOOL PROCESSING = NO;
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Failed to check GUI scripting", @"OK", nil, nil);
+		NSRunAlertPanel(@"Failed to check GUI scripting", 
+						[err_info objectForKey:@"OSAScriptErrorMessageKey"], @"OK", nil, nil);
 		[NSApp terminate:self];
 		return;
 	}
@@ -293,7 +294,7 @@ bail:
 	if (err_info) {
 		NSLog(@"Error : %@", [err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, @"Fail to load CheckGUIScripting.scpt", @"OK", nil, nil);
+		NSRunAlertPanel(@"Fail to load CheckGUIScripting.scpt", [err_info description], @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 }
