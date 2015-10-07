@@ -717,7 +717,7 @@
 		fRef = 2C48998F0DE43333001A564D /* History.rd */;
 		name = "History.rd: 27";
 		rLen = 0;
-		rLoc = 930;
+		rLoc = 997;
 		rType = 0;
 		vrLen = 758;
 		vrLoc = 191;
@@ -727,7 +727,7 @@
 		fRef = 2C48998F0DE43333001A564D /* History.rd */;
 		name = "History.rd: 10";
 		rLen = 0;
-		rLoc = 220;
+		rLoc = 199;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 0;
@@ -737,7 +737,7 @@
 		fRef = 2C48998F0DE43333001A564D /* History.rd */;
 		name = "History.rd: 10";
 		rLen = 0;
-		rLoc = 220;
+		rLoc = 199;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 0;
@@ -837,7 +837,7 @@
 		fRef = 2C48998F0DE43333001A564D /* History.rd */;
 		name = "History.rd: 18";
 		rLen = 24;
-		rLoc = 303;
+		rLoc = 370;
 		rType = 0;
 		vrLen = 251;
 		vrLoc = 8;
