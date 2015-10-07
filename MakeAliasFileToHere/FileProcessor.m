@@ -5,19 +5,18 @@
 
 - (void)doTask:(id)sender
 {
-	//NSString* newname = [[currentSource displayName] uniqueNameAtLocation:currentLocation];
-	if (![self resolveNewName:currentSource]) {
+	if (![self resolveNewName: self.currentSource]) {
 		return;
 	}
-	NSString* destination = [currentLocation stringByAppendingPathComponent:self.newName];
+	NSString* destination = [self.currentLocation stringByAppendingPathComponent:self.nuName];
     NSError *error = nil;
-	NSData *bd = [[NSURL foleURLWithPath:currentSource]
+	NSData *bd = [[NSURL fileURLWithPath:self.currentSource]
                   bookmarkDataWithOptions:0 includingResourceValuesForKeys:nil relativeToURL:nil error:&error];
     if (error) {
         [NSApp presentError:error];
         [self displayErrorLog:
          NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""),
-         currentSource];
+         self.currentSource];
         return;
     }
     

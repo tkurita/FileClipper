@@ -23,7 +23,7 @@ static BOOL PROCESSING = NO;
 {
     va_list argumentList;
     va_start(argumentList, format);
-	NSString *msg = [[[NSString alloc] initWithFormat:format arguments:argumentList] autorelease];
+	NSString *msg = [[NSString alloc] initWithFormat:format arguments:argumentList];
     va_end(argumentList);
 	msg = [msg stringByAppendingString:@"\n"];
 	[errorWindow orderFront:self];
@@ -57,7 +57,7 @@ static BOOL PROCESSING = NO;
 		NSLog(@"Error : %@",[err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(@"Failed to check GUI scripting", 
-						[err_info objectForKey:@"OSAScriptErrorMessageKey"], @"OK", nil, nil);
+						err_info[@"OSAScriptErrorMessageKey"], @"OK", nil, nil);
 		[NSApp terminate:self];
 		return;
 	}
@@ -76,7 +76,7 @@ static BOOL PROCESSING = NO;
 #endif	
 	NSMutableArray *locations = [NSMutableArray arrayWithCapacity:[filenames count]];
 	
-	for (NSString *path in filenames) {
+	for (__strong NSString *path in filenames) {
 		if (![path isFolder] || [path isPackage]) {
 			path = [path stringByDeletingLastPathComponent];
 		}
@@ -155,13 +155,13 @@ static BOOL PROCESSING = NO;
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
 	script_result = [finderController executeHandlerWithName:@"update_on_finder"
-					   arguments:[NSArray arrayWithObjects:[aPath stringByDeletingLastPathComponent], aPath,  nil] 
+					   arguments:@[[aPath stringByDeletingLastPathComponent], aPath] 
 							   error:&err_info];
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 [err_info objectForKey:OSAScriptErrorMessage],
-						 [err_info objectForKey:OSAScriptErrorNumber]];
+						 err_info[OSAScriptErrorMessage],
+						 err_info[OSAScriptErrorNumber]];
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 	}
@@ -180,12 +180,11 @@ static BOOL PROCESSING = NO;
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 [err_info objectForKey:OSAScriptErrorMessage],
-						 [err_info objectForKey:OSAScriptErrorNumber]];
+						 err_info[OSAScriptErrorMessage],
+						 err_info[OSAScriptErrorNumber]];
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
-		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
-														  forKey:NSLocalizedDescriptionKey];
+		NSDictionary *udict = @{NSLocalizedDescriptionKey: msg};
 		*error = [NSError errorWithDomain:@"FileClipperError" code:1 userInfo:udict];
 		goto bail;
 	}
@@ -215,12 +214,11 @@ bail:
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 [err_info objectForKey:OSAScriptErrorMessage],
-						 [err_info objectForKey:OSAScriptErrorNumber]];
+						 err_info[OSAScriptErrorMessage],
+						 err_info[OSAScriptErrorNumber]];
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
-		NSDictionary *udict = [NSDictionary dictionaryWithObject:msg
-														  forKey:NSLocalizedDescriptionKey];
+		NSDictionary *udict = @{NSLocalizedDescriptionKey: msg};
 		*error = [NSError errorWithDomain:@"FileClipperError" code:2 userInfo:udict];
 		goto bail;
 	}
@@ -243,7 +241,7 @@ bail:
 	if (error) goto bail;
 	NSPoint center_position = [self centerOfFinderWindowReturningError:&error];
 	if (error) goto bail;
-	[self processAtLocations:[NSArray arrayWithObject:location_path] centerPosition:center_position];
+	[self processAtLocations:@[location_path] centerPosition:center_position];
 bail:
 	return;	
 }
@@ -315,7 +313,7 @@ bail:
     }
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	NSDictionary *preactiveapp = [[NSWorkspace sharedWorkspace] activeApplication];
-	if ( [[preactiveapp objectForKey:@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.finder"] ) {
+	if ( [preactiveapp[@"NSApplicationBundleIdentifier"] isEqualToString:@"com.apple.finder"] ) {
 		NSError *error = nil;
 		[self insertionLocationReturningError:&error];
 		if (!error) 
@@ -325,12 +323,6 @@ bail:
 #if useLog
 	NSLog(@"end processAtLocationFromPasteboard");
 #endif	
-}
-
-- (void)dealloc
-{
-	[finderController release];
-	[super dealloc];
 }
 
 @end

@@ -9,12 +9,11 @@
 
 - (void)doTask:(id)sender
 {
-	//NSString *newname = [[currentSource lastPathComponent] uniqueNameAtLocation:currentLocation];
-	if (![self resolveNewName:currentSource]) {
+	if (![self resolveNewName:self.currentSource]) {
 		return;
 	}	
-	NSString *destination = [currentLocation stringByAppendingPathComponent:self.newName];
-	NSString *relpath = [currentSource relativePathWithBase:destination];
+	NSString *destination = [self.currentLocation stringByAppendingPathComponent:self.nuName];
+	NSString *relpath = [self.currentSource relativePathWithBase:destination];
 #if useLog		
 	NSLog(@"relative path: %@", relpath);
 	NSLog(@"destination : %@", destination);
@@ -22,8 +21,8 @@
 	if ([destination fileExists]) {
 		NSInteger tag;
 		if (![[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation 
-													source:currentLocation destination:@"" 
-														   files:[NSArray arrayWithObject:self.newName] tag:&tag]) {
+													source:self.currentLocation destination:@""
+														   files:[NSArray arrayWithObject:self.nuName] tag:&tag]) {
 			[self displayErrorLog:
 					NSLocalizedString(@"Failed to replace : %@", @""), destination];
 			return;

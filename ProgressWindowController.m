@@ -8,8 +8,6 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 @implementation ProgressWindowController
 
-@synthesize fileProcessor;
-
 + (void)initialize
 {
 	if (!WORKING_WINDOW_CONTROLLERS) {
@@ -31,7 +29,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 - (IBAction)okAction:(id)sender
 {
-	NSString *newpath = [fileProcessor.currentLocation stringByAppendingPathComponent:[newNameField stringValue]];
+	NSString *newpath = [_fileProcessor.currentLocation stringByAppendingPathComponent:[newNameField stringValue]];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:newpath]) {
 		[messageField setStringValue:NSLocalizedString(@"SameNameExists", @"")];
 		return;
@@ -51,7 +49,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 - (IBAction)cancelTask:(id)sender
 {
-	fileProcessor.isCanceled = YES;
+	_fileProcessor.isCanceled = YES;
 }
 
 - (void)setStatusMessage:(NSString *)string
@@ -74,7 +72,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 - (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(FileProcessor *)processor
 {
 	if (returnCode == NSOKButton) {
-		processor.newName = [newNameField stringValue];
+		processor.nuName = [newNameField stringValue];
 	}
 	
 	[sheet orderOut:self];
@@ -83,7 +81,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 
 - (BOOL)panel:(id)sender isValidFilename:(NSString *)filename
 {
-	if ([fileProcessor.currentSource isEqualToString:filename]) {
+	if ([_fileProcessor.currentSource isEqualToString:filename]) {
 		[sender setMessage:NSLocalizedStringFromTable(@"Same to the source item.", @"ParticularLocalizable", @"")];
 		return NO;
 	}
@@ -91,7 +89,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	for (ProgressWindowController* wc in WORKING_WINDOW_CONTROLLERS) {
 		if (wc != self) {
 			NSString *destination = [wc.fileProcessor.currentLocation stringByAppendingPathComponent:
-									 wc.fileProcessor.newName];
+									 wc.fileProcessor.nuName];
 			if ([filename isEqualToString:destination]) {
 				[sender setMessage:[NSString stringWithFormat:NSLocalizedString(@"%@ is busy.", @""), [filename lastPathComponent]]];
 				return NO;
@@ -101,28 +99,23 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	return YES;
 }
 
-- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode contextInfo:(FileProcessor *)processor
-{
-	if (returnCode == NSOKButton) {
-		NSString *path = [sheet filename];
-		processor.newName = [path lastPathComponent];
-		processor.currentLocation = [path stringByDeletingLastPathComponent];
-	}
-	[processor unlock];
-}
-
 - (void)askNewName:(FileProcessor *)processor
 {
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	[save_panel setDelegate:self];
+	//[save_panel setDelegate:self];
 	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
 	[[self window] orderFront:self];
 	[NSRunningApplication activateSelf];
-	[save_panel beginSheetForDirectory:processor.currentLocation
-				file:[processor.currentSource lastPathComponent] 
-				modalForWindow:[self window] modalDelegate:self
-						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
-						   contextInfo:processor];
+    [save_panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
+     {
+         if (result == NSOKButton) {
+             NSString *path = [[save_panel URL] path];
+             processor.nuName = [path lastPathComponent];
+             processor.currentLocation = [path stringByDeletingLastPathComponent];
+         }
+         [processor unlock];
+     }];
+
 	[processor lock];
 }
 
@@ -130,9 +123,9 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 {
 	[self showWindow:self];
 	[WORKING_WINDOW_CONTROLLERS addObject:self];
-	fileProcessor.sourceItems = array;
-	fileProcessor.locations = locations;
-	[NSThread detachNewThreadSelector:@selector(startThreadTask:) toTarget:fileProcessor withObject:self];
+	_fileProcessor.sourceItems = array;
+	_fileProcessor.locations = locations;
+	[NSThread detachNewThreadSelector:@selector(startThreadTask:) toTarget:_fileProcessor withObject:self];
 }
 
 
@@ -144,13 +137,7 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	if (isTaskFinished) {
 		[WORKING_WINDOW_CONTROLLERS removeObject:self];
 		[super windowWillClose:notification];
-		[self autorelease];
 	}
-}
-
-- (void)dealloc
-{
-	[super dealloc];
 }
 
 @end

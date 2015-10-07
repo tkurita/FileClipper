@@ -28,7 +28,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 	if (error == userCanceledErr) {
 		return;
 	}
-	FileProcessor *processor = info;
+	FileProcessor *processor = (__bridge FileProcessor *)(info);
 	if (error != noErr) {
 		[processor displayErrorLog:@"Failed to process %s with error %d", currentItem, error];
 	}
@@ -62,8 +62,8 @@ static void statusCallback (FSFileOperationRef fileOp,
 #if useLog
 	NSLog(@"start doTask");
 #endif
-	NSString* source = [enumerator nextObject];
-	if (!source || isCanceled) {
+	NSString* source = [self.enumerator nextObject];
+	if (!source || self.isCanceled) {
 #if useLog
 		NSLog(@"will stop run loop");
 #endif
@@ -72,13 +72,13 @@ static void statusCallback (FSFileOperationRef fileOp,
 	}
 	
 	source = [source cleanPath];
-	self.newName = [source lastPathComponent];
+	self.nuName = [source lastPathComponent];
 	OSStatus status;
 
 	NSString *status_msg = [NSString stringWithFormat:
 							NSLocalizedStringFromTable(@"ProcessingFromTo", @"ParticularLocalizable", @""), 
-							newName, currentLocation];
-	[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+							self.nuName, self.currentLocation];
+	[self.owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 	
 	
 	if ([self resolveNewName:source]) {
@@ -87,21 +87,21 @@ static void statusCallback (FSFileOperationRef fileOp,
 		} else {
 			//if (YES) {
 #if useLog
-			NSString *destination = [currentLocation stringByAppendingPathComponent:newName];
+			NSString *destination = [currentLocation stringByAppendingPathComponent:_nuName];
 			NSLog(@"Copy source : %@", source);
 			NSLog(@"Copy destination : %@", destination);
 #endif			
 			FSFileOperationRef fileOp = FSFileOperationCreate(NULL);
 			const char *source_char = [source fileSystemRepresentation];
-			const char *loc_char = [currentLocation fileSystemRepresentation];
+			const char *loc_char = [self.currentLocation fileSystemRepresentation];
 			status = FSFileOperationScheduleWithRunLoop(fileOp, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
 			if (status != noErr) {
 				[self displayErrorLog:@"Failed to FSFileOperationScheduleWithRunLoop with error : %d", status];
 				CFRelease(fileOp);
 				goto bail;
 			}
-			FSFileOperationClientContext context = {0, self, NULL, NULL, NULL};
-			status = (*processPathAsync)(fileOp, source_char,loc_char, (CFStringRef)newName,
+			FSFileOperationClientContext context = {0, (__bridge void *)(self), NULL, NULL, NULL};
+			status = (*processPathAsync)(fileOp, source_char,loc_char, (__bridge CFStringRef)self.nuName,
 										   kFSFileOperationDefaultOptions|kFSFileOperationOverwrite, 
 										   statusCallback,2,&context);
 			if (status != noErr) {
@@ -109,19 +109,20 @@ static void statusCallback (FSFileOperationRef fileOp,
 				CFRelease(fileOp);
 				goto bail;
 			}
-			NSString *loc_name = [currentLocation lastPathComponent];
+			NSString *loc_name = [self.currentLocation lastPathComponent];
 			NSString *source_name = [source lastPathComponent];
-			if (![source_name isEqualToString:newName]) {
-				loc_name = [loc_name stringByAppendingPathComponent:newName];
+			if (![source_name isEqualToString:self.nuName]) {
+				loc_name = [loc_name stringByAppendingPathComponent:self.nuName];
 				status_msg = [NSString stringWithFormat:
 										NSLocalizedStringFromTable(@"ProcessingFromTo", 
 																   @"ParticularLocalizable", @""), 
 										source_name, loc_name];
-				[owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+				[self.owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
 			}
 		}
 		[[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:) 
-								withObject:[currentLocation stringByAppendingPathComponent:newName] waitUntilDone:NO];
+								withObject:[self.currentLocation stringByAppendingPathComponent:self.nuName]
+                                        waitUntilDone:NO];
 	}
 	
 bail:
@@ -130,11 +131,10 @@ bail:
 
 - (void)startThreadTask:(id)sender
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	for (NSString *path in locations) {
+	for (NSString *path in self.locations) {
 		self.currentLocation = path;
 		BOOL done = NO;
-		self.enumerator = [sourceItems objectEnumerator];
+		self.enumerator = [self.sourceItems objectEnumerator];
 		[self doTask:sender];
 		do
 		{
@@ -147,9 +147,8 @@ bail:
 			}
 		}
 		while (!done);
-		if (isCanceled) break;
+		if (self.isCanceled) break;
 	}
-	[pool release];
 	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
 	[NSThread exit];
 }

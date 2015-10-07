@@ -6,13 +6,12 @@
 	IBOutlet id indicator;
 	IBOutlet id askWindow;
 	IBOutlet id newNameField;
-	IBOutlet FileProcessor* fileProcessor;
 	IBOutlet id messageField;
 	IBOutlet id statusLabel;
 	BOOL isTaskFinished;
 }
 
-@property (assign) FileProcessor* fileProcessor;
+@property (assign) IBOutlet FileProcessor* fileProcessor;
 
 + (NSArray *)workingControllers;
 

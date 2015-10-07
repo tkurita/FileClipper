@@ -4,13 +4,12 @@
 #define useLog 0
 
 @implementation FileProcessorBase
-@synthesize locations, currentLocation, sourceItems, owner, currentSource, newName, loginShell, enumerator, isCanceled;
 
 - (id)init
 {
 	if (self = [super init]) {
-		lock = [NSLock new];
-		isCanceled = NO;
+		self.lockobj = [NSLock new];
+		self.isCanceled = NO;
 	}
 	return self;
 }
@@ -27,61 +26,51 @@
 - (NSTask*)loginShellTask:(NSArray*)arguments
 {
 	NSTask* task = [NSTask new];
-	[task setLaunchPath:loginShell];
+	[task setLaunchPath:_loginShell];
 	[task setArguments:arguments];
 	[task setStandardError:[NSPipe pipe]];
 	[task setStandardOutput:[NSPipe pipe]];
-	return [task autorelease];
+	return task;
 }
 
 - (BOOL)trySVN:(NSString *)command withSource:(NSString *)source
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	NSTask* svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"",source, nil]];
+	NSTask* svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"",source]];
 	BOOL result = NO;
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
-		goto bail;
+		return result;
 	}
 	
-	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", @"svn info \"$0\"", currentLocation, nil]];
+	svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"", _currentLocation]];
 	[svntask launch];
 	[svntask waitUntilExit];
 	
 	if ([svntask terminationStatus] != 0) {
-		goto bail;
+		return result;
 	}
-	/*
-	NSString *out_text = [[[NSString alloc] initWithData:
-								[[[svntask standardOutput] fileHandleForReading] availableData]
-												encoding:NSUTF8StringEncoding] autorelease];
-	*/
-	NSString *err_text = [[[NSString alloc] initWithData:
+	NSString *err_text = [[NSString alloc] initWithData:
 								[[[svntask standardError] fileHandleForReading] availableData]
-												encoding:NSUTF8StringEncoding] autorelease];
+												encoding:NSUTF8StringEncoding];
 	if (0 != ([err_text rangeOfString:@"(Not a versioned resource)"].length)) {
-		goto bail;
+		return result;
 	}
 	/*
 	NSLog(@"stdout : %@", out_text);
 	NSLog(@"stderr : %@", err_text);
 	*/
 	NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
-	svntask = [self loginShellTask:[NSArray arrayWithObjects:@"-lc", svncommand, source, 
-									[currentLocation stringByAppendingPathComponent:newName], nil]];
+	svntask = [self loginShellTask:@[@"-lc", svncommand, source, 
+									[_currentLocation stringByAppendingPathComponent:_nuName]]];
 	[svntask launch];
 	[svntask waitUntilExit];
 	if ([svntask terminationStatus] != 0) {
-		NSLog(@"%@", [[[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
-									 encoding:NSUTF8StringEncoding] autorelease]);
-		goto bail;
+		NSLog(@"%@", [[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
+									 encoding:NSUTF8StringEncoding]);
 	}
 	
-	result = YES;
-bail:
-	[pool release];
-	return result;
+	return YES;
 }
 
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
@@ -103,26 +92,26 @@ bail:
 
 - (void)lock
 {
-	[lock lock];
+	[_lockobj lock];
 }
 
 - (void)unlock
 {
-	[lock unlock];
+	[_lockobj unlock];
 }
 
 - (BOOL)resolveNewName:(NSString *)source
 {
 	self.currentSource = source;
-	self.newName = nil;
-	if ([[currentLocation stringByAppendingPathComponent:[source lastPathComponent]] fileExists]) {
-		[owner performSelectorOnMainThread:@selector(askNewName:) withObject:self waitUntilDone:YES];
-		[lock lock];
-		[lock unlock];
+	self.nuName = nil;
+	if ([[_currentLocation stringByAppendingPathComponent:[source lastPathComponent]] fileExists]) {
+		[_owner performSelectorOnMainThread:@selector(askNewName:) withObject:self waitUntilDone:YES];
+		[_lockobj lock];
+		[_lockobj unlock];
 	} else {
-		self.newName = [source lastPathComponent];
+		self.nuName = [source lastPathComponent];
 	}
-	return (newName != nil);
+	return (_nuName != nil);
 }
 
 - (void)doTask:(id)sender
@@ -132,33 +121,21 @@ bail:
 
 - (void)startThreadTask:(id)sender
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	for (NSString *path in locations) {
+	for (NSString *path in _locations) {
 		self.currentLocation = path;
-		for (NSString *source in sourceItems) {
+		for (NSString *source in _sourceItems) {
 			self.currentSource = source;
 			NSString *status_msg = [NSString stringWithFormat:
 									NSLocalizedStringFromTable(@"ProcessingFromTo", 
 															   @"ParticularLocalizable", @""), 
-									[source lastPathComponent], currentLocation];
-			[owner performSelectorOnMainThread:@selector(setStatusMessage:) 
+									[source lastPathComponent], _currentLocation];
+			[_owner performSelectorOnMainThread:@selector(setStatusMessage:)
 									withObject: status_msg waitUntilDone:NO];
 			[self doTask:sender];
 		}
 	}
-	[pool release];
 	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
 	[NSThread exit];
 }
 
-- (void) dealloc
-{
-	[sourceItems release];
-	[locations release];
-	[currentLocation release];
-	[newName release];
-	[lock release];
-	[enumerator release];
-	[super dealloc];
-}
 @end

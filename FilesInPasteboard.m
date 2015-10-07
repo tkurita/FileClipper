@@ -6,7 +6,7 @@
 {
 	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
 	NSString *availableType = [pasteboard availableTypeFromArray:
-		[NSArray arrayWithObjects:NSFilenamesPboardType, NSStringPboardType, nil]];
+		@[NSFilenamesPboardType, NSStringPboardType]];
 	//NSLog(availableType);
 	if (availableType == nil) {
 		//NSLog(@"no abailable");
@@ -33,7 +33,7 @@
 		NSString *a_path = [pasteboard stringForType:NSStringPboardType];
 		if (!a_path || (![a_path hasPrefix:@"/"]))  return nil;
 		if ([[NSFileManager defaultManager] fileExistsAtPath:a_path]) {
-			result = [NSArray arrayWithObject:a_path];
+			result = @[a_path];
 		} else {
 			result = nil;
 		}

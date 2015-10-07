@@ -1,26 +1,17 @@
 #import <Cocoa/Cocoa.h>
 
-@interface FileProcessorBase : NSObject {
-	IBOutlet id owner;
-	NSArray *locations;
-	NSString *currentLocation;
-	NSArray *sourceItems;
-	NSString* currentSource;
-	NSString* newName;
-	NSLock* lock;
-	NSString* loginShell;
-	NSEnumerator *enumerator;
-	BOOL isCanceled;
-}
-@property (retain) NSArray* locations;
-@property (retain) NSString* currentLocation;
-@property (retain) NSArray* sourceItems;
-@property (assign) id owner;
+@interface FileProcessorBase : NSObject
+
+@property NSLock* lockobj;
+@property NSArray* locations;
+@property NSString* currentLocation;
+@property NSArray* sourceItems;
+@property (assign) IBOutlet id owner;
 @property (assign) NSString* currentSource;
-@property (retain) NSString* newName;
-@property (retain) NSString* loginShell;
-@property (retain) NSEnumerator *enumerator;
-@property (assign) BOOL isCanceled;
+@property NSString* nuName;
+@property NSString* loginShell;
+@property NSEnumerator *enumerator;
+@property BOOL isCanceled;
 
 - (id)initWithSourceItems:(NSArray *)array toLocations:(NSArray *)pathes owner:(id)ownerObject;
 - (void)startThreadTask:(id)sender;
