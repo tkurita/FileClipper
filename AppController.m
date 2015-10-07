@@ -276,7 +276,7 @@ bail:
 	[PaletteWindowController setVisibilityController:[WindowVisibilityController sharedWindowVisibilityController]];
 	
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"FinderController"
-													 ofType:@"scpt" inDirectory:@"Scripts"];
+													 ofType:@"scpt"];
 	NSDictionary *err_info = nil;
 	finderController = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
 																	 error:&err_info];
@@ -288,7 +288,7 @@ bail:
 	}
 	
 	path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
-										   ofType:@"scpt" inDirectory:@"Scripts"];
+										   ofType:@"scpt"];
 	guiScriptingChecker = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
 															 error:&err_info];
 	if (err_info) {
