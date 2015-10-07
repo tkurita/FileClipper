@@ -1,7 +1,5 @@
 #import "FileProcessor.h"
 #import "PathExtra.h"
-#import "NDAlias.h"
-#import "NDAlias+AliasFile.h"
 
 @implementation FileProcessor
 
@@ -12,18 +10,25 @@
 		return;
 	}
 	NSString* destination = [currentLocation stringByAppendingPathComponent:self.newName];
-	NDAlias* alias = [NDAlias aliasWithPath:currentSource];
-	if (alias) {
-		if (![alias writeToFile:destination includeCustomIcon:YES] ) {
-			[self displayErrorLog:
-					NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""), 
-					destination];
-		}
-	} else {
-		[self displayErrorLog:
-			  NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""), 
-			currentSource];
-	}
+    NSError *error = nil;
+	NSData *bd = [[NSURL foleURLWithPath:currentSource]
+                  bookmarkDataWithOptions:0 includingResourceValuesForKeys:nil relativeToURL:nil error:&error];
+    if (error) {
+        [NSApp presentError:error];
+        [self displayErrorLog:
+         NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""),
+         currentSource];
+        return;
+    }
+    
+    
+    if (![NSURL writeBookmarkData:bd toURL:[NSURL fileURLWithPath:destination]
+                          options: NSURLBookmarkCreationSuitableForBookmarkFile  error:&error]) {
+        [NSApp presentError:error];
+        [self displayErrorLog:
+         NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""),
+         destination];
+    }
 }
 
 @end
