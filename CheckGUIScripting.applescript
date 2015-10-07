@@ -4,7 +4,7 @@ property loader : boot (module loader of application (get "FileClipperLib")) for
 
 on run
 	tell GUIScriptingChecker
-		if is_marvericks() then
+		if is_mavericks() then
 			set_delegate(MessageProvider109)
 		else
 			set_delegate(MessageProvider)
@@ -38,7 +38,7 @@ script MessageProvider109
 	end ok_button
 	
 	on cancel_button()
-		return localized string "Cancel"
+		return localized string "Deny"
 	end cancel_button
 	
 	on title_message()
