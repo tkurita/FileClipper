@@ -7,3 +7,12 @@
 [submodule "DonationReminder"]
 	path = DonationReminder
 	url = https://tkurita@github.com/tkurita/DonationReminder.git
+[submodule "LibraryScripts/GUIScriptingChecker.scptd"]
+	path = LibraryScripts/GUIScriptingChecker.scptd
+	url = https://tkurita@github.com/tkurita/GUIScriptingChecker.scptd.git
+[submodule "LibraryScripts/XText.scptd"]
+	path = LibraryScripts/XText.scptd
+	url = https://tkurita@github.com/tkurita/XText.scptd.git
+[submodule "LibraryScripts/InsertionLocator.scptd"]
+	path = LibraryScripts/InsertionLocator.scptd
+	url = https://tkurita@github.com/tkurita/InsertionLocator.scptd.git
