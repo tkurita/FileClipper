@@ -4,3 +4,6 @@
 [submodule "PaletteWindowController"]
 	path = PaletteWindowController
 	url = https://tkurita@github.com/tkurita/PaletteWindowController.git
+[submodule "DonationReminder"]
+	path = DonationReminder
+	url = https://tkurita@github.com/tkurita/DonationReminder.git
