@@ -16,3 +16,6 @@
 [submodule "LibraryScripts/InsertionLocator.scptd"]
 	path = LibraryScripts/InsertionLocator.scptd
 	url = https://tkurita@github.com/tkurita/InsertionLocator.scptd.git
+[submodule "LibraryScripts/XList.scptd"]
+	path = LibraryScripts/XList.scptd
+	url = https://tkurita@github.com/tkurita/XList.scptd.git
