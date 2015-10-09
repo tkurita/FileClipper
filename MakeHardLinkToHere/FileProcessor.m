@@ -17,10 +17,23 @@
 	NSString *destination = [self.currentLocation stringByAppendingPathComponent:self.nuName];
 	
 	NSFileManager *file_manager = [NSFileManager defaultManager];
-	NSNumber *source_device = [[file_manager fileAttributesAtPath:self.currentSource traverseLink:NO]
-							   objectForKey:NSFileSystemNumber];
-	NSNumber *location_device = [[file_manager fileAttributesAtPath:self.currentLocation traverseLink:NO]
-								 objectForKey:NSFileSystemNumber];
+    NSError *error = nil;
+    NSNumber *source_device = [[file_manager attributesOfItemAtPath:self.currentSource
+                                                              error:&error]
+                                                    objectForKey:NSFileSystemNumber];
+    if (error) {
+        [NSApp presentError:error];
+        return;
+    }
+
+    NSNumber *location_device = [[file_manager attributesOfItemAtPath:self.currentLocation
+                                                                error:&error]
+                                 objectForKey:NSFileSystemNumber];
+    if (error) {
+        [NSApp presentError:error];
+        return;
+    }
+    
 	if ([destination fileExists]) {
 		NSInteger tag;
 		if (![[NSWorkspace sharedWorkspace] performFileOperation:NSWorkspaceRecycleOperation 
@@ -38,7 +51,11 @@
 		return;
 	}
 	
-	if (![file_manager linkPath:self.currentSource toPath:destination handler:self] ){
+    if (![file_manager linkItemAtURL:[NSURL fileURLWithPath:self.currentSource]
+                               toURL:[NSURL fileURLWithPath:destination] error:&error]) {
+        if (error) {
+            [NSApp presentError:error];
+        }
 		[self displayErrorLog:
 			 NSLocalizedStringFromTable(@"Failed to make hard link from %@ to %@.", @"ParticularLocalizable", @""),
 						self.currentSource, destination];
