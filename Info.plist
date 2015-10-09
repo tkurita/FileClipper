@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>3.1b copyright 1999-2012, Tetsuro KURITA</string>
+	<string>3.1b copyright 1999-2015, Tetsuro KURITA</string>
 	<key>CFBundleIconFile</key>
 	<string>BundleIcon</string>
 	<key>CFBundleIdentifier</key>
@@ -23,7 +23,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>16</string>
+	<string>17</string>
 	<key>DonationURL</key>
 	<string>http://www.script-factory.net/donation/en/index.html</string>
 	<key>LSHasLocalizedDisplayName</key>
@@ -33,7 +33,7 @@
 	<key>NSAppleScriptEnabled</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>copyright 1999-2012, Tetsuro KURITA</string>
+	<string>copyright 1999-2015, Tetsuro KURITA</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
