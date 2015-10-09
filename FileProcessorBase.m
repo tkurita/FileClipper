@@ -35,41 +35,42 @@
 
 - (BOOL)trySVN:(NSString *)command withSource:(NSString *)source
 {
-	NSTask* svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"",source]];
-	BOOL result = NO;
-	[svntask launch];
-	[svntask waitUntilExit];
-	if ([svntask terminationStatus] != 0) {
-		return result;
+	@autoreleasepool {
+        NSTask* svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"",source]];
+        BOOL result = NO;
+        [svntask launch];
+        [svntask waitUntilExit];
+        if ([svntask terminationStatus] != 0) {
+            return result;
+        }
+        
+        svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"", _currentLocation]];
+        [svntask launch];
+        [svntask waitUntilExit];
+        
+        if ([svntask terminationStatus] != 0) {
+            return result;
+        }
+        NSString *err_text = [[NSString alloc] initWithData:
+                                    [[[svntask standardError] fileHandleForReading] availableData]
+                                                    encoding:NSUTF8StringEncoding];
+        if (0 != ([err_text rangeOfString:@"(Not a versioned resource)"].length)) {
+            return result;
+        }
+        /*
+        NSLog(@"stdout : %@", out_text);
+        NSLog(@"stderr : %@", err_text);
+        */
+        NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
+        svntask = [self loginShellTask:@[@"-lc", svncommand, source, 
+                                        [_currentLocation stringByAppendingPathComponent:_nuName]]];
+        [svntask launch];
+        [svntask waitUntilExit];
+        if ([svntask terminationStatus] != 0) {
+            NSLog(@"%@", [[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
+                                         encoding:NSUTF8StringEncoding]);
+        }
 	}
-	
-	svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"", _currentLocation]];
-	[svntask launch];
-	[svntask waitUntilExit];
-	
-	if ([svntask terminationStatus] != 0) {
-		return result;
-	}
-	NSString *err_text = [[NSString alloc] initWithData:
-								[[[svntask standardError] fileHandleForReading] availableData]
-												encoding:NSUTF8StringEncoding];
-	if (0 != ([err_text rangeOfString:@"(Not a versioned resource)"].length)) {
-		return result;
-	}
-	/*
-	NSLog(@"stdout : %@", out_text);
-	NSLog(@"stderr : %@", err_text);
-	*/
-	NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
-	svntask = [self loginShellTask:@[@"-lc", svncommand, source, 
-									[_currentLocation stringByAppendingPathComponent:_nuName]]];
-	[svntask launch];
-	[svntask waitUntilExit];
-	if ([svntask terminationStatus] != 0) {
-		NSLog(@"%@", [[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
-									 encoding:NSUTF8StringEncoding]);
-	}
-	
 	return YES;
 }
 
@@ -121,19 +122,21 @@
 
 - (void)startThreadTask:(id)sender
 {
-	for (NSString *path in _locations) {
-		self.currentLocation = path;
-		for (NSString *source in _sourceItems) {
-			self.currentSource = source;
-			NSString *status_msg = [NSString stringWithFormat:
-									NSLocalizedStringFromTable(@"ProcessingFromTo", 
-															   @"ParticularLocalizable", @""), 
-									[source lastPathComponent], _currentLocation];
-			[_owner performSelectorOnMainThread:@selector(setStatusMessage:)
-									withObject: status_msg waitUntilDone:NO];
-			[self doTask:sender];
-		}
-	}
+	@autoreleasepool {
+        for (NSString *path in _locations) {
+            self.currentLocation = path;
+            for (NSString *source in _sourceItems) {
+                self.currentSource = source;
+                NSString *status_msg = [NSString stringWithFormat:
+                                        NSLocalizedStringFromTable(@"ProcessingFromTo", 
+                                                                   @"ParticularLocalizable", @""), 
+                                        [source lastPathComponent], _currentLocation];
+                [_owner performSelectorOnMainThread:@selector(setStatusMessage:)
+                                        withObject: status_msg waitUntilDone:NO];
+                [self doTask:sender];
+            }
+        }
+    }
 	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
 	[NSThread exit];
 }

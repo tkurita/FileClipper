@@ -131,25 +131,27 @@ bail:
 
 - (void)startThreadTask:(id)sender
 {
-	for (NSString *path in self.locations) {
-		self.currentLocation = path;
-		BOOL done = NO;
-		self.enumerator = [self.sourceItems objectEnumerator];
-		[self doTask:sender];
-		do
-		{
-			SInt32    result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
-			if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished)) {
-#if useLog
-				NSLog(@"run loop is stoped");
-#endif
-				done = YES;
-			}
-		}
-		while (!done);
-		if (self.isCanceled) break;
-	}
-	[sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
+	@autoreleasepool {
+        for (NSString *path in self.locations) {
+            self.currentLocation = path;
+            BOOL done = NO;
+            self.enumerator = [self.sourceItems objectEnumerator];
+            [self doTask:sender];
+            do
+            {
+                SInt32    result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 3, YES);
+                if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished)) {
+    #if useLog
+                    NSLog(@"run loop is stoped");
+    #endif
+                    done = YES;
+                }
+            }
+            while (!done);
+            if (self.isCanceled) break;
+        }
+        [sender performSelectorOnMainThread:@selector(taskEnded:) withObject:self waitUntilDone:NO];
+    }
 	[NSThread exit];
 }
 

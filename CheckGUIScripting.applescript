@@ -9,7 +9,7 @@ on run
 		else
 			set_delegate(MessageProvider)
 		end if
-		set is_enabled to do()
+		set is_enabled to urge_GUIScripting()
 	end tell
 	return is_enabled
 end run

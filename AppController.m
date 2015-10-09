@@ -42,15 +42,21 @@ static BOOL PROCESSING = NO;
 	NSLog(@"applicationShouldTerminateAfterLastWindowClosed");
 #endif
 	
-	return (!PROCESSING && AUTO_QUIT 
+	BOOL result = (!PROCESSING && AUTO_QUIT
 			&& ([[ProgressWindowController workingControllers] count] < 1) 
 			&& ![errorWindow isVisible] && ![DonationReminder isWindowOpened]);
+    return result;
 }
 
 - (void)checkGUIScripting
 {
 	PROCESSING = YES;
-	NSDictionary *err_info = nil;
+	if (AXIsProcessTrusted() || AXAPIEnabled()) {
+        PROCESSING = NO;
+        return;
+    }
+    
+    NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *result = [guiScriptingChecker executeAndReturnError:&err_info];
 
 	if (err_info) {
