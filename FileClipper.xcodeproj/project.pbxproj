@@ -100,27 +100,6 @@
 		2C9E860D104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
 		2C9E860E104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
 		2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
-		2CA0019C17F99A8900D6FE21 /* FinderController.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E9C104BD85700C5B158 /* FinderController.applescript */; settings = {ATTRIBUTES = (); }; };
-		2CA0019D17F99A8900D6FE21 /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
-		2CA0019F17F99A8900D6FE21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF7418209B9EA7400EF8406 /* InfoPlist.strings */; };
-		2CA001A017F99A8900D6FE21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CF743E409B9FC6C00EF8406 /* Localizable.strings */; };
-		2CA001A117F99A8900D6FE21 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
-		2CA001A217F99A8900D6FE21 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
-		2CA001A317F99A8900D6FE21 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
-		2CA001A417F99A8900D6FE21 /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
-		2CA001A517F99A8900D6FE21 /* ServicesMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E7E78104B905200C5B158 /* ServicesMenu.strings */; };
-		2CA001A617F99A8900D6FE21 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF0657105AC388001E9511 /* ParticularLocalizable.strings */; };
-		2CA001A817F99A8900D6FE21 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
-		2CA001A917F99A8900D6FE21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		2CA001AA17F99A8900D6FE21 /* ProgressWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB362F09BE6A3800A9C0EC /* ProgressWindow.m */; };
-		2CA001AB17F99A8900D6FE21 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB364C09BE6BE200A9C0EC /* AppController.m */; };
-		2CA001B117F99A8900D6FE21 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
-		2CA001B217F99A8900D6FE21 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7FD3104CDF7000C5B158 /* FileProcessor.m */; };
-		2CA001B417F99A8900D6FE21 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
-		2CA001B517F99A8900D6FE21 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
-		2CA001B817F99A8900D6FE21 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		2CA001B917F99A8900D6FE21 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5FB17E1046109F006C3DC9 /* Carbon.framework */; };
-		2CA001BA17F99A8900D6FE21 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */; };
 		2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
 		2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */; };
 		2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE2030E4C4246002A8807 /* BundleIcon.icns */; };
@@ -142,31 +121,26 @@
 		2CDEC1B01BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1AD1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m */; };
 		2CDEC1B11BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1AD1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m */; };
 		2CDEC1B21BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1AD1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m */; };
-		2CDEC1B31BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1AD1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m */; };
 		2CDEC1B71BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
 		2CDEC1B81BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
 		2CDEC1B91BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
 		2CDEC1BA1BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
 		2CDEC1BB1BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
-		2CDEC1BC1BC5138100FA77AF /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1B61BC5138100FA77AF /* PathExtra.m */; };
 		2CDEC1C41BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
 		2CDEC1C51BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
 		2CDEC1C61BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
 		2CDEC1C71BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
 		2CDEC1C81BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
-		2CDEC1C91BC513D000FA77AF /* FrontAppMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1BF1BC513D000FA77AF /* FrontAppMonitor.m */; };
 		2CDEC1CA1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
 		2CDEC1CB1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
 		2CDEC1CC1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
 		2CDEC1CD1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
 		2CDEC1CE1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
-		2CDEC1CF1BC513D000FA77AF /* PaletteWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C11BC513D000FA77AF /* PaletteWindowController.m */; };
 		2CDEC1D01BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
 		2CDEC1D11BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
 		2CDEC1D21BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
 		2CDEC1D31BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
 		2CDEC1D41BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
-		2CDEC1D51BC513D000FA77AF /* WindowVisibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEC1C31BC513D000FA77AF /* WindowVisibilityController.m */; };
 		2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		2CF73C4309B8737000EF8406 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2CF73C4909B8737A00EF8406 /* FilesInPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF73B7A09B870CD00EF8406 /* FilesInPasteboard.m */; };
@@ -242,15 +216,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2CA001BC17F99A8900D6FE21 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2CCF03FC105AAB78001E9511 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,7 +318,6 @@
 		2C9E85B7104E4D8D00C5B158 /* Make Hard Link to Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make Hard Link to Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9E8608104E784700C5B158 /* FileProcessorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessorBase.m; sourceTree = "<group>"; };
 		2C9E8610104E788A00C5B158 /* FileProcessorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessorBase.h; sourceTree = "<group>"; };
-		2CA001C117F99A8900D6FE21 /* Copy to Here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Copy to Here.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -405,16 +369,6 @@
 				2C9E85D1104E4F5000C5B158 /* Cocoa.framework in Frameworks */,
 				2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */,
 				2C9E85D4104E4F5000C5B158 /* OSAKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CA001B617F99A8900D6FE21 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA001B817F99A8900D6FE21 /* Cocoa.framework in Frameworks */,
-				2CA001B917F99A8900D6FE21 /* Carbon.framework in Frameworks */,
-				2CA001BA17F99A8900D6FE21 /* OSAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +455,6 @@
 				2CF73DBD09B88D4C00EF8406 /* Move to Here.app */,
 				2CF73E8C09B8997400EF8406 /* Make Symbolic Link to Here.app */,
 				2C9E85B7104E4D8D00C5B158 /* Make Hard Link to Here.app */,
-				2CA001C117F99A8900D6FE21 /* Copy to Here.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -694,24 +647,6 @@
 			productReference = 2C9E85B7104E4D8D00C5B158 /* Make Hard Link to Here.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CA0019917F99A8900D6FE21 /* Copy to Here no ASS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CA001BE17F99A8900D6FE21 /* Build configuration list for PBXNativeTarget "Copy to Here no ASS" */;
-			buildPhases = (
-				2CA0019E17F99A8900D6FE21 /* Resources */,
-				2CA001A717F99A8900D6FE21 /* Sources */,
-				2CA001B617F99A8900D6FE21 /* Frameworks */,
-				2CA001BC17F99A8900D6FE21 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Copy to Here no ASS";
-			productName = "Move to Here";
-			productReference = 2CA001C117F99A8900D6FE21 /* Copy to Here.app */;
-			productType = "com.apple.product-type.application";
-		};
 		2CF73B5509B86EB100EF8406 /* Make Alias File to Here */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CF73B5909B86EB300EF8406 /* Build configuration list for PBXNativeTarget "Make Alias File to Here" */;
@@ -821,7 +756,6 @@
 				2CF73B5509B86EB100EF8406 /* Make Alias File to Here */,
 				2C9E85B6104E4D8D00C5B158 /* Make Hard Link to Here */,
 				2CAB356709BE675400A9C0EC /* BuildAll */,
-				2CA0019917F99A8900D6FE21 /* Copy to Here no ASS */,
 			);
 		};
 /* End PBXProject section */
@@ -849,21 +783,6 @@
 				2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */,
 				2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */,
 				2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CA0019E17F99A8900D6FE21 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA0019F17F99A8900D6FE21 /* InfoPlist.strings in Resources */,
-				2CA001A017F99A8900D6FE21 /* Localizable.strings in Resources */,
-				2CA001A117F99A8900D6FE21 /* MainMenu.nib in Resources */,
-				2CA001A217F99A8900D6FE21 /* BundleIcon.icns in Resources */,
-				2CA001A317F99A8900D6FE21 /* FactorySettings.plist in Resources */,
-				2CA001A417F99A8900D6FE21 /* ProgressWindow.xib in Resources */,
-				2CA001A517F99A8900D6FE21 /* ServicesMenu.strings in Resources */,
-				2CA001A617F99A8900D6FE21 /* ParticularLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,28 +867,6 @@
 				2CDEC1C81BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CE1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D41BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CA001A717F99A8900D6FE21 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA0019C17F99A8900D6FE21 /* FinderController.applescript in Sources */,
-				2CA0019D17F99A8900D6FE21 /* CheckGUIScripting.applescript in Sources */,
-				2CA001A817F99A8900D6FE21 /* FilesInPasteboard.m in Sources */,
-				2CA001A917F99A8900D6FE21 /* main.m in Sources */,
-				2CA001AA17F99A8900D6FE21 /* ProgressWindow.m in Sources */,
-				2CA001AB17F99A8900D6FE21 /* AppController.m in Sources */,
-				2CA001B117F99A8900D6FE21 /* ProgressWindowController.m in Sources */,
-				2CA001B217F99A8900D6FE21 /* FileProcessor.m in Sources */,
-				2CA001B417F99A8900D6FE21 /* FileProcessorBase.m in Sources */,
-				2CA001B517F99A8900D6FE21 /* FileProcessorCopyMoveAsync.m in Sources */,
-				2CDEC1B31BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */,
-				2CDEC1BC1BC5138100FA77AF /* PathExtra.m in Sources */,
-				2CDEC1C91BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
-				2CDEC1CF1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
-				2CDEC1D51BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,57 +1211,6 @@
 			};
 			name = Release;
 		};
-		2CA001BF17F99A8900D6FE21 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_IDENTIFIER = CopyToHere;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 17;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "Copy to Here";
-				SKIP_INSTALL = NO;
-				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		2CA001C017F99A8900D6FE21 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				BUNDLE_IDENTIFIER = CopyToHere;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 17;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "Copy to Here";
-				SKIP_INSTALL = NO;
-				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		2CAB357409BE67A600A9C0EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1613,15 +1459,6 @@
 			buildConfigurations = (
 				2C9E85BA104E4D8E00C5B158 /* Debug */,
 				2C9E85BB104E4D8E00C5B158 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CA001BE17F99A8900D6FE21 /* Build configuration list for PBXNativeTarget "Copy to Here no ASS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CA001BF17F99A8900D6FE21 /* Debug */,
-				2CA001C017F99A8900D6FE21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
