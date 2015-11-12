@@ -11,7 +11,8 @@
 	NSString* destination = [self.currentLocation stringByAppendingPathComponent:self.nuName];
     NSError *error = nil;
 	NSData *bd = [[NSURL fileURLWithPath:self.currentSource]
-                  bookmarkDataWithOptions:0 includingResourceValuesForKeys:nil relativeToURL:nil error:&error];
+                    bookmarkDataWithOptions:NSURLBookmarkCreationSuitableForBookmarkFile
+                    includingResourceValuesForKeys:nil relativeToURL:nil error:&error];
     if (error) {
         [NSApp presentError:error];
         [self displayErrorLog:
@@ -22,11 +23,12 @@
     
     
     if (![NSURL writeBookmarkData:bd toURL:[NSURL fileURLWithPath:destination]
-                          options: NSURLBookmarkCreationSuitableForBookmarkFile  error:&error]) {
-        [NSApp presentError:error];
+                          options:NSURLBookmarkCreationSuitableForBookmarkFile  error:&error]) {
+        [NSApp performSelectorOnMainThread:@selector(presentError:)
+                                withObject:error waitUntilDone:NO];
         [self displayErrorLog:
-         NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""),
-         destination];
+            NSLocalizedStringFromTable(@"Failed to make alias file at %@.", @"ParticularLocalizable", @""),
+            destination];
     }
 }
 
