@@ -102,8 +102,9 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 - (void)askNewName:(FileProcessor *)processor
 {
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	//[save_panel setDelegate:self];
 	[save_panel setMessage:NSLocalizedString(@"SameNameExists", @"")];
+    [save_panel setDirectoryURL:[NSURL fileURLWithPath:processor.currentLocation]];
+    [save_panel setNameFieldStringValue:[processor.currentSource lastPathComponent]];
 	[[self window] orderFront:self];
 	[NSRunningApplication activateSelf];
     [save_panel beginSheetModalForWindow:[self window] completionHandler:^(NSInteger result)
