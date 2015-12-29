@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface GUIScriptingChecker : NSObject
-
++ (BOOL)check;
 @end

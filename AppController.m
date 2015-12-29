@@ -5,6 +5,7 @@
 #import "FilesInPasteboard.h"
 #import "PathExtra.h"
 #import "DonationReminder/DonationReminder.h"
+#import "GUIScriptingChecker/GUIScriptingChecker.h"
 
 #define	useLog 0
 
@@ -51,27 +52,12 @@ static BOOL PROCESSING = NO;
 - (void)checkGUIScripting
 {
 	PROCESSING = YES;
-	if (AXIsProcessTrusted() || AXAPIEnabled()) {
+    if ([GUIScriptingChecker check]) {
         PROCESSING = NO;
         return;
     }
     
-    NSDictionary *err_info = nil;
-	NSAppleEventDescriptor *result = [guiScriptingChecker executeAndReturnError:&err_info];
-
-	if (err_info) {
-		NSLog(@"Error : %@",[err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(@"Failed to check GUI scripting", 
-						err_info[@"OSAScriptErrorMessageKey"], @"OK", nil, nil);
-		[NSApp terminate:self];
-		return;
-	}
-	
-	if ([result descriptorType] != typeTrue) {
-		[NSApp terminate:self];
-	}
-	
+    [NSApp terminate:self];
 	PROCESSING = NO;
 }
 
@@ -288,17 +274,6 @@ bail:
 		NSLog(@"Error : %@", [err_info description]);
 		[NSApp activateIgnoringOtherApps:YES];
 		NSRunAlertPanel(nil, @"Fail to load FinderController.scpt", @"OK", nil, nil);
-		[NSApp terminate:self];
-	}
-	
-	path = [[NSBundle mainBundle] pathForResource:@"CheckGUIScripting"
-										   ofType:@"scpt"];
-	guiScriptingChecker = [[OSAScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
-															 error:&err_info];
-	if (err_info) {
-		NSLog(@"Error : %@", [err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(@"Fail to load CheckGUIScripting.scpt", [err_info description], @"OK", nil, nil);
 		[NSApp terminate:self];
 	}
 }

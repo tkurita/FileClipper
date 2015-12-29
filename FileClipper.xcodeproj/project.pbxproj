@@ -27,6 +27,16 @@
 /* Begin PBXBuildFile section */
 		2C073B011BF424180007551C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
 		2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C18EE03106305C600E7F55F /* BundleIcon.icns */; };
+		2C2D94011C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2C2D94021C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2C2D94031C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2C2D94041C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2C2D94051C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2C2D94081C313A0E005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
+		2C2D94091C313A19005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
+		2C2D940A1C313A3B005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
+		2C2D940B1C313A4C005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
+		2C2D940C1C313A62005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
 		2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E85AB104E4D2700C5B158 /* InfoPlist.strings */; };
 		2C5D93C81054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
 		2C5D93C91054A14B00B8479B /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93C71054A14B00B8479B /* MainMenu.nib */; };
@@ -46,11 +56,6 @@
 		2C5FB1B7104613FE006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B8104613FF006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
 		2C5FB1B910461400006C3DC9 /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */; };
-		2C60E25D1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C60E25E1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C60E25F1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C60E2601096FF9C0072275A /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
-		2C60E2611096FF9C0072275A /* CheckGUIScripting.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C7F3BBC105E1A330041D337 /* FileProcessorCopyMoveAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF06E8105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m */; };
 		2C7F3EB8105E4FF40041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EB7105E4FF40041D337 /* ParticularLocalizable.strings */; };
 		2C7F3EC1105E50E60041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC0105E50E60041D337 /* ParticularLocalizable.strings */; };
@@ -275,10 +280,14 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2C18EE03106305C600E7F55F /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
+		2C2D93FF1C3125C2005D8C3E /* GUIScriptingChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIScriptingChecker.h; path = GUIScriptingChecker/GUIScriptingChecker.h; sourceTree = "<group>"; };
+		2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIScriptingChecker.m; path = GUIScriptingChecker/GUIScriptingChecker.m; sourceTree = "<group>"; };
+		2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		2C2D940D1C313E3C005D8C3E /* SystemEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemEvents.h; path = GUIScriptingChecker/SystemEvents.h; sourceTree = "<group>"; };
+		2C2D940F1C3171B4005D8C3E /* SystemPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SystemPreferences.h; path = GUIScriptingChecker/SystemPreferences.h; sourceTree = "<group>"; };
 		2C48998F0DE43333001A564D /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
 		2C5FB17E1046109F006C3DC9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
-		2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = CheckGUIScripting.applescript; sourceTree = "<group>"; };
 		2C7F3BAF105E19650041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3C0C105E20910041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3EA1105E4CB90041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
@@ -367,6 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2D940C1C313A62005D8C3E /* ScriptingBridge.framework in Frameworks */,
 				2C9920391BC6601500336E70 /* DonationReminder.framework in Frameworks */,
 				2C9E85D1104E4F5000C5B158 /* Cocoa.framework in Frameworks */,
 				2C9E85D3104E4F5000C5B158 /* Carbon.framework in Frameworks */,
@@ -378,6 +388,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2D940B1C313A4C005D8C3E /* ScriptingBridge.framework in Frameworks */,
 				2C9920371BC6600C00336E70 /* DonationReminder.framework in Frameworks */,
 				2CF73B5F09B86F0900EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1811046109F006C3DC9 /* Carbon.framework in Frameworks */,
@@ -389,6 +400,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2D94091C313A19005D8C3E /* ScriptingBridge.framework in Frameworks */,
 				2C9920341BC65B5B00336E70 /* DonationReminder.framework in Frameworks */,
 				2CF73DF409B895AD00EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB17F1046109F006C3DC9 /* Carbon.framework in Frameworks */,
@@ -400,6 +412,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2D94081C313A0E005D8C3E /* ScriptingBridge.framework in Frameworks */,
 				2C9920321BC65B3F00336E70 /* DonationReminder.framework in Frameworks */,
 				2CF73E2909B8971D00EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1821046109F006C3DC9 /* Carbon.framework in Frameworks */,
@@ -411,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2D940A1C313A3B005D8C3E /* ScriptingBridge.framework in Frameworks */,
 				2C9920361BC65B6D00336E70 /* DonationReminder.framework in Frameworks */,
 				2CF73E8709B8997400EF8406 /* Cocoa.framework in Frameworks */,
 				2C5FB1801046109F006C3DC9 /* Carbon.framework in Frameworks */,
@@ -425,7 +439,6 @@
 			isa = PBXGroup;
 			children = (
 				2C9E7E9C104BD85700C5B158 /* FinderController.applescript */,
-				2C60E25C1096FF9C0072275A /* CheckGUIScripting.applescript */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -433,6 +446,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */,
 				2C9E7EB1104BDCE000C5B158 /* OSAKit.framework */,
 				2C5FB17E1046109F006C3DC9 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -466,6 +480,7 @@
 			children = (
 				2C48998F0DE43333001A564D /* History.rd */,
 				2C9E7E23104B893800C5B158 /* Classes */,
+				2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				2CDEC1BD1BC513D000FA77AF /* PaletteWindowController */,
@@ -510,6 +525,17 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */ = {
+			isa = PBXGroup;
+			children = (
+				2C2D940F1C3171B4005D8C3E /* SystemPreferences.h */,
+				2C2D940D1C313E3C005D8C3E /* SystemEvents.h */,
+				2C2D93FF1C3125C2005D8C3E /* GUIScriptingChecker.h */,
+				2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */,
+			);
+			name = GUIScriptingChecker;
 			sourceTree = "<group>";
 		};
 		2C99202B1BC65AC400336E70 /* Products */ = {
@@ -856,7 +882,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E85BE104E4DCF00C5B158 /* FinderController.applescript in Sources */,
-				2C60E25D1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */,
 				2C9E85BF104E4DD800C5B158 /* FilesInPasteboard.m in Sources */,
 				2C9E85C0104E4DDC00C5B158 /* AppController.m in Sources */,
 				2C9E85C1104E4DE000C5B158 /* ProgressWindow.m in Sources */,
@@ -869,6 +894,7 @@
 				2CDEC1C81BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CE1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D41BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
+				2C2D94051C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,7 +903,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E7E9D104BD85700C5B158 /* FinderController.applescript in Sources */,
-				2C60E25F1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */,
 				2CF73C4909B8737A00EF8406 /* FilesInPasteboard.m in Sources */,
 				2CF73C4309B8737000EF8406 /* main.m in Sources */,
 				2CAB363309BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
@@ -890,6 +915,7 @@
 				2CDEC1C71BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CD1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D31BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
+				2C2D94041C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,7 +924,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E7E9F104BD85700C5B158 /* FinderController.applescript in Sources */,
-				2C60E2601096FF9C0072275A /* CheckGUIScripting.applescript in Sources */,
 				2CF73DF609B895B400EF8406 /* FilesInPasteboard.m in Sources */,
 				2CF73DF709B895B400EF8406 /* main.m in Sources */,
 				2CAB363509BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
@@ -912,6 +937,7 @@
 				2CDEC1C51BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CB1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D11BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
+				2C2D94021C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +946,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E7EA1104BD85700C5B158 /* FinderController.applescript in Sources */,
-				2C60E2611096FF9C0072275A /* CheckGUIScripting.applescript in Sources */,
 				2CF73E2609B8971D00EF8406 /* FilesInPasteboard.m in Sources */,
 				2CF73E2709B8971D00EF8406 /* main.m in Sources */,
 				2CAB363109BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
@@ -934,6 +959,7 @@
 				2CDEC1C41BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CA1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D01BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
+				2C2D94011C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,7 +968,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9E7E9E104BD85700C5B158 /* FinderController.applescript in Sources */,
-				2C60E25E1096FF9C0072275A /* CheckGUIScripting.applescript in Sources */,
 				2CF73E8409B8997400EF8406 /* FilesInPasteboard.m in Sources */,
 				2CF73E8509B8997400EF8406 /* main.m in Sources */,
 				2CAB363709BE6A3800A9C0EC /* ProgressWindow.m in Sources */,
@@ -955,6 +980,7 @@
 				2CDEC1C61BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CC1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D21BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
+				2C2D94031C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
