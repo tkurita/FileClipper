@@ -19,3 +19,6 @@
 [submodule "LibraryScripts/XList.scptd"]
 	path = LibraryScripts/XList.scptd
 	url = https://tkurita@github.com/tkurita/XList.scptd.git
+[submodule "GUIScriptingChecker"]
+	path = GUIScriptingChecker
+	url = https://github.com/tkurita/GUIScriptingChecker.git
