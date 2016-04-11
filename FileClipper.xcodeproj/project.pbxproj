@@ -38,6 +38,15 @@
 		2C2D940B1C313A4C005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
 		2C2D940C1C313A62005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
 		2C381B911CBBCEAC006416E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B8F1CBBCEAC006416E3 /* MainMenu.xib */; };
+		2C381B9A1CBBD6E1006416E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B8F1CBBCEAC006416E3 /* MainMenu.xib */; };
+		2C381B9B1CBBD6E1006416E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B8F1CBBCEAC006416E3 /* MainMenu.xib */; };
+		2C381B9C1CBBD6E2006416E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B8F1CBBCEAC006416E3 /* MainMenu.xib */; };
+		2C381B9D1CBBD6E2006416E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B8F1CBBCEAC006416E3 /* MainMenu.xib */; };
+		2C381BA01CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */; };
+		2C381BA41CBBD8CE006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */; };
+		2C381BA51CBBD8CE006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */; };
+		2C381BA61CBBD8CF006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */; };
+		2C381BA71CBBD8D0006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */; };
 		2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C9E85AB104E4D2700C5B158 /* InfoPlist.strings */; };
 		2C5D93FB1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
 		2C5D93FC1054E2FC00B8479B /* ProgressWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */; };
@@ -285,7 +294,10 @@
 		2C381B901CBBCEAC006416E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2C381B951CBBCF13006416E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressWindow.strings; sourceTree = "<group>"; };
 		2C381B961CBBCFD6006416E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2C381B971CBBCFDB006416E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C381B9F1CBBD790006416E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GUIScriptingChecker/en.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2C381BA11CBBD798006416E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = GUIScriptingChecker/ja.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2C381BA21CBBD7C7006416E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C381BA31CBBD831006416E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C48998F0DE43333001A564D /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
 		2C5FB17E1046109F006C3DC9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2C5FB1B41046138D006C3DC9 /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
@@ -364,7 +376,6 @@
 		2CF7418609B9EB7D00EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7418F09B9EC0500EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CF7419509B9EC5100EF8406 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2CF7431E09B9FC3E00EF8406 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; lineEnding = 0; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +537,7 @@
 		2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */ = {
 			isa = PBXGroup;
 			children = (
+				2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */,
 				2C2D940F1C3171B4005D8C3E /* SystemPreferences.h */,
 				2C2D940D1C313E3C005D8C3E /* SystemEvents.h */,
 				2C2D93FF1C3125C2005D8C3E /* GUIScriptingChecker.h */,
@@ -765,6 +777,7 @@
 				zh_TW,
 				Base,
 				ja,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* FileClipper */;
 			projectDirPath = "";
@@ -808,6 +821,8 @@
 				2C5A1FBA10609F68000A8841 /* InfoPlist.strings in Resources */,
 				2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */,
 				2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */,
+				2C381B9D1CBBD6E2006416E3 /* MainMenu.xib in Resources */,
+				2C381BA71CBBD8D0006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +837,8 @@
 				2C5D93FC1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E83E3104D2A3100C5B158 /* ServicesMenu.strings in Resources */,
 				2C7F3EC1105E50E60041D337 /* ParticularLocalizable.strings in Resources */,
+				2C381B9C1CBBD6E2006416E3 /* MainMenu.xib in Resources */,
+				2C381BA61CBBD8CF006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +853,8 @@
 				2C5D93FE1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */,
 				2CCF0673105AC66D001E9511 /* ParticularLocalizable.strings in Resources */,
+				2C381B9A1CBBD6E1006416E3 /* MainMenu.xib in Resources */,
+				2C381BA41CBBD8CE006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +870,7 @@
 				2C9E7E7A104B905200C5B158 /* ServicesMenu.strings in Resources */,
 				2CCF0658105AC388001E9511 /* ParticularLocalizable.strings in Resources */,
 				2C381B911CBBCEAC006416E3 /* MainMenu.xib in Resources */,
+				2C381BA01CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +885,8 @@
 				2C5D93FD1054E2FC00B8479B /* ProgressWindow.xib in Resources */,
 				2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */,
 				2C7F3EB8105E4FF40041D337 /* ParticularLocalizable.strings in Resources */,
+				2C381B9B1CBBD6E1006416E3 /* MainMenu.xib in Resources */,
+				2C381BA51CBBD8CE006416E3 /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1045,15 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		2C381B9E1CBBD790006416E3 /* GUIScriptingChecker_Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C381B9F1CBBD790006416E3 /* en */,
+				2C381BA11CBBD798006416E3 /* ja */,
+			);
+			name = GUIScriptingChecker_Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2C5D93FA1054E2FC00B8479B /* ProgressWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1170,8 +1201,8 @@
 		2CF743E409B9FC6C00EF8406 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CF7431E09B9FC3E00EF8406 /* English */,
-				2C381B971CBBCFDB006416E3 /* ja */,
+				2C381BA21CBBD7C7006416E3 /* Base */,
+				2C381BA31CBBD831006416E3 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1185,7 +1216,7 @@
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1212,7 +1243,7 @@
 				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
@@ -1259,7 +1290,7 @@
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1283,7 +1314,7 @@
 				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1304,7 +1335,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1327,7 +1358,7 @@
 			buildSettings = {
 				BUNDLE_IDENTIFIER = MoveToHere;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1349,7 +1380,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1371,7 +1402,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_IDENTIFIER = CopyToHere;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1391,7 +1422,7 @@
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1415,7 +1446,7 @@
 				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1437,12 +1468,14 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications/FileClipper;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_VERSION = 3.1.1;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1453,12 +1486,14 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications/FileClipper;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_VERSION = 3.1.1;
 				SDKROOT = macosx;
 			};
 			name = Release;
