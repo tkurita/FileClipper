@@ -1,0 +1,21 @@
+
+/* Class = "NSWindow"; title = "ウインドウ"; ObjectID = "3"; */
+"3.title" = "ウインドウ";
+
+/* Class = "NSTextFieldCell"; title = "新しいファイル名 :"; ObjectID = "18"; */
+"18.title" = "新しいファイル名 :";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "20"; */
+"20.title" = "OK";
+
+/* Class = "NSButtonCell"; title = "キャンセル"; ObjectID = "22"; */
+"22.title" = "キャンセル";
+
+/* Class = "NSMenuItem"; title = "キャンセル"; ObjectID = "34"; */
+"34.title" = "キャンセル";
+
+/* Class = "NSTextFieldCell"; title = "Copy aaa to bbb"; ObjectID = "40"; */
+"40.title" = "Copy aaa to bbb";
+
+/* Class = "NSButtonCell"; title = "置き換える"; ObjectID = "43"; */
+"43.title" = "置き換える";
