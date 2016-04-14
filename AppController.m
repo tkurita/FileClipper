@@ -142,6 +142,19 @@ static BOOL PROCESSING = NO;
 	[wc processFiles:array toLocations:locations];
 }
 
+void displayAppleScriptError(NSDictionary *err_info)
+{
+    NSLog(@"Error : %@",[err_info description]);
+    [NSApp activateIgnoringOtherApps:YES];
+    NSAlert *alert = [NSAlert alertWithMessageText:@"AppleScript Error"
+                                     defaultButton:nil
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@"%@ (%@)",
+                      err_info[OSAScriptErrorMessage], err_info[OSAScriptErrorNumber]];
+    [alert runModal];
+}
+
 - (void)updateOnFinder:(NSString *)aPath
 {
 	NSDictionary *err_info = nil;
@@ -150,15 +163,7 @@ static BOOL PROCESSING = NO;
 					   arguments:@[[aPath stringByDeletingLastPathComponent], aPath] 
 							   error:&err_info];
 	if (err_info) {
-		NSLog(@"Error : %@",[err_info description]);
-		[NSApp activateIgnoringOtherApps:YES];
-        NSAlert *alert = [NSAlert alertWithMessageText:@"AppleScript Error"
-                                         defaultButton:nil
-                                       alternateButton:nil
-                                           otherButton:nil
-                             informativeTextWithFormat:@"%@ (%@)",
-                          err_info[OSAScriptErrorMessage], err_info[OSAScriptErrorNumber]];
-        [alert runModal];
+        displayAppleScriptError(err_info);
 	}
 }
 
@@ -174,12 +179,11 @@ static BOOL PROCESSING = NO;
 #endif
 	NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
 	if (err_info) {
+        displayAppleScriptError(err_info);
 		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 err_info[OSAScriptErrorMessage],
 						 err_info[OSAScriptErrorNumber]];
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		NSDictionary *udict = @{NSLocalizedDescriptionKey: msg};
 		*error = [NSError errorWithDomain:@"FileClipperError" code:1 userInfo:udict];
 		goto bail;
@@ -209,12 +213,10 @@ bail:
                         arguments:@[] error:&err_info];
 	NSString *location_path = nil;
 	if (err_info) {
-		NSLog(@"Error : %@",[err_info description]);
+		displayAppleScriptError(err_info);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
 						 err_info[OSAScriptErrorMessage],
 						 err_info[OSAScriptErrorNumber]];
-		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
 		NSDictionary *udict = @{NSLocalizedDescriptionKey: msg};
 		*error = [NSError errorWithDomain:@"FileClipperError" code:2 userInfo:udict];
 		goto bail;
