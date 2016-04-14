@@ -166,8 +166,9 @@ static BOOL PROCESSING = NO;
 {
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
-	script_result = [finderController executeHandlerWithName:@"center_of_finderwindow"
-												   arguments:nil error:&err_info];
+	script_result = [finderController
+                        executeHandlerWithName:@"center_of_finderwindow"
+                        arguments:@[] error:&err_info];
 #if useLog
 	NSLog(@"result of center_of_finderwindow : %@", script_result);
 #endif
@@ -203,8 +204,9 @@ bail:
 {
 	NSDictionary *err_info = nil;
 	NSAppleEventDescriptor *script_result = nil;
-	script_result = [finderController executeHandlerWithName:@"insertion_location"
-												   arguments:nil error:&err_info];
+	script_result = [finderController
+                        executeHandlerWithName:@"insertion_location"
+                        arguments:@[] error:&err_info];
 	NSString *location_path = nil;
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
