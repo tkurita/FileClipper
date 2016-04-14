@@ -285,6 +285,13 @@ bail:
 	}
 }
 
+- (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames
+{
+    [self checkGUIScripting];
+    NSPoint center_position = NSMakePoint(FLT_MAX, FLT_MAX);
+    [self processAtLocations:filenames centerPosition:center_position];
+}
+
 - (void)processAtLocationFromPasteboard:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error
 {
 #if useLog
