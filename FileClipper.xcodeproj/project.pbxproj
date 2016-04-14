@@ -25,7 +25,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2C073B011BF424180007551C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
+		2C073B011BF424180007551C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C18EE03106305C600E7F55F /* BundleIcon.icns */; };
 		2C2D94011C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
 		2C2D94021C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
@@ -66,14 +66,14 @@
 		2C7F3EC1105E50E60041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC0105E50E60041D337 /* ParticularLocalizable.strings */; };
 		2C7F3EC5105E52470041D337 /* ParticularLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F3EC4105E52470041D337 /* ParticularLocalizable.strings */; };
 		2C9920321BC65B3F00336E70 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
-		2C9920331BC65B4F00336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
+		2C9920331BC65B4F00336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C9920341BC65B5B00336E70 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
-		2C9920351BC65B6100336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
+		2C9920351BC65B6100336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C9920361BC65B6D00336E70 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
 		2C9920371BC6600C00336E70 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
-		2C9920381BC6600D00336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
+		2C9920381BC6600D00336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C9920391BC6601500336E70 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
-		2C99203A1BC6601700336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; };
+		2C99203A1BC6601700336E70 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C9E7E17104B892300C5B158 /* FileProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E15104B892300C5B158 /* FileProcessor.m */; };
 		2C9E7E32104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
 		2C9E7E34104B8A1100C5B158 /* ProgressWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E7E30104B8A1100C5B158 /* ProgressWindowController.m */; };
@@ -762,7 +762,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 4E71A80908A2C90C0034BBD9 /* Build configuration list for PBXProject "FileClipper" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1213,7 +1213,6 @@
 		2C9E85BA104E4D8E00C5B158 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1231,6 +1230,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeHardLinkToHere;
 				PRODUCT_NAME = "Make Hard Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1240,7 +1240,6 @@
 		2C9E85BB104E4D8E00C5B158 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeHardLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1256,6 +1255,7 @@
 					"-framework",
 					AppKit,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeHardLinkToHere;
 				PRODUCT_NAME = "Make Hard Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1287,7 +1287,6 @@
 		2CF73B5A09B86EB300EF8406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1301,6 +1300,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeAliasFileToHere;
 				PRODUCT_NAME = "Make Alias File to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1311,7 +1311,6 @@
 		2CF73B5B09B86EB300EF8406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeAliasFileToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1323,6 +1322,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeAliasFileToHere;
 				PRODUCT_NAME = "Make Alias File to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1333,7 +1333,6 @@
 		2CF73DC109B88D4D00EF8406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MoveToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1346,6 +1345,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MoveToHere;
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1356,7 +1356,6 @@
 		2CF73DC209B88D4D00EF8406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MoveToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1367,6 +1366,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MoveToHere;
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1378,7 +1378,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_IDENTIFIER = CopyToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1390,6 +1389,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
 				PRODUCT_NAME = "Copy to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1400,7 +1400,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_IDENTIFIER = CopyToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1410,6 +1409,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
 				PRODUCT_NAME = "Copy to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1419,7 +1419,6 @@
 		2CF73E8A09B8997400EF8406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1433,6 +1432,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactpry.MakeSymbolicLinkToHere;
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1443,7 +1443,6 @@
 		2CF73E8B09B8997400EF8406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_IDENTIFIER = MakeSymbolicLinkToHere;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 19;
@@ -1455,6 +1454,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactpry.MakeSymbolicLinkToHere;
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1466,15 +1466,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
+				ENABLE_TESTABILITY = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications/FileClipper;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_VERSION = 3.1.1;
 				SDKROOT = macosx;
 			};
@@ -1484,7 +1485,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
