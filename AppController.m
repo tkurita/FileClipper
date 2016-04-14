@@ -151,11 +151,14 @@ static BOOL PROCESSING = NO;
 							   error:&err_info];
 	if (err_info) {
 		NSLog(@"Error : %@",[err_info description]);
-		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 err_info[OSAScriptErrorMessage],
-						 err_info[OSAScriptErrorNumber]];
 		[NSApp activateIgnoringOtherApps:YES];
-		NSRunAlertPanel(nil, msg, @"OK", nil, nil);
+        NSAlert *alert = [NSAlert alertWithMessageText:@"AppleScript Error"
+                                         defaultButton:nil
+                                       alternateButton:nil
+                                           otherButton:nil
+                             informativeTextWithFormat:@"%@ (%@)",
+                          err_info[OSAScriptErrorMessage], err_info[OSAScriptErrorNumber]];
+        [alert runModal];
 	}
 }
 
