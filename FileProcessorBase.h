@@ -21,7 +21,6 @@
 
 // private
 - (BOOL)resolveNewName:(NSString *)source;
-- (BOOL)trySVN:(NSString *)command withSource:(NSString *)source;
 - (void)doTask:(id)sender;
 
 @end

@@ -33,47 +33,6 @@
 	return task;
 }
 
-- (BOOL)trySVN:(NSString *)command withSource:(NSString *)source
-{
-	@autoreleasepool {
-        NSTask* svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"",source]];
-        BOOL result = NO;
-        [svntask launch];
-        [svntask waitUntilExit];
-        if ([svntask terminationStatus] != 0) {
-            return result;
-        }
-        
-        svntask = [self loginShellTask:@[@"-lc", @"svn info \"$0\"", _currentLocation]];
-        [svntask launch];
-        [svntask waitUntilExit];
-        
-        if ([svntask terminationStatus] != 0) {
-            return result;
-        }
-        NSString *err_text = [[NSString alloc] initWithData:
-                                    [[[svntask standardError] fileHandleForReading] availableData]
-                                                    encoding:NSUTF8StringEncoding];
-        if (0 != ([err_text rangeOfString:@"(Not a versioned resource)"].length)) {
-            return result;
-        }
-        /*
-        NSLog(@"stdout : %@", out_text);
-        NSLog(@"stderr : %@", err_text);
-        */
-        NSString *svncommand = [NSString stringWithFormat:@"svn %@ \"$0\" \"$1\"", command];
-        svntask = [self loginShellTask:@[@"-lc", svncommand, source, 
-                                        [_currentLocation stringByAppendingPathComponent:_nuName]]];
-        [svntask launch];
-        [svntask waitUntilExit];
-        if ([svntask terminationStatus] != 0) {
-            NSLog(@"%@", [[NSString alloc] initWithData:[[[svntask standardError] fileHandleForReading] availableData]
-                                         encoding:NSUTF8StringEncoding]);
-        }
-	}
-	return YES;
-}
-
 - (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
 {
 	NSLog(@"Error in file manager : %@", [errorInfo description]);

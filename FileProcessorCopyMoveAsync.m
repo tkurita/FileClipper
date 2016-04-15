@@ -82,48 +82,43 @@ static void statusCallback (FSFileOperationRef fileOp,
 	
 	
 	if ([self resolveNewName:source]) {
-		if ([self trySVN:svnCpMvCommand withSource:source]) {
-			[self doTask:sender];
-		} else {
-			//if (YES) {
 #if useLog
-			NSString *destination = [currentLocation stringByAppendingPathComponent:_nuName];
-			NSLog(@"Copy source : %@", source);
-			NSLog(@"Copy destination : %@", destination);
+        NSString *destination = [currentLocation stringByAppendingPathComponent:_nuName];
+        NSLog(@"Copy source : %@", source);
+        NSLog(@"Copy destination : %@", destination);
 #endif			
-			FSFileOperationRef fileOp = FSFileOperationCreate(NULL);
-			const char *source_char = [source fileSystemRepresentation];
-			const char *loc_char = [self.currentLocation fileSystemRepresentation];
-			status = FSFileOperationScheduleWithRunLoop(fileOp, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-			if (status != noErr) {
-				[self displayErrorLog:@"Failed to FSFileOperationScheduleWithRunLoop with error : %d", status];
-				CFRelease(fileOp);
-				goto bail;
-			}
-			FSFileOperationClientContext context = {0, (__bridge void *)(self), NULL, NULL, NULL};
-			status = (*processPathAsync)(fileOp, source_char,loc_char, (__bridge CFStringRef)self.nuName,
-										   kFSFileOperationDefaultOptions|kFSFileOperationOverwrite, 
-										   statusCallback,2,&context);
-			if (status != noErr) {
-				[self displayErrorLog:@"Failed to FSPathCopy/MoveObjectAsync with error: %d", status];
-				CFRelease(fileOp);
-				goto bail;
-			}
-			NSString *loc_name = [self.currentLocation lastPathComponent];
-			NSString *source_name = [source lastPathComponent];
-			if (![source_name isEqualToString:self.nuName]) {
-				loc_name = [loc_name stringByAppendingPathComponent:self.nuName];
-				status_msg = [NSString stringWithFormat:
-										NSLocalizedStringFromTable(@"ProcessingFromTo", 
-																   @"ParticularLocalizable", @""), 
-										source_name, loc_name];
-				[self.owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
-			}
-		}
-		[[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:) 
-								withObject:[self.currentLocation stringByAppendingPathComponent:self.nuName]
-                                        waitUntilDone:NO];
-	}
+        FSFileOperationRef fileOp = FSFileOperationCreate(NULL);
+        const char *source_char = [source fileSystemRepresentation];
+        const char *loc_char = [self.currentLocation fileSystemRepresentation];
+        status = FSFileOperationScheduleWithRunLoop(fileOp, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
+        if (status != noErr) {
+            [self displayErrorLog:@"Failed to FSFileOperationScheduleWithRunLoop with error : %d", status];
+            CFRelease(fileOp);
+            goto bail;
+        }
+        FSFileOperationClientContext context = {0, (__bridge void *)(self), NULL, NULL, NULL};
+        status = (*processPathAsync)(fileOp, source_char,loc_char, (__bridge CFStringRef)self.nuName,
+                                       kFSFileOperationDefaultOptions|kFSFileOperationOverwrite, 
+                                       statusCallback,2,&context);
+        if (status != noErr) {
+            [self displayErrorLog:@"Failed to FSPathCopy/MoveObjectAsync with error: %d", status];
+            CFRelease(fileOp);
+            goto bail;
+        }
+        NSString *loc_name = [self.currentLocation lastPathComponent];
+        NSString *source_name = [source lastPathComponent];
+        if (![source_name isEqualToString:self.nuName]) {
+            loc_name = [loc_name stringByAppendingPathComponent:self.nuName];
+            status_msg = [NSString stringWithFormat:
+                                    NSLocalizedStringFromTable(@"ProcessingFromTo", 
+                                                               @"ParticularLocalizable", @""), 
+                                    source_name, loc_name];
+            [self.owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
+        }
+    }
+    [[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:) 
+                            withObject:[self.currentLocation stringByAppendingPathComponent:self.nuName]
+                                    waitUntilDone:NO];
 	
 bail:
 	return;
