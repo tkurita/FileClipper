@@ -763,6 +763,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					2CF73DBC09B88D4C00EF8406 = {
+						DevelopmentTeam = N3YK2F43T4;
+					};
+					2CF73E1E09B8971D00EF8406 = {
+						DevelopmentTeam = N3YK2F43T4;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 4E71A80908A2C90C0034BBD9 /* Build configuration list for PBXProject "FileClipper" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1378,6 +1391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1391,6 +1405,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
 				PRODUCT_NAME = "Copy to Here";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1400,6 +1415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1411,6 +1427,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
 				PRODUCT_NAME = "Copy to Here";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

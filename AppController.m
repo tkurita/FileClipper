@@ -170,10 +170,9 @@ void displayAppleScriptError(NSDictionary *err_info)
 - (NSPoint)centerOfFinderWindowReturningError:(NSError **)error
 {
 	NSDictionary *err_info = nil;
-	NSAppleEventDescriptor *script_result = nil;
-	script_result = [finderController
-                        executeHandlerWithName:@"center_of_finderwindow"
-                        arguments:@[] error:&err_info];
+	NSAppleEventDescriptor *script_result = [finderController
+                                            executeHandlerWithName:@"center_of_finderwindow"
+                                            arguments:@[] error:&err_info];
 #if useLog
 	NSLog(@"result of center_of_finderwindow : %@", script_result);
 #endif
@@ -182,8 +181,8 @@ void displayAppleScriptError(NSDictionary *err_info)
         displayAppleScriptError(err_info);
 		NSLog(@"Error : %@",[err_info description]);
 		NSString *msg = [NSString stringWithFormat:@"AppleScript Error : %@ (%@)",
-						 err_info[OSAScriptErrorMessage],
-						 err_info[OSAScriptErrorNumber]];
+                                         err_info[OSAScriptErrorMessage],
+                                         err_info[OSAScriptErrorNumber]];
 		NSDictionary *udict = @{NSLocalizedDescriptionKey: msg};
 		*error = [NSError errorWithDomain:@"FileClipperError" code:1 userInfo:udict];
 		goto bail;
@@ -207,8 +206,7 @@ bail:
 - (NSString *)insertionLocationReturningError:(NSError **)error
 {
 	NSDictionary *err_info = nil;
-	NSAppleEventDescriptor *script_result = nil;
-	script_result = [finderController
+	NSAppleEventDescriptor *script_result = [finderController
                         executeHandlerWithName:@"insertion_location"
                         arguments:@[] error:&err_info];
 	NSString *location_path = nil;
