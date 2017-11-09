@@ -11,4 +11,6 @@
 	BOOL preactiveIsFinder;
 }
 
+- (void)updateOnFinder:(NSString *)aPath;
+
 @end

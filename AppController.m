@@ -188,7 +188,7 @@ void displayAppleScriptError(NSDictionary *err_info)
 		goto bail;
 	}
 	
-	unsigned int nitem = [script_result numberOfItems];
+	NSInteger nitem = [script_result numberOfItems];
 	if (nitem > 1) {
 		[[[[script_result descriptorAtIndex:1] coerceToDescriptorType:TYPE_CGFloat] 
 			data] getBytes:&center_position.x];

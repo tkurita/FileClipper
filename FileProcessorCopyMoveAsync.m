@@ -1,6 +1,7 @@
 #import "FileProcessorCopyMoveAsync.h"
 #import "PathExtra.h"
 #import "ProgressWindowController.h"
+#import "AppController.h"
 
 #define useLog 0
 
@@ -116,7 +117,8 @@ static void statusCallback (FSFileOperationRef fileOp,
             [self.owner performSelectorOnMainThread:@selector(setStatusMessage:) withObject: status_msg waitUntilDone:NO];
         }
     }
-    [[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:) 
+    
+    [(AppController *)[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:)
                             withObject:[self.currentLocation stringByAppendingPathComponent:self.nuName]
                                     waitUntilDone:NO];
 	
@@ -124,7 +126,7 @@ bail:
 	return;
 }
 
-- (void)startThreadTask:(id)sender
+- (void)startThreadTask:(ProgressWindowController *)sender
 {
 	@autoreleasepool {
         for (NSString *path in self.locations) {

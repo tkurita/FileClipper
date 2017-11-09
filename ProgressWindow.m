@@ -3,7 +3,7 @@
 
 @implementation ProgressWindow
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag 
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 {
 	ProgressWindow* result = [super initWithContentRect:contentRect 
 							styleMask:NSBorderlessWindowMask 

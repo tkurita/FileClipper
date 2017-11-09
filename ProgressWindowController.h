@@ -24,6 +24,7 @@
 
 #pragma mark public
 - (void)processFiles:(NSArray *)array toLocations:(NSArray *)locations;
-
+- (void)taskEnded:(id)sender;
+- (void)askNewName:(FileProcessor *)processor;
 
 @end

@@ -1,5 +1,7 @@
 #import "FileProcessorBase.h"
 #import "PathExtra.h"
+#import "AppController.h"
+#import "ProgressWindowController.h"
 
 #define useLog 0
 
@@ -44,7 +46,7 @@
     va_list argumentList;
     va_start(argumentList, format);
 	NSString *msg = [[NSString alloc] initWithFormat:format arguments:argumentList];
-	[[NSApp delegate] 
+	[(AppController *)[NSApp delegate]
 		 performSelectorOnMainThread:@selector(displayErrorLog:) 
 		 withObject:msg waitUntilDone:NO];	
     va_end(argumentList);
