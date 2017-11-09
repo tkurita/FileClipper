@@ -1243,7 +1243,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1259,7 +1259,7 @@
 					"-framework",
 					AppKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeHardLinkToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MakeHardLinkToHere";
 				PRODUCT_NAME = "Make Hard Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1272,7 +1272,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1286,7 +1286,7 @@
 					"-framework",
 					AppKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeHardLinkToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MakeHardLinkToHere";
 				PRODUCT_NAME = "Make Hard Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1321,7 +1321,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1333,7 +1333,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeAliasFileToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MakeAliasFileToHere";
 				PRODUCT_NAME = "Make Alias File to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1347,7 +1347,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1357,7 +1357,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MakeAliasFileToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MakeAliasFileToHere";
 				PRODUCT_NAME = "Make Alias File to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1370,7 +1370,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1382,7 +1382,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MoveToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MoveToHere";
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1395,7 +1395,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1405,7 +1405,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.MoveToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.MoveToHere";
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1419,7 +1419,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1430,7 +1430,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.CopyToHere";
 				PRODUCT_NAME = "Copy to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1443,7 +1443,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1452,7 +1452,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.CopyToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.CopyToHere";
 				PRODUCT_NAME = "Copy to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1465,7 +1465,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1477,7 +1477,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactpry.MakeSymbolicLinkToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factpry.MakeSymbolicLinkToHere";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1491,7 +1491,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = N3YK2F43T4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1501,7 +1501,7 @@
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactpry.MakeSymbolicLinkToHere;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factpry.MakeSymbolicLinkToHere";
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1524,7 +1524,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 1999-2017, Tetsuro KURITA";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
@@ -1559,7 +1559,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 1999-2016, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 1999-2017, Tetsuro KURITA";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
