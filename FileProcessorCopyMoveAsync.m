@@ -1,5 +1,5 @@
 #import "FileProcessorCopyMoveAsync.h"
-#import "PathExtra.h"
+#import "PathExtra/PathExtra.h"
 #import "ProgressWindowController.h"
 #import "AppController.h"
 

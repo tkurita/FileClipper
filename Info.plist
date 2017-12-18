@@ -57,7 +57,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>ProcessAtLocation</string>
+				<string>$PRODUCT_NAME</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>processAtLocationFromPasteboard</string>
