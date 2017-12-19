@@ -16,11 +16,20 @@
     if (error) {
         [NSApp presentError:error];
         [self displayErrorLog:
-         NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""),
-         self.currentSource];
+            NSLocalizedStringFromTable(@"Failed to make alias for %@.", @"ParticularLocalizable", @""),
+            self.currentSource];
         return;
     }
     
+    if ([destination fileExists]) {
+        if (![[NSFileManager defaultManager] removeItemAtPath:destination error:&error]) {
+            [self displayErrorLog:
+                NSLocalizedStringFromTable(@"Failed to remove a file at %@.", @"ParticularLocalizable", @""),
+                destination];
+            return;
+        }
+        
+    }
     
     if (![NSURL writeBookmarkData:bd toURL:[NSURL fileURLWithPath:destination]
                           options:NSURLBookmarkCreationSuitableForBookmarkFile  error:&error]) {
