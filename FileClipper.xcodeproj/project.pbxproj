@@ -795,6 +795,7 @@
 				zh_CN,
 				zh_TW,
 				Base,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* FileClipper */;
 			projectDirPath = "";

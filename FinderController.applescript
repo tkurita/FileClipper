@@ -1,7 +1,7 @@
-property InsertionLocator : module
+property InsertionLocator : "@module"
 
 on compiled()
-	boot (module loader of application (get "FileClipperLib")) for me
+    application (get "FileClipperLib")'s loader()'s setup(me)
 	InsertionLocator's set_allow_closed_folder(false)
 end compiled
 
