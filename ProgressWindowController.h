@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
-#import "PaletteWindowController.h"
-#import "FileProcessor.h"
+#import "PaletteWindowController/PaletteWindowController.h"
+@class FileProcessor;
 
 @interface ProgressWindowController : PaletteWindowController {
 	IBOutlet id indicator;

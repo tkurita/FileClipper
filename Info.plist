@@ -36,9 +36,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>21</string>
+	<string>22</string>
 	<key>DonationURL</key>
-	<string>http://www.script-factory.net/donation/en/index.html</string>
+	<string>https://www.script-factory.net/donation/en/index.html</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<true/>
 	<key>LSUIElement</key>

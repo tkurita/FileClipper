@@ -1,7 +1,7 @@
 #import "AppController.h"
 #import "ProgressWindow.h"
 #import "ProgressWindowController.h"
-#import "WindowVisibilityController.h"
+#import "PaletteWindowController/WindowVisibilityController.h"
 #import "FilesInPasteboard.h"
 #import "PathExtra.h"
 #import "DonationReminder/DonationReminder.h"

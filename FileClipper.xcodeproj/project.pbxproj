@@ -27,11 +27,6 @@
 /* Begin PBXBuildFile section */
 		2C073B011BF424180007551C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C99202F1BC65AC500336E70 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C18EE03106305C600E7F55F /* BundleIcon.icns */; };
-		2C2D94011C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
-		2C2D94021C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
-		2C2D94031C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
-		2C2D94041C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
-		2C2D94051C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
 		2C2D94081C313A0E005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
 		2C2D94091C313A19005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
 		2C2D940A1C313A3B005D8C3E /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2D94071C313A0E005D8C3E /* ScriptingBridge.framework */; };
@@ -106,6 +101,16 @@
 		2C9E860D104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
 		2C9E860E104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
 		2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E8608104E784700C5B158 /* FileProcessorBase.m */; };
+		2CA4FDD8240DE99600B4EA9A /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2CA4FDD9240DE99700B4EA9A /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2CA4FDDA240DE99700B4EA9A /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2CA4FDDB240DE99800B4EA9A /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2CA4FDDC240DE99800B4EA9A /* GUIScriptingChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D94001C3125C2005D8C3E /* GUIScriptingChecker.m */; };
+		2CA4FDE0240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */; };
+		2CA4FDE1240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */; };
+		2CA4FDE2240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */; };
+		2CA4FDE3240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */; };
+		2CA4FDE4240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */; };
 		2CAAE1860E4C4104002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1850E4C4103002A8807 /* BundleIcon.icns */; };
 		2CAAE2000E4C4216002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */; };
 		2CAAE2040E4C4246002A8807 /* BundleIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CAAE2030E4C4246002A8807 /* BundleIcon.icns */; };
@@ -329,6 +334,9 @@
 		2CA4FDD1240DD49300B4EA9A /* Make Symbolic Link to Here.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make Symbolic Link to Here.entitlements"; sourceTree = "<group>"; };
 		2CA4FDD2240DD49400B4EA9A /* Make Alias File to Here.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make Alias File to Here.entitlements"; sourceTree = "<group>"; };
 		2CA4FDD3240DD49600B4EA9A /* Make Hard Link to Here.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make Hard Link to Here.entitlements"; sourceTree = "<group>"; };
+		2CA4FDDE240DEB7700B4EA9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GUIScriptingChecker/en.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2CA4FDDF240DEB7700B4EA9A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = GUIScriptingChecker/ja.lproj/GUIScriptingChecker_Localizable.strings; sourceTree = "<group>"; };
+		2CA4FDE7240E0C2B00B4EA9A /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		2CAAE1850E4C4103002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE1FF0E4C4216002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
 		2CAAE2030E4C4246002A8807 /* BundleIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BundleIcon.icns; sourceTree = "<group>"; };
@@ -489,6 +497,7 @@
 				2CA4FDD0240DD49000B4EA9A /* Move to Here.entitlements */,
 				2CA4FDCF240DD48E00B4EA9A /* Copy to Here.entitlements */,
 				2C48998F0DE43333001A564D /* History.rd */,
+				2CA4FDE7240E0C2B00B4EA9A /* Makefile */,
 				2C9E7E23104B893800C5B158 /* Classes */,
 				2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
@@ -540,6 +549,7 @@
 		2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */ = {
 			isa = PBXGroup;
 			children = (
+				2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */,
 				2C2D940F1C3171B4005D8C3E /* SystemPreferences.h */,
 				2C2D940D1C313E3C005D8C3E /* SystemEvents.h */,
 				2C2D93FF1C3125C2005D8C3E /* GUIScriptingChecker.h */,
@@ -767,19 +777,19 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					2C9E85B6104E4D8D00C5B158 = {
-						DevelopmentTeam = N3YK2F43T4;
+						DevelopmentTeam = 5VBC6385DN;
 						ProvisioningStyle = Automatic;
 					};
 					2CF73B5509B86EB100EF8406 = {
-						DevelopmentTeam = N3YK2F43T4;
+						DevelopmentTeam = 5VBC6385DN;
 						ProvisioningStyle = Automatic;
 					};
 					2CF73DBC09B88D4C00EF8406 = {
-						DevelopmentTeam = N3YK2F43T4;
+						DevelopmentTeam = 5VBC6385DN;
 						ProvisioningStyle = Automatic;
 					};
 					2CF73E1E09B8971D00EF8406 = {
-						DevelopmentTeam = N3YK2F43T4;
+						DevelopmentTeam = 5VBC6385DN;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -788,7 +798,7 @@
 						};
 					};
 					2CF73E7B09B8997400EF8406 = {
-						DevelopmentTeam = N3YK2F43T4;
+						DevelopmentTeam = 5VBC6385DN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -849,6 +859,7 @@
 				2C18EE04106305C600E7F55F /* BundleIcon.icns in Resources */,
 				2CDE876B106C54C1000AC7FA /* ServicesMenu.strings in Resources */,
 				2C381B9D1CBBD6E2006416E3 /* MainMenu.xib in Resources */,
+				2CA4FDE4240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +875,7 @@
 				2C9E83E3104D2A3100C5B158 /* ServicesMenu.strings in Resources */,
 				2C7F3EC1105E50E60041D337 /* ParticularLocalizable.strings in Resources */,
 				2C381B9C1CBBD6E2006416E3 /* MainMenu.xib in Resources */,
+				2CA4FDE3240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +891,7 @@
 				2C9E81DD104D22FF00C5B158 /* ServicesMenu.strings in Resources */,
 				2CCF0673105AC66D001E9511 /* ParticularLocalizable.strings in Resources */,
 				2C381B9A1CBBD6E1006416E3 /* MainMenu.xib in Resources */,
+				2CA4FDE1240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +907,7 @@
 				2C9E7E7A104B905200C5B158 /* ServicesMenu.strings in Resources */,
 				2CCF0658105AC388001E9511 /* ParticularLocalizable.strings in Resources */,
 				2C381B911CBBCEAC006416E3 /* MainMenu.xib in Resources */,
+				2CA4FDE0240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +923,7 @@
 				2C9E81E5104D23B100C5B158 /* ServicesMenu.strings in Resources */,
 				2C7F3EB8105E4FF40041D337 /* ParticularLocalizable.strings in Resources */,
 				2C381B9B1CBBD6E1006416E3 /* MainMenu.xib in Resources */,
+				2CA4FDE2240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,7 +947,7 @@
 				2CDEC1C81BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CE1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D41BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-				2C2D94051C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
+				2CA4FDD9240DE99700B4EA9A /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,7 +968,7 @@
 				2CDEC1C71BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CD1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D31BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-				2C2D94041C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
+				2CA4FDDA240DE99700B4EA9A /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,13 +984,13 @@
 				2C9E7E36104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E7FF6104CEEEC00C5B158 /* FileProcessor.m in Sources */,
 				2C9E860C104E784700C5B158 /* FileProcessorBase.m in Sources */,
+				2CA4FDDC240DE99800B4EA9A /* GUIScriptingChecker.m in Sources */,
 				2CCF06EA105DEC9F001E9511 /* FileProcessorCopyMoveAsync.m in Sources */,
 				2CDEC1AF1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */,
 				2CDEC1B81BC5138100FA77AF /* PathExtra.m in Sources */,
 				2CDEC1C51BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CB1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D11BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-				2C2D94021C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,13 +1006,13 @@
 				2C9E7E3A104B8A1100C5B158 /* ProgressWindowController.m in Sources */,
 				2C9E7FD5104CDF7000C5B158 /* FileProcessor.m in Sources */,
 				2C9E860F104E784700C5B158 /* FileProcessorBase.m in Sources */,
+				2CA4FDD8240DE99600B4EA9A /* GUIScriptingChecker.m in Sources */,
 				2C7F3BBC105E1A330041D337 /* FileProcessorCopyMoveAsync.m in Sources */,
 				2CDEC1AE1BC5104700FA77AF /* NSRunningApplication+SmartActivate.m in Sources */,
 				2CDEC1B71BC5138100FA77AF /* PathExtra.m in Sources */,
 				2CDEC1C41BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CA1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D01BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-				2C2D94011C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,7 +1033,7 @@
 				2CDEC1C61BC513D000FA77AF /* FrontAppMonitor.m in Sources */,
 				2CDEC1CC1BC513D000FA77AF /* PaletteWindowController.m in Sources */,
 				2CDEC1D21BC513D000FA77AF /* WindowVisibilityController.m in Sources */,
-				2C2D94031C3125C2005D8C3E /* GUIScriptingChecker.m in Sources */,
+				2CA4FDDB240DE99800B4EA9A /* GUIScriptingChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,6 +1172,15 @@
 			name = ServicesMenu.strings;
 			sourceTree = "<group>";
 		};
+		2CA4FDDD240DEB7700B4EA9A /* GUIScriptingChecker_Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA4FDDE240DEB7700B4EA9A /* en */,
+				2CA4FDDF240DEB7700B4EA9A /* ja */,
+			);
+			name = GUIScriptingChecker_Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2CCF0657105AC388001E9511 /* ParticularLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1230,12 +1254,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeHardLinkToHere;
@@ -1261,8 +1284,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1312,16 +1335,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1340,14 +1361,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeAliasFileToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1365,16 +1385,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Move to Here.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1382,7 +1400,6 @@
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -1392,14 +1409,13 @@
 				CODE_SIGN_ENTITLEMENTS = "Move to Here.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MoveToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1407,7 +1423,6 @@
 				PRODUCT_NAME = "Move to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -1417,16 +1432,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Copy to Here.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.CopyToHere";
@@ -1442,14 +1455,13 @@
 				CODE_SIGN_ENTITLEMENTS = "Copy to Here.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = CopyToHere;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.CopyToHere";
@@ -1466,16 +1478,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1483,7 +1493,6 @@
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -1494,14 +1503,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 21;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 22;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = MakeSymbolicLinkToHere;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
@@ -1509,7 +1517,6 @@
 				PRODUCT_NAME = "Make Symbolic Link to Here";
 				SKIP_INSTALL = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -1536,12 +1543,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 1999-2017, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 1999-2020, Kurita Tetsuro";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1551,7 +1559,7 @@
 				INSTALL_PATH = /Applications/FileClipper;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_VERSION = 3.1.2;
+				PRODUCT_VERSION = 3.1.3;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1579,10 +1587,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPYRIGHT = "Copyright 1999-2017, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 1999-2020, Kurita Tetsuro";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*ToHere *.nib *.lproj *.framework *.gch *.xcode* (*) CVS .svn";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1592,7 +1601,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /Applications/FileClipper;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_VERSION = 3.1.2;
+				PRODUCT_VERSION = 3.1.3;
 				SDKROOT = macosx;
 			};
 			name = Release;

@@ -29,7 +29,7 @@ static void statusCallback (FSFileOperationRef fileOp,
 	if (error == userCanceledErr) {
 		return;
 	}
-	FileProcessor *processor = (__bridge FileProcessor *)(info);
+	FileProcessorBase *processor = (__bridge FileProcessorBase *)(info);
 	if (error != noErr) {
 		[processor displayErrorLog:@"Failed to process %s with error %d", currentItem, error];
 	}
