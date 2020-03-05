@@ -81,5 +81,27 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>This application needs to control other applications to run.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This application needs access to your music to run.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This application needs access to your calendars to run.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This application needs access to your camera to run.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This application needs access to your contacts to run.</string>
+	<key>NSHomeKitUsageDescription</key>
+	<string>This application needs access to your HomeKit Home to run.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This application needs access to your microphone to run.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This application needs access to your photos to run.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>This application needs access to your reminders to run.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>This application needs access to Siri to run.</string>
+	<key>NSSystemAdministrationUsageDescription</key>
+	<string>This application needs access to administer this system to run.</string>
 </dict>
 </plist>
