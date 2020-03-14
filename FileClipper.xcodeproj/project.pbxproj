@@ -317,6 +317,7 @@
 		2C7F3EAD105E4EC30041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C7F3ECD105E53510041D337 /* FileProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProcessor.h; sourceTree = "<group>"; };
 		2C99202A1BC65AC400336E70 /* DonationReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DonationReminder.xcodeproj; path = DonationReminder/DonationReminder.xcodeproj; sourceTree = "<group>"; };
+		2C9BB10F241CD81400323F19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C9E7E10104B88F100C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E15104B892300C5B158 /* FileProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProcessor.m; sourceTree = "<group>"; };
 		2C9E7E2F104B8A1100C5B158 /* ProgressWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWindowController.h; sourceTree = "<group>"; };
@@ -498,6 +499,7 @@
 				2CA4FDCF240DD48E00B4EA9A /* Copy to Here.entitlements */,
 				2C48998F0DE43333001A564D /* History.rd */,
 				2CA4FDE7240E0C2B00B4EA9A /* Makefile */,
+				2C9BB10F241CD81400323F19 /* README.md */,
 				2C9E7E23104B893800C5B158 /* Classes */,
 				2C2D94061C3125D2005D8C3E /* GUIScriptingChecker */,
 				080E96DDFE201D6D7F000001 /* Scripts */,
