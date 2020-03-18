@@ -79,24 +79,25 @@ static NSMutableArray* WORKING_WINDOW_CONTROLLERS = nil;
 	[processor unlock];
 }
 
-- (BOOL)panel:(id)sender isValidFilename:(NSString *)filename
+- (BOOL)panel:(id)sender validateURL:(NSURL *)url error:(NSError * _Nullable *)outError;
 {
-	if ([_fileProcessor.currentSource isEqualToString:filename]) {
-		[sender setMessage:NSLocalizedStringFromTable(@"Same to the source item.", @"ParticularLocalizable", @"")];
-		return NO;
-	}
-	
-	for (ProgressWindowController* wc in WORKING_WINDOW_CONTROLLERS) {
-		if (wc != self) {
-			NSString *destination = [wc.fileProcessor.currentLocation stringByAppendingPathComponent:
-									 wc.fileProcessor.nuName];
-			if ([filename isEqualToString:destination]) {
-				[sender setMessage:[NSString stringWithFormat:NSLocalizedString(@"%@ is busy.", @""), [filename lastPathComponent]]];
-				return NO;
-			}
-		}
-	}
-	return YES;
+    NSString *filename = [url path];
+    if ([_fileProcessor.currentSource isEqualToString:filename]) {
+        [sender setMessage:NSLocalizedStringFromTable(@"Same to the source item.", @"ParticularLocalizable", @"")];
+        return NO;
+    }
+    
+    for (ProgressWindowController* wc in WORKING_WINDOW_CONTROLLERS) {
+        if (wc != self) {
+            NSString *destination = [wc.fileProcessor.currentLocation stringByAppendingPathComponent:
+                                     wc.fileProcessor.nuName];
+            if ([filename isEqualToString:destination]) {
+                [sender setMessage:[NSString stringWithFormat:NSLocalizedString(@"%@ is busy.", @""), [filename lastPathComponent]]];
+                return NO;
+            }
+        }
+    }
+    return YES;
 }
 
 - (void)askNewName:(FileProcessor *)processor
