@@ -5,6 +5,6 @@
 
 }
 
-+(id) getContents;
++(NSArray *) getContents;
 
 @end
