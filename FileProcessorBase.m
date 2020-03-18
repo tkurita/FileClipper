@@ -35,12 +35,6 @@
 	return task;
 }
 
-- (BOOL)fileManager:(NSFileManager *)manager shouldProceedAfterError:(NSDictionary *)errorInfo
-{
-	NSLog(@"Error in file manager : %@", [errorInfo description]);
-	return NO;
-}
-
 - (void)displayErrorLog:(NSString *)format, ...
 {
     va_list argumentList;
