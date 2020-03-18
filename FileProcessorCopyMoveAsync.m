@@ -118,7 +118,7 @@ static void statusCallback (FSFileOperationRef fileOp,
         }
     }
     
-    [(AppController *)[NSApp delegate] performSelectorOnMainThread:@selector(updateOnFinder:)
+    [self.appController performSelectorOnMainThread:@selector(updateOnFinder:)
                             withObject:[self.currentLocation stringByAppendingPathComponent:self.nuName]
                                     waitUntilDone:NO];
 	

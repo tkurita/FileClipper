@@ -1,4 +1,5 @@
 #import <Cocoa/Cocoa.h>
+@class AppController;
 
 @interface FileProcessorBase : NSObject
 
@@ -12,6 +13,7 @@
 @property NSString* loginShell;
 @property NSEnumerator *enumerator;
 @property BOOL isCanceled;
+@property AppController *appController;
 
 - (id)initWithSourceItems:(NSArray *)array toLocations:(NSArray *)pathes owner:(id)ownerObject;
 - (void)startThreadTask:(id)sender;

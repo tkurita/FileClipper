@@ -12,6 +12,7 @@
 	if (self = [super init]) {
 		self.lockobj = [NSLock new];
 		self.isCanceled = NO;
+        self.appController = [NSApp delegate];
 	}
 	return self;
 }
@@ -40,7 +41,7 @@
     va_list argumentList;
     va_start(argumentList, format);
 	NSString *msg = [[NSString alloc] initWithFormat:format arguments:argumentList];
-	[(AppController *)[NSApp delegate]
+	[self.appController
 		 performSelectorOnMainThread:@selector(displayErrorLog:) 
 		 withObject:msg waitUntilDone:NO];	
     va_end(argumentList);
