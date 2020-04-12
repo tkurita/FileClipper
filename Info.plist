@@ -36,21 +36,41 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>23</string>
+	<string>24</string>
 	<key>DonationURL</key>
 	<string>https://www.script-factory.net/donation/en/index.html</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<true/>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>This application needs to control other applications to run.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This application needs access to your music to run.</string>
 	<key>NSAppleScriptEnabled</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This application needs access to your calendars to run.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This application needs access to your camera to run.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This application needs access to your contacts to run.</string>
+	<key>NSHomeKitUsageDescription</key>
+	<string>This application needs access to your HomeKit Home to run.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>${COPYRIGHT}</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This application needs access to your microphone to run.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This application needs access to your photos to run.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>This application needs access to your reminders to run.</string>
 	<key>NSServices</key>
 	<array>
 		<dict>
@@ -81,24 +101,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>This application needs to control other applications to run.</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>This application needs access to your music to run.</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>This application needs access to your calendars to run.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>This application needs access to your camera to run.</string>
-	<key>NSContactsUsageDescription</key>
-	<string>This application needs access to your contacts to run.</string>
-	<key>NSHomeKitUsageDescription</key>
-	<string>This application needs access to your HomeKit Home to run.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This application needs access to your microphone to run.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This application needs access to your photos to run.</string>
-	<key>NSRemindersUsageDescription</key>
-	<string>This application needs access to your reminders to run.</string>
 	<key>NSSiriUsageDescription</key>
 	<string>This application needs access to Siri to run.</string>
 	<key>NSSystemAdministrationUsageDescription</key>
