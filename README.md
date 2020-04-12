@@ -38,7 +38,8 @@ Japanese :
 
 ## Building
 Requirements :
-* Mac OS X 10.9 or later.
+* OS X 10.9 or later.
+* Xcode
 * [ModuleLoader]
 
 [ModuleLoader]: https://www.script-factory.net/XModules/ModuleLoader/en/index.html
